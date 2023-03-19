@@ -38,14 +38,14 @@ const DarkMode = () => {
     >
       {" "}
       <BsFillCloudMoonFill
-        style={{ fontSize: "22px", margin: "-4px 0 0 0 " }}
+        style={{ fontSize: "20px", margin: "-6px 0 0 0 " }}
         className="moon"
       />
       <BsSun
         className="sun"
         style={{
           color: "rgb(255, 255, 255)",
-          fontSize: "20px",
+          fontSize: "19px",
           margin: "-6px 0 0 0 ",
         }}
       />

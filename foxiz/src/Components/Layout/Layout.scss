@@ -17,6 +17,8 @@ body.light {
   }
 }
 body.dark {
+  background: #131518 !important;
+  color: rgb(255, 255, 255) !important;
   #lightmode_img {
     display: none;
   }
@@ -27,13 +29,16 @@ body.dark {
     color: black;
     display: none;
   }
-  background: #131518 !important;
-  color: rgb(255, 255, 255) !important;
 
   #nav {
     ul {
       li {
         color: white !important;
+      }
+    }
+    #nav_dark {
+      &:before {
+        background-color: #454545 !important;
       }
     }
   }

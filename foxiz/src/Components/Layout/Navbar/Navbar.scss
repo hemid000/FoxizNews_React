@@ -105,6 +105,18 @@
           }
         }
       }
+      #nav_dark {
+        position: relative;
+        &:before {
+          content: "";
+          width: 1px;
+          height: 16px;
+          position: absolute;
+          top: 4px;
+          left: -9px;
+          background-color: #d8d8d8;
+        }
+      }
     }
   }
 }

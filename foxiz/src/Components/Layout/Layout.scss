@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+}
+
+body.light {
+  background: white;
+  color: black;
+  #darkmode_img {
+    display: none;
+  }
+  .sun {
+    display: none;
+  }
+}
+body.dark {
+  #lightmode_img {
+    display: none;
+  }
+  #dark-mode-img {
+    display: block;
+  }
+  .moon {
+    color: black;
+    display: none;
+  }
+  background: #131518 !important;
+  color: rgb(255, 255, 255) !important;
+
+  #nav {
+    ul {
+      li {
+        color: white !important;
+      }
+    }
+  }
+}

@@ -24,7 +24,9 @@
   $opacity: null,
   $transition: null,
   $align-items: null,
-  $gap: null
+  $gap: null,
+  $transform: null,
+  $visibility: null
 ) {
   width: $width;
   height: $height;
@@ -52,4 +54,6 @@
   transition: $transition;
   align-items: $align-items;
   gap: $gap;
+  transform: $transform;
+  visibility: $visibility;
 }

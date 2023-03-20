@@ -31,8 +31,16 @@ const Navbar = () => {
           <div className="col-lg-7">
             <div className="nav_middle">
               <ul>
-                <li>
+                <li id="home">
                   Home <BiChevronDown className="down" />
+                  <div className="home_hover">
+                    <ul>
+                      <li>Home 2</li>
+                      <li>Home 3</li>
+                      <li>Home 4</li>
+                      <li>Home 5</li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   Politics <BiChevronDown className="down" />

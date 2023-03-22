@@ -1,7 +1,7 @@
 import React from "react";
 import "../Navbar/Navbar.scss";
 import { BiChevronDown, BiTrendingUp } from "react-icons/bi";
-import { BsBookmark, BsClock } from "react-icons/bs";
+import { BsBookmark, BsClock, BsArrowRightCircle } from "react-icons/bs";
 import { RiMore2Fill } from "react-icons/ri";
 import { MdNotificationsNone } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
@@ -162,7 +162,87 @@ const Navbar = () => {
                     </div>
                   </div>
                 </li>
-                <li>
+                <li id="tech">
+                  <div className="tech_hover">
+                    <div className="container">
+                      <div className="article">
+                        <p>Technology</p>
+                        <span>
+                          Show More <BsArrowRightCircle />
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="container mt-3">
+                      <div className="info_short">
+                        <div className="info">
+                          <img
+                            src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/t54-1-330x220.jpg"
+                            alt=""
+                          />
+                          <p>
+                            How My Phone’s Most Annoying Feature Saved My Life
+                          </p>
+                          <span>Oct 1, 2021</span>
+                        </div>
+                        <div className="info">
+                          <img
+                            src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t12-330x220.jpg"
+                            alt=""
+                          />
+                          <p>
+                            Apple Watch Series 9 Reportedly Has Flat Sides and
+                            Bigger Screens
+                          </p>
+                          <span>Sep 19, 2021</span>
+                        </div>
+                        <div className="info">
+                          <img
+                            src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/r119-330x220.jpg"
+                            alt=""
+                          />
+                          <p>
+                            Apple iMac M1 Review: the All-In-One for Almost
+                            Everyone
+                          </p>
+                          <div className="color">
+                            <div className="col1"></div>
+                            <div className="col2"></div>
+                            <div className="col3"></div>
+                            <div className="col4"></div>
+                            <div className="col5"></div>
+                          </div>
+                        </div>
+                        <div className="info">
+                          <img
+                            src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t34-330x220.jpg"
+                            alt=""
+                          />
+                          <p>
+                            Google’s Self-Designed Tensor Chips will Power Its
+                            Next
+                          </p>
+                          <span>Sep 8, 2021</span>
+                        </div>
+                        <div className="info">
+                          <img
+                            src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t37-330x220.jpg"
+                            alt=""
+                          />
+                          <p>
+                            Sony WF-10XM4: Headphones Are Our Absolute Favorite
+                          </p>
+                          <div className="add_info">
+                            <MdNotificationsNone /> <p>Sponsored by</p>
+                            <img
+                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/sponsor-1.png"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   Technology <BiChevronDown className="down" />
                 </li>
                 <li>

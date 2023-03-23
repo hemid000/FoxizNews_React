@@ -1,6 +1,6 @@
 import React from "react";
 import "../Navbar/Navbar.scss";
-import { BiChevronDown, BiTrendingUp } from "react-icons/bi";
+import { BiChevronDown, BiTrendingUp, BiChevronRight } from "react-icons/bi";
 import { BsBookmark, BsClock, BsArrowRightCircle } from "react-icons/bs";
 import { RiMore2Fill } from "react-icons/ri";
 import { MdNotificationsNone } from "react-icons/md";
@@ -245,7 +245,124 @@ const Navbar = () => {
                   </div>
                   Technology <BiChevronDown className="down" />
                 </li>
-                <li>
+                <li id="post">
+                  <div className="post_hover">
+                    <ul>
+                      <li id="post_add">
+                        Post Layouts
+                        <div className="post_add_hover">
+                          <ul>
+                            <li>Standard 1</li>
+                            <li>Standard 2</li>
+                            <li>Standard 3</li>
+                            <li>Standard 4</li>
+                            <li>Standard 5</li>
+                            <li>Standard 6</li>
+                            <li>Standard 7</li>
+                            <li>Standard 8</li>
+                            <li>No Featured</li>
+                          </ul>
+                        </div>
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li id="layout_add">
+                        <div className="layout_add_hover">
+                          <ul>
+                            <li>Layout 1</li>
+                            <li>Layout 2</li>
+                            <li>Layout 3</li>
+                          </ul>
+                        </div>
+                        Gallery Layouts{" "}
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li id="layout_add">
+                        <div className="layout_add_hover">
+                          <ul>
+                            <li>Layout 1</li>
+                            <li>Layout 2</li>
+                            <li>Layout 3</li>
+                            <li>Layout 4</li>
+                          </ul>
+                        </div>
+                        Video Layouts{" "}
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li id="layout_add">
+                        <div className="layout_add_hover">
+                          <ul>
+                            <li>Layout 1</li>
+                            <li>Layout 2</li>
+                            <li>Layout 3</li>
+                            <li>Layout 4</li>
+                          </ul>
+                        </div>
+                        Audio Layouts{" "}
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li id="post_add">
+                        <div className="post_add_hover">
+                          <ul>
+                            <li>Right Sidebar</li>
+                            <li>left Sidebar</li>
+                            <li>No Sidebar</li>
+                          </ul>
+                        </div>
+                        Post Sidebar{" "}
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li id="review_add">
+                        <div className="review_add_hover">
+                          <ul>
+                            <li>Stars</li>
+                            <li>lScores</li>
+                            <li>User Rating</li>
+                          </ul>
+                        </div>
+                        Review <div className="add_info">Hot</div>{" "}
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li id="content_add">
+                        <div className="content_add_hover">
+                          <ul>
+                            <li>Inline Mailchimp</li>
+                            <li>Highlight Shares</li>
+                            <li>Print Post</li>
+                            <li>Inline Related</li>
+                            <li>Source/Via Tag</li>
+                            <li>Reading Indicator</li>
+                            <li>Content Size Resizer</li>
+                          </ul>
+                        </div>
+                        Content Features <div className="add_info2">100+</div>{" "}
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li>
+                        Multiple Authors <div className="add_info3">New</div>
+                      </li>
+                      <li>
+                        Break Page Selection{" "}
+                        <div className="add_info4">Hot</div>
+                      </li>
+                      <li id="table_con_add">
+                        <div className="table_con_add_hover">
+                          <ul>
+                            <li>Full Width</li>
+                            <li>Left Side</li>
+                          </ul>
+                        </div>
+                        Table of Contents{" "}
+                        <BiChevronRight style={{ fontSize: "16px" }} />
+                      </li>
+                      <li>
+                        Auto Load Next Posts{" "}
+                        <div className="add_info5">Hot</div>
+                      </li>
+                      <li>Reaction Post</li>
+                      <li>Sponsored Post</li>
+                      <li>Highlights/ Key Points</li>
+                    </ul>
+                  </div>
                   Posts <BiChevronDown className="down" />
                 </li>
                 <li>

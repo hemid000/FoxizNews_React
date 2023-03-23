@@ -94,7 +94,7 @@
             $display: flex,
             $margin: 0px,
             $padding: 10px 0px,
-            $gap: 10px,
+            $gap: 0px,
             $justify-content: start
           );
           flex-direction: column;
@@ -528,6 +528,498 @@
 
       &:hover {
         .tech_hover {
+          @include _main(
+            $visibility: visible,
+            $transform: translateY(0px),
+            $opacity: 1
+          );
+        }
+      }
+    }
+    #post {
+      position: relative;
+      .post_hover {
+        @include _main(
+          $transition: 0.3s ease-in-out,
+          $position: absolute,
+          $top: 65px,
+          $left: -5px,
+          $width: 218px,
+          $opacity: 0,
+          $visibility: hidden,
+          $transform: translateY(16px)
+        );
+
+        ul {
+          @include _main(
+            $width: 100%,
+            $border-radius: 9px,
+            $back-color: rgb(234, 234, 234),
+            $align-items: start,
+            $display: flex,
+            $margin: 0px,
+            $padding: 10px 0px,
+            $gap: 0px,
+            $justify-content: start
+          );
+          flex-direction: column;
+          list-style-type: none;
+
+          li {
+            font-weight: 600;
+            @include _main(
+              $color: $fourth_color,
+              $font_s: 13px,
+              $border: 3px solid transparent,
+              $cursor: pointer,
+              $display: flex,
+              $padding: 3px 10px 3px 27px,
+              $gap: 2px,
+              $width: 100%,
+              $justify-content: space-between
+            );
+            .add_info {
+              @include _main(
+                $back-color: #ff7070,
+                $width: 30px,
+                $height: 19px,
+                $border-radius: 3px,
+                $color: $main_color,
+                $display: flex,
+                $align-items: center,
+                $justify-content: center,
+                $margin: 0 0 0 5px,
+                $font_s: 11px
+              );
+            }
+            .add_info2 {
+              @include _main(
+                $back-color: #ff184e20,
+                $width: 30px,
+                $height: 19px,
+                $border-radius: 3px,
+                $color: $nine_color,
+                $display: flex,
+                $align-items: center,
+                $justify-content: center,
+                $margin: 0 0 0 5px,
+                $font_s: 11px
+              );
+            }
+            .add_info3 {
+              @include _main(
+                $back-color: #54b7c7,
+                $width: 30px,
+                $height: 19px,
+                $border-radius: 3px,
+                $color: $main_color,
+                $display: flex,
+                $align-items: center,
+                $justify-content: center,
+                $margin: 0 0 0 5px,
+                $font_s: 11px
+              );
+            }
+
+            .add_info4 {
+              @include _main(
+                $back-color: #a7c560,
+                $width: 30px,
+                $height: 19px,
+                $border-radius: 3px,
+                $color: $main_color,
+                $display: flex,
+                $align-items: center,
+                $justify-content: center,
+                $margin: 0 0 0 5px,
+                $font_s: 11px
+              );
+            }
+            .add_info5 {
+              @include _main(
+                $back-color: #54b7c7,
+                $width: 30px,
+                $height: 19px,
+                $border-radius: 3px,
+                $color: $main_color,
+                $display: flex,
+                $align-items: center,
+                $justify-content: center,
+                $margin: 0 0 0 5px,
+                $font_s: 11px
+              );
+            }
+            &:hover {
+              @include _main($back-color: rgba(0, 0, 0, 0.037));
+              border-left: 3px solid red;
+            }
+          }
+        }
+      }
+      #post_add {
+        position: relative;
+        .post_add_hover {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: -13px,
+            $left: 214px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateX(10px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: rgb(234, 234, 234),
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
+              );
+
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .post_add_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateX(0px),
+              $opacity: 1
+            );
+          }
+        }
+      }
+      #layout_add {
+        position: relative;
+        .layout_add_hover {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: -13px,
+            $left: 214px,
+            $width: 218px,
+            $visibility: hidden,
+            $opacity: 0,
+
+            $transform: translateX(10px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: rgb(234, 234, 234),
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
+              );
+
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .layout_add_hover {
+            @include _main(
+              $opacity: 1,
+              $visibility: visible,
+
+              $transform: translateX(0px)
+            );
+          }
+        }
+      }
+      #content_add {
+        position: relative;
+        .content_add_hover {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: -13px,
+            $left: 214px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateX(10px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: rgb(234, 234, 234),
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
+              );
+
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .content_add_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateX(0px),
+              $opacity: 1
+            );
+          }
+        }
+      }
+      #review_add {
+        position: relative;
+        .review_add_hover {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: -13px,
+            $left: 214px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateX(10px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: rgb(234, 234, 234),
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
+              );
+
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .review_add_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateX(0px),
+              $opacity: 1
+            );
+          }
+        }
+      }
+      #content_add {
+        position: relative;
+        .content_add_hover {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: -13px,
+            $left: 214px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateX(10px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: rgb(234, 234, 234),
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
+              );
+
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .review_add_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateX(0px),
+              $opacity: 1
+            );
+          }
+        }
+      }
+      #table_con_add {
+        position: relative;
+        .table_con_add_hover {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: -13px,
+            $left: 214px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateX(10px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: rgb(234, 234, 234),
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
+              );
+
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .table_con_add_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateX(0px),
+              $opacity: 1
+            );
+          }
+        }
+      }
+      &:hover {
+        .post_hover {
           @include _main(
             $visibility: visible,
             $transform: translateY(0px),

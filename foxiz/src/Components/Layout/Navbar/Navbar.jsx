@@ -383,7 +383,7 @@ const Navbar = () => {
                   </div>
                   Posts <BiChevronDown className="down" />
                 </li>
-                <li>
+                <li id="bookmarks">
                   <BsBookmark /> Bookmarks
                 </li>
                 <li id="pages">

@@ -39,7 +39,9 @@
       list-style-type: none;
 
       li {
+        position: relative;
         font-weight: 600;
+
         @include _main(
           $color: $fourth_color,
           $cursor: pointer,
@@ -157,6 +159,26 @@
           );
         }
       }
+      &:before {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        padding: 1.5px;
+        background-color: #ff184e;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 300ms ease-in-out 25ms;
+        border-radius: 6px;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
     #politics {
       position: relative;
@@ -176,40 +198,6 @@
           $back-color: rgb(204, 204, 204)
         );
 
-        // ul {
-        //   @include _main(
-        //     $width: 100%,
-        //     $border-radius: 9px,
-        //     $back-color: rgb(234, 234, 234),
-        //     $align-items: start,
-        //     $display: flex,
-        //     $margin: 0px,
-        //     $padding: 10px 0px,
-        //     $gap: 10px,
-        //     $justify-content: start
-        //   );
-        //   flex-direction: column;
-        //   list-style-type: none;
-
-        //   li {
-        //     font-weight: 600;
-        //     @include _main(
-        //       $color: $fourth_color,
-        //       $font_s: 13px,
-        //       $border: 3px solid transparent,
-        //       $cursor: pointer,
-        //       $display: flex,
-        //       $padding: 3px 10px 3px 27px,
-        //       $gap: 2px,
-        //       $width: 100%
-        //     );
-
-        //     &:hover {
-        //       @include _main($back-color: rgba(0, 0, 0, 0.037));
-        //       border-left: 3px solid red;
-        //     }
-        //   }
-        // }
         .left_side {
           @include _main($display: flex, $justify-content: start, $gap: 4px);
           flex-direction: column;
@@ -410,6 +398,27 @@
           );
         }
       }
+
+      &:before {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        padding: 1.5px;
+        background-color: #ff184e;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 300ms ease-in-out 25ms;
+        border-radius: 6px;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
 
     #tech {
@@ -532,6 +541,26 @@
             $transform: translateY(0px),
             $opacity: 1
           );
+        }
+      }
+      &:before {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        padding: 1.5px;
+        background-color: #ff184e;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 300ms ease-in-out 25ms;
+        border-radius: 6px;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          transform-origin: left;
         }
       }
     }
@@ -1026,6 +1055,26 @@
           );
         }
       }
+      &:before {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        padding: 1.5px;
+        background-color: #ff184e;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 300ms ease-in-out 25ms;
+        border-radius: 6px;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
 
     #pages {
@@ -1113,6 +1162,26 @@
             $transform: translateY(0px),
             $opacity: 1
           );
+        }
+      }
+      &:before {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        padding: 1.5px;
+        background-color: #ff184e;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 300ms ease-in-out 25ms;
+        border-radius: 6px;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          transform-origin: left;
         }
       }
     }
@@ -1218,6 +1287,29 @@
             );
             font-weight: 600;
           }
+        }
+      }
+    }
+
+    #bookmarks {
+      &:before {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 100%;
+        padding: 1.5px;
+        background-color: #ff184e;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 300ms ease-in-out 25ms;
+        border-radius: 6px;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          transform-origin: left;
         }
       }
     }

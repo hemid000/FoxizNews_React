@@ -368,7 +368,16 @@ const Navbar = () => {
                 <li>
                   <BsBookmark /> Bookmarks
                 </li>
-                <li>
+                <li id="pages">
+                  <div className="pages_hover">
+                    <ul>
+                      <li>Blog Index</li>
+                      <li>Contact Us</li>
+                      <li>Search Page</li>
+                      <li>404 Page</li>
+                      <li>Costumize Interests</li>
+                    </ul>
+                  </div>
                   Pages <BiChevronDown className="down" />
                 </li>
                 <li>

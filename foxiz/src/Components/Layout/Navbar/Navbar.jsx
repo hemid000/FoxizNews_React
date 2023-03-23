@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Navbar/Navbar.scss";
 import { BiChevronDown, BiTrendingUp, BiChevronRight } from "react-icons/bi";
-import { BsBookmark, BsClock, BsArrowRightCircle } from "react-icons/bs";
+import {
+  BsBookmark,
+  BsClock,
+  BsArrowRightCircle,
+  BsSearch,
+} from "react-icons/bs";
 import { RiMore2Fill } from "react-icons/ri";
 import { MdNotificationsNone } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import DarkMode from "../../DarkMode/DarkMode";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 const Navbar = () => {
+  const [search, setSearch] = useState(false);
+  const [notification, setNotification] = useState(false);
+
+  const handleclick = () => {
+    setSearch(!search);
+    setNotification(false);
+  };
+  const notification_click = () => {
+    setNotification(!notification);
+    setSearch(false);
+  };
   return (
     <nav id="nav">
       <div className="container mt-1">
@@ -380,8 +398,80 @@ const Navbar = () => {
                   </div>
                   Pages <BiChevronDown className="down" />
                 </li>
-                <li>
-                  <RiMore2Fill className="svg_more" title="More" />
+
+                <li id="more">
+                  {search && (
+                    <div className="more_hover">
+                      <div className="container">
+                        <p id="search_line ">Search</p>
+                        <form action="">
+                          <InputGroup className="mb-3">
+                            <InputGroup.Text id="inputGroup-sizing-default">
+                              <BsSearch />
+                            </InputGroup.Text>
+                            <Form.Control
+                              placeholder="Search Headlines,News..."
+                              aria-label="Default"
+                              aria-describedby="inputGroup-sizing-default"
+                            />
+                          </InputGroup>
+                        </form>
+                      </div>
+                      <div className="container mt-3 searching_items">
+                        <div className="row g-3">
+                          <div className="col-lg-4">
+                            <ul>
+                              <p>Technology</p>
+                              <li>Innovate</li>
+                              <li>Gadget</li>
+                              <li>PC hardware</li>
+                              <li>Review</li>
+                              <li>Software</li>
+                            </ul>
+                          </div>
+                          <div className="col-lg-4">
+                            <ul>
+                              <p>Health</p>
+                              <li>Medicine</li>
+                              <li>Children</li>
+                              <li>Coronavirus</li>
+                              <li>Nutrition</li>
+                              <li>Disease</li>
+                            </ul>
+                          </div>
+                          <div className="col-lg-4">
+                            <ul>
+                              <p>Entertainment</p>
+                              <li>Stars</li>
+                              <li>Screen</li>
+                              <li>Culture</li>
+                              <li>Media</li>
+                              <li>Videos</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="container path">
+                        <ul>
+                          <li>Contact</li>
+                          <li>Blog</li>
+                          <li>Complaint</li>
+                          <li>Advertise</li>
+                        </ul>
+
+                        <p>
+                          © 2022 Foxiz News Network. Ruby Design Company. All
+                          Rights Reserved.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  <RiMore2Fill
+                    className="svg_more"
+                    title="More"
+                    onClick={handleclick}
+                  />
                 </li>
               </ul>
             </div>
@@ -390,11 +480,107 @@ const Navbar = () => {
             <div className="nav_right">
               <button id="sign_in">Sign in</button>
               <ul>
-                <li>
-                  <MdNotificationsNone title="Notification" />
+                <li id="notification">
+                  {notification && (
+                    <div className="notification_click">
+                      <div className="container">
+                        <p id="note_line ">Notification:</p>
+                      </div>
+                      <div className="container mt-3 searching_items">
+                        <p id="topics">
+                          <BsClock style={{ color: "red" }} /> Latest News
+                        </p>
+                        <div className="info">
+                          <div className="info_short">
+                            <img
+                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p50-150x150.jpg"
+                              alt=""
+                            />
+                            <div className="info_right">
+                              <p>
+                                White House Reminds Lawmakers not to Travel to
+                                Afghanistan
+                              </p>
+                              <span>Technology</span>
+                            </div>
+                          </div>
+                          <div className="info_short">
+                            <img
+                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p54-150x150.jpg"
+                              alt=""
+                            />
+                            <div className="info_right">
+                              <p>
+                                Two Anti-Lockdown Leaders Arrested as Protests
+                                Held Across Valinor
+                              </p>
+                              <span>Entertainment</span>
+                            </div>
+                          </div>
+                          <div className="info_short">
+                            <img
+                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/b36-150x150.jpg"
+                              alt=""
+                            />
+                            <div className="info_right">
+                              <p>
+                                National Day Rally 2023: Sacrifice, Effort
+                                Needed to Preserve Harmony
+                              </p>
+                              <span>Business</span>
+                            </div>
+                          </div>
+                          <div className="info_short">
+                            <img
+                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/b19-150x150.jpg"
+                              alt=""
+                            />
+                            <div className="info_right">
+                              <p>
+                                The impact of COVID-19 on The Airport Business
+                              </p>
+                              <span>Business</span>
+                            </div>
+                          </div>
+                          <div className="info_short">
+                            <img
+                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p6-150x150.jpg"
+                              alt=""
+                            />
+                            <div className="info_right">
+                              <p>
+                                Bad Credit Shouldn’t Affect Health Insurance,
+                                Experts Say
+                              </p>
+                              <span>Politics</span>
+                            </div>
+                          </div>
+                          <div className="info_short">
+                            <img
+                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t12-150x150.jpg"
+                              alt=""
+                            />
+                            <div className="info_right">
+                              <p>
+                                Apple Watch Series 9 Reportedly Has Flat Sides
+                                and Bigger Screens
+                              </p>
+                              <span>Technology</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <MdNotificationsNone
+                    title="Notification"
+                    onClick={notification_click}
+                  />
                 </li>
+
                 <li>
-                  <FiSearch title="Search" />
+                  <FiSearch title="Search" onClick={handleclick} />
                 </li>
                 <li id="nav_dark">
                   <DarkMode />

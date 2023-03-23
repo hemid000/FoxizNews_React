@@ -1116,6 +1116,111 @@
         }
       }
     }
+    #more {
+      @include _main($position: relative);
+      .more_hover {
+        @include _main(
+          $overflow: hidden,
+          $transition: 0.3s ease-in-out,
+          $position: absolute,
+          $top: 65px,
+          $left: -261px,
+          $back-color: rgb(226, 226, 226),
+          $width: 492px,
+          $border-radius: 7px,
+          $padding: 14px 10px 6px 10px,
+          $cursor: auto
+        );
+        #search_line {
+          @include _main($font_s: 16px, $color: $fourth_color);
+          font-weight: 700;
+        }
+        #inputGroup-sizing-default {
+          @include _main($back-color: $main_color, $cursor: auto);
+        }
+        .form-control {
+          @include _main($font_s: 14px !important);
+        }
+        .searching_items {
+          @include _main($text-align: center);
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 6px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+            p {
+              @include _main($font_s: 14px, $margin: 3px 0 3px 0);
+              font-weight: 600;
+            }
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: rgba(0, 0, 0, 0.748),
+                $font_s: 13px,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 5px 10px 3px 2px,
+                $gap: 2px,
+                $width: 100%,
+                $transition: 0.2s ease-in-out
+              );
+
+              &:hover {
+                @include _main($color: $nine_color);
+              }
+            }
+          }
+        }
+        .path {
+          @include _main($color: $nine_color, $margin: 30px 0);
+          ul {
+            @include _main(
+              $width: 100%,
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 6px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: row;
+
+            li {
+              font-weight: 600;
+              font-size: 12px;
+              @include _main(
+                $color: rgba(0, 0, 0, 0.748),
+                $cursor: pointer,
+                $display: flex,
+                $padding: 5px 18px 3px 2px,
+                $gap: 2px,
+
+                $font_s: 12px,
+
+                $transition: 0.2s ease-in-out
+              );
+            }
+          }
+          p {
+            @include _main(
+              $font_s: 11px,
+              $margin: 3px 0 3px 0,
+              $color: $fourth_color
+            );
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
 
   .nav_right {
@@ -1126,6 +1231,113 @@
       $align-items: center,
       $justify-content: end
     );
+
+    #notification {
+      @include _main($position: relative);
+      .notification_click {
+        @include _main(
+          $transition: 0.3s ease-in-out,
+          $position: absolute,
+          $top: 65px,
+          $left: -247px,
+          $back-color: rgb(226, 226, 226),
+          $width: 350px,
+          $height: 420px,
+          $border-radius: 7px,
+          $padding: 14px 10px 6px 10px,
+          $cursor: auto
+        );
+        overflow-y: scroll;
+        #topics {
+          @include _main(
+            $font_s: 14px,
+            $position: relative,
+            $width: 100%,
+            $margin: 0 0 20px 0
+          );
+          font-weight: 550;
+          &::after {
+            content: "";
+            @include _main(
+              $position: absolute,
+              $top: 29px,
+              $left: -10px,
+              $width: 100%,
+              $height: 1px,
+              $back-color: rgb(198, 198, 198)
+            );
+          }
+          svg {
+            @include _main($font_s: 14px);
+          }
+        }
+        #note_line {
+          @include _main($font_s: 16px, $color: $fourth_color);
+          font-weight: 700;
+        }
+        .info {
+          flex-direction: column;
+          @include _main($display: flex, $width: 100%, $gap: 20px);
+          .info_short {
+            flex-direction: row;
+
+            @include _main($display: flex, $width: 100%, $gap: 15px);
+
+            img {
+              @include _main(
+                $width: 100px,
+                $height: 75px,
+                $object_f: cover,
+                $cursor: pointer,
+                $border-radius: 4px
+              );
+            }
+            .info_right {
+              flex-direction: column;
+              @include _main($display: flex, $justify-content: space-evenly);
+              p {
+                @include _main(
+                  $font_s: 12px,
+                  $cursor: pointer,
+                  $margin: 0 0 2px 0
+                );
+                font-weight: 700;
+                &:hover {
+                  text-decoration: underline;
+                  @include _main($color: $nine_color);
+                }
+              }
+              span {
+                @include _main(
+                  $font_s: 12px,
+                  $color: $nine_color,
+                  $cursor: pointer
+                );
+              }
+            }
+          }
+        }
+      }
+      /* width */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #c4c4c4;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
 
     #sign_in {
       outline: none;

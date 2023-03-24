@@ -1,7 +1,12 @@
 import React from "react";
+import HotNews from "./HotNews/HotNews";
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <main>
+      <HotNews />
+    </main>
+  );
 };
 
 export default Home;

@@ -1,0 +1,98 @@
+@import "../../../../Scss/Style.scss";
+
+#quick_links {
+  @include _main(
+    $margin: 5px 0,
+    $back-color: #00000007,
+    $display: flex,
+    $align-items: center,
+    $padding: 10px 0
+  );
+
+  .left_side {
+    @include _main($display: flex, $align-items: center, $justify-content: end);
+    #hot_news {
+      @include _main(
+        $back-color: $main_color,
+        $margin: 0 0 0 0,
+        $display: flex,
+        $align-items: center,
+        $font_s: 13px,
+        $padding: 4px 7px,
+        $border-radius: 6px,
+        $gap: 1px,
+        // $width: 55%
+      );
+      svg {
+        @include _main($font_s: 13px, $color: $nine_color);
+      }
+    }
+  }
+  .middle_side {
+    #swiper {
+      margin: 3px 0 0 0;
+    }
+    p {
+      @include _main(
+        $margin: 0 0 0 0,
+        $display: flex,
+        $align-items: center,
+        $font_s: 13px,
+        $cursor: pointer
+      );
+      &:hover {
+        @include _main($color: $nine_color);
+        text-decoration: underline;
+      }
+
+      font-weight: 600;
+    }
+    .swiper-pagination-bullet {
+      display: none;
+    }
+    .swiper-slide {
+      width: 100%;
+    }
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-button-next {
+      color: black;
+      &::after {
+        content: "next";
+        font-size: 20px;
+      }
+    }
+  }
+  .right_side {
+    @include _main(
+      $display: flex,
+      $align-items: center,
+      $justify-content: end,
+      $gap: 7px
+    );
+    span {
+      @include _main($font_s: 12px, $color: $fourth_color, $margin: 0 2px 0 0);
+      font-weight: 700;
+    }
+    #sign_in {
+      outline: none;
+      font-weight: 600;
+      @include _main(
+        $transition: 0.2s ease-in-out,
+        $font_s: 12px,
+        $color: $fourth_color,
+        $back-color: rgb(221, 221, 221),
+        $padding: 5px 19px,
+        $border-radius: 4px,
+        $border: transparent
+      );
+
+      &:hover {
+        @include _main($back-color: #ff184e, $color: $main_color);
+
+        box-shadow: #ff184e 0px 0px 4px;
+      }
+    }
+  }
+}

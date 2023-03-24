@@ -32,7 +32,7 @@ const Navbar = () => {
     <nav id="nav">
       <div className="container mt-1">
         <div className="row">
-          <div className="col-lg-2 ">
+          <div className="col-2 ">
             <div className="nav_left">
               <div className="img">
                 <img
@@ -49,7 +49,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-7">
+          <div className="col-7">
             <div className="nav_middle">
               <ul>
                 <li id="home">
@@ -432,7 +432,7 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-3 ">
+          <div className="col-3 ">
             <div className="nav_right">
               <button id="sign_in">Sign in</button>
               <ul>

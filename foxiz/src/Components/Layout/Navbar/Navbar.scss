@@ -1,6 +1,8 @@
 @import "../../../Scss/Style.scss";
 
 #nav {
+  @include _main($position: relative);
+  z-index: 1122121;
   .nav_left {
     .img {
       @include _main(
@@ -1330,7 +1332,7 @@
         @include _main(
           $transition: 0.3s ease-in-out,
           $position: absolute,
-          $top: 65px,
+          $top: 43px,
           $left: -247px,
           $back-color: rgb(226, 226, 226),
           $width: 350px,

@@ -13,6 +13,9 @@ import { FiSearch } from "react-icons/fi";
 import DarkMode from "../../DarkMode/DarkMode";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import { NavbarMockTopNews } from "../../Mock/NavbarMock";
+import { NavbarMock } from "../../Mock/NavbarMock";
+import { NavbarMockNotnews } from "../../Mock/NavbarMock";
 const Navbar = () => {
   const [search, setSearch] = useState(false);
   const [notification, setNotification] = useState(false);
@@ -99,45 +102,18 @@ const Navbar = () => {
                           </p>
 
                           <div className="info">
-                            <div className="info_short">
-                              <img
-                                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p50-150x150.jpg"
-                                alt=""
-                              />
-                              <div className="info_right">
-                                <p>
-                                  White House Reminds Lawmakers not to Travel to
-                                  Afghanistan
-                                </p>
-                                <span>Sep 24, 2021</span>
-                              </div>
-                            </div>
-                            <div className="info_short">
-                              <img
-                                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p54-150x150.jpg"
-                                alt=""
-                              />
-                              <div className="info_right">
-                                <p>
-                                  Two Anti-Lockdown Leaders Arrested as Protests
-                                  Held Across Valinor
-                                </p>
-                                <span>Sep 24, 2021</span>
-                              </div>
-                            </div>
-                            <div className="info_short">
-                              <img
-                                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/b36-150x150.jpg"
-                                alt=""
-                              />
-                              <div className="info_right">
-                                <p>
-                                  National Day Rally 2023: Sacrifice, Effort
-                                  Needed to Preserve Harmony
-                                </p>
-                                <span>Oct 5, 2021</span>
-                              </div>
-                            </div>
+                            {NavbarMock &&
+                              NavbarMock.slice(0, 3).map((el) => {
+                                return (
+                                  <div className="info_short">
+                                    <img src={el.imgSrc} alt="" />
+                                    <div className="info_right">
+                                      <p>{el.shortinfo}</p>
+                                      <span>{el.time}</span>
+                                    </div>
+                                  </div>
+                                );
+                              })}
                           </div>
                         </div>
                         <div className="col-lg-4 right_side">
@@ -145,35 +121,15 @@ const Navbar = () => {
                             <BsClock style={{ color: "red" }} /> Latest News
                           </p>
                           <div className="info">
-                            <div className="info_right">
-                              <p>
-                                Bad Credit Shouldn’t Affect Health Insurance,
-                                Experts Say
-                              </p>
-                              <span>Nov 2, 2021</span>
-                            </div>
-
-                            <div className="info_right">
-                              <p>
-                                What Is Women’s Equality Day and Why Is It
-                                Celebrated?
-                              </p>
-                              <span>Sep 24, 2021</span>
-                            </div>
-
-                            <div className="info_right">
-                              <p>
-                                New Census Data Will Shake Up Alabama Politics
-                              </p>
-                              <span>Sep 25, 2021</span>
-                            </div>
-                            <div className="info_right">
-                              <p>
-                                The States Braces for Protests Over New COVID
-                                Rules
-                              </p>
-                              <span>Nov 3, 2021</span>
-                            </div>
+                            {NavbarMockTopNews &&
+                              NavbarMockTopNews.slice(0, 3).map((el) => {
+                                return (
+                                  <div className="info_right">
+                                    <p>{el.shortinfo_latestnews}</p>
+                                    <span>{el.time}</span>
+                                  </div>
+                                );
+                              })}
                           </div>
                         </div>
                       </div>
@@ -491,82 +447,21 @@ const Navbar = () => {
                           <BsClock style={{ color: "red" }} /> Latest News
                         </p>
                         <div className="info">
-                          <div className="info_short">
-                            <img
-                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p50-150x150.jpg"
-                              alt=""
-                            />
-                            <div className="info_right">
-                              <p>
-                                White House Reminds Lawmakers not to Travel to
-                                Afghanistan
-                              </p>
-                              <span>Technology</span>
-                            </div>
-                          </div>
-                          <div className="info_short">
-                            <img
-                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p54-150x150.jpg"
-                              alt=""
-                            />
-                            <div className="info_right">
-                              <p>
-                                Two Anti-Lockdown Leaders Arrested as Protests
-                                Held Across Valinor
-                              </p>
-                              <span>Entertainment</span>
-                            </div>
-                          </div>
-                          <div className="info_short">
-                            <img
-                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/b36-150x150.jpg"
-                              alt=""
-                            />
-                            <div className="info_right">
-                              <p>
-                                National Day Rally 2023: Sacrifice, Effort
-                                Needed to Preserve Harmony
-                              </p>
-                              <span>Business</span>
-                            </div>
-                          </div>
-                          <div className="info_short">
-                            <img
-                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/b19-150x150.jpg"
-                              alt=""
-                            />
-                            <div className="info_right">
-                              <p>
-                                The impact of COVID-19 on The Airport Business
-                              </p>
-                              <span>Business</span>
-                            </div>
-                          </div>
-                          <div className="info_short">
-                            <img
-                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p6-150x150.jpg"
-                              alt=""
-                            />
-                            <div className="info_right">
-                              <p>
-                                Bad Credit Shouldn’t Affect Health Insurance,
-                                Experts Say
-                              </p>
-                              <span>Politics</span>
-                            </div>
-                          </div>
-                          <div className="info_short">
-                            <img
-                              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t12-150x150.jpg"
-                              alt=""
-                            />
-                            <div className="info_right">
-                              <p>
-                                Apple Watch Series 9 Reportedly Has Flat Sides
-                                and Bigger Screens
-                              </p>
-                              <span>Technology</span>
-                            </div>
+                          {NavbarMockNotnews &&
+                            NavbarMockNotnews.map((el) => {
+                              return (
+                                <div className="info_short">
+                                  <img src={el.imgSrc} alt="" />
+                                  <div className="info_right">
+                                    <p>{el.shortinfo_tech}</p>
+                                    <span>{el.time}</span>
+                                  </div>
+                                </div>
+                              );
+                            })}
+
+                          <div class="spinner-border text-danger" role="status">
+                            <span class="sr-only"></span>
                           </div>
                         </div>
                       </div>

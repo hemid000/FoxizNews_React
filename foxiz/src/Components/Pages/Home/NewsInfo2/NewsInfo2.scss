@@ -1,0 +1,209 @@
+@import "../../../../Scss/Style.scss";
+
+#NewsInfo2 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  .all {
+    border-radius: 6px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .left_side {
+    @include _main(
+      $display: flex,
+      $align-items: center,
+      $gap: 4px,
+      $padding: 0 20px
+    );
+    .first {
+      @include _main($width: 80%);
+      p {
+        margin: 0;
+      }
+      #info {
+        font-weight: 650;
+        font-size: 17px;
+
+        &:hover {
+          text-decoration: underline;
+          color: red;
+          cursor: pointer;
+        }
+      }
+      .box {
+        display: inline-block;
+        transform: matrix(1, 0, -0.5, 1, 0, 0);
+        border-radius: 50%;
+
+        #line {
+          @include _main(
+            $font_s: 14px,
+            $padding: 4px 7px,
+            $back-color: #56ca71,
+            $margin: 15px 0,
+            $color: $main_color,
+            $transition: 0.3s ease-in-out,
+            $cursor: pointer
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #56ca71 0px 5px 15px;
+          }
+        }
+      }
+      .down_side {
+        @include _main(
+          $display: flex,
+          $justify-content: space-between,
+          $align-items: center
+        );
+        .down_left {
+          @include _main($display: flex, $align-items: center, $gap: 5px);
+          img {
+            @include _main(
+              $width: 22px,
+              $margin: 16px 0,
+              $height: 22px,
+              $object_f: cover,
+              $border-radius: 11px
+            );
+          }
+          p {
+            @include _main($font_s: 13px, $margin: 0);
+            font-weight: 700;
+          }
+          span {
+            @include _main($font_s: 13px);
+          }
+        }
+      }
+    }
+    .second {
+      img {
+        @include _main(
+          $width: 200px,
+          $height: 120px,
+          $object_f: cover,
+          $cursor: pointer
+        );
+      }
+    }
+  }
+  .right_side {
+    @include _main(
+      $display: flex,
+      $align-items: center,
+      $gap: 4px,
+      $padding: 0 20px
+    );
+    .first {
+      @include _main($width: 80%);
+      p {
+        margin: 0;
+      }
+      #info {
+        font-weight: 650;
+        font-size: 17px;
+
+        &:hover {
+          text-decoration: underline;
+          color: red;
+          cursor: pointer;
+        }
+      }
+      .box {
+        display: inline-block;
+        transform: matrix(1, 0, -0.5, 1, 0, 0);
+        border-radius: 50%;
+
+        #line {
+          @include _main(
+            $font_s: 14px,
+            $padding: 4px 9px,
+            $back-color: #8d80ff,
+            $margin: 15px 0,
+            $color: $main_color,
+            $transition: 0.3s ease-in-out,
+            $cursor: pointer
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #8d80ff 0px 5px 15px;
+          }
+        }
+      }
+      .down_side {
+        @include _main(
+          $display: flex,
+          $justify-content: space-between,
+          $align-items: center
+        );
+        .down_left {
+          @include _main($display: flex, $align-items: center, $gap: 5px);
+          .color {
+            @include _main($display: flex, $gap: 2px, $margin: 6px 0);
+            .col1 {
+              @include _main($width: 20px, $height: 7px, $back-color: red);
+            }
+            .col2 {
+              @include _main($width: 20px, $height: 7px, $back-color: #ff5612);
+            }
+            .col3 {
+              @include _main($width: 20px, $height: 7px, $back-color: #ffa444);
+            }
+            .col4 {
+              @include _main($width: 20px, $height: 7px, $back-color: #a0b339);
+            }
+            .col5 {
+              @include _main($width: 20px, $height: 7px, $back-color: #50a735);
+            }
+          }
+          p {
+            @include _main($font_s: 12px, $margin: 0);
+          }
+          span {
+            @include _main($font_s: 13px);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .second {
+      img {
+        @include _main(
+          $width: 200px,
+          $height: 120px,
+          $object_f: cover,
+          $cursor: pointer
+        );
+      }
+    }
+  }
+  .middle {
+    p {
+      text-align: center;
+      font-size: 14px;
+      color: rgb(86, 86, 86);
+      margin: 20px 0;
+    }
+    .sponsor {
+      @include _main(
+        $display: flex,
+        $align-items: center,
+        $justify-content: center
+      );
+      @include _main($display: flex, $width: 100%);
+
+      img {
+        @include _main(
+          $width: 100%,
+          $margin: 0px 0,
+          $cursor: pointer,
+          $height: 95px,
+          $object_f: contain
+        );
+      }
+    }
+  }
+}

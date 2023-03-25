@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../NewsInfo/NewsInfo.scss";
-import { BsBookmark } from "react-icons/bs";
+import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
 
-const NewsInfo = () => {
+const NewsInfo = (probs) => {
+  const notify = probs.notify;
+  const handleClick = probs.handleClick;
+  const handleClick2 = probs.handleClick2;
+  const handleClick3 = probs.handleClick3;
+  const handleClick4 = probs.handleClick4;
+  const handleClick5 = probs.handleClick5;
+  const handleClick6 = probs.handleClick6;
+  const save = probs.save;
+  const unsave = probs.unsave;
+  const save2 = probs.save2;
+  const unsave2 = probs.unsave2;
+  const save3 = probs.save3;
+  const unsave3 = probs.unsave3;
+
   return (
     <section id="NewsInfo">
       <div className="container">
@@ -33,8 +47,20 @@ const NewsInfo = () => {
                     />
                     <p>Taylor Emma</p>
                     <span>Oct 1, 2021</span>
-                  </div>
-                  <BsBookmark style={{ cursor: "pointer" }} />
+                  </div>{" "}
+                  {save && (
+                    <div onClick={handleClick} className="">
+                      <BsBookmark
+                        onClick={notify}
+                        style={{ cursor: "pointer" }}
+                      />
+                    </div>
+                  )}
+                  {unsave && (
+                    <div onClick={handleClick2} className="">
+                      <BsBookmarkFill style={{ cursor: "pointer" }} />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -65,7 +91,19 @@ const NewsInfo = () => {
                         <p>Taylor Emma</p>
                         <span>Oct 1, 2021</span>
                       </div>
-                      <BsBookmark style={{ cursor: "pointer" }} />
+                      {save2 && (
+                        <div onClick={handleClick3} className="">
+                          <BsBookmark
+                            onClick={notify}
+                            style={{ cursor: "pointer" }}
+                          />
+                        </div>
+                      )}
+                      {unsave2 && (
+                        <div onClick={handleClick4} className="">
+                          <BsBookmarkFill style={{ cursor: "pointer" }} />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -92,7 +130,21 @@ const NewsInfo = () => {
                         <p>Taylor Emma</p>
                         <span>Oct 1, 2021</span>
                       </div>
-                      <BsBookmark style={{ cursor: "pointer" }} />
+
+                      <div onClick={handleClick5} className="">
+                        {save3 && (
+                          <BsBookmark
+                            onClick={notify}
+                            style={{ cursor: "pointer" }}
+                          />
+                        )}
+                      </div>
+
+                      {unsave3 && (
+                        <div onClick={handleClick6} className="">
+                          <BsBookmarkFill style={{ cursor: "pointer" }} />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

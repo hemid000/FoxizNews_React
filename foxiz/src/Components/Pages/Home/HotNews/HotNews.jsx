@@ -65,7 +65,7 @@ const HotNews = () => {
                 // }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper"
+                className="Swiper_hotnews"
               >
                 <SwiperSlide>
                   <p>How My Phone’s Most Annoying Feature Saved My Life</p>

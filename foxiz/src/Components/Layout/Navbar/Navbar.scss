@@ -93,7 +93,7 @@
           @include _main(
             $width: 100%,
             $border-radius: 9px,
-            $back-color: rgb(234, 234, 234),
+            $back-color: $main_color,
             $align-items: start,
             $display: flex,
             $margin: 0px,
@@ -197,7 +197,7 @@
           $transform: translateY(16px),
           $padding: 10px,
           $cursor: auto,
-          $back-color: rgb(204, 204, 204)
+          $back-color: $main_color
         );
 
         .left_side {
@@ -438,7 +438,7 @@
           $transform: translateY(16px),
           $padding: 10px,
           $cursor: auto,
-          $back-color: rgb(204, 204, 204)
+          $back-color: $main_color
         );
 
         .article {
@@ -584,7 +584,8 @@
           @include _main(
             $width: 100%,
             $border-radius: 9px,
-            $back-color: rgb(234, 234, 234),
+            $back-color: $main_color,
+
             $align-items: start,
             $display: flex,
             $margin: 0px,
@@ -704,7 +705,8 @@
             @include _main(
               $width: 100%,
               $border-radius: 9px,
-              $back-color: rgb(234, 234, 234),
+              $back-color: $main_color,
+
               $align-items: start,
               $display: flex,
               $margin: 0px,
@@ -765,7 +767,8 @@
             @include _main(
               $width: 100%,
               $border-radius: 9px,
-              $back-color: rgb(234, 234, 234),
+              $back-color: $main_color,
+
               $align-items: start,
               $display: flex,
               $margin: 0px,
@@ -826,7 +829,8 @@
             @include _main(
               $width: 100%,
               $border-radius: 9px,
-              $back-color: rgb(234, 234, 234),
+              $back-color: $main_color,
+
               $align-items: start,
               $display: flex,
               $margin: 0px,
@@ -886,7 +890,8 @@
             @include _main(
               $width: 100%,
               $border-radius: 9px,
-              $back-color: rgb(234, 234, 234),
+              $back-color: $main_color,
+
               $align-items: start,
               $display: flex,
               $margin: 0px,
@@ -946,7 +951,8 @@
             @include _main(
               $width: 100%,
               $border-radius: 9px,
-              $back-color: rgb(234, 234, 234),
+              $back-color: $main_color,
+
               $align-items: start,
               $display: flex,
               $margin: 0px,
@@ -1006,7 +1012,8 @@
             @include _main(
               $width: 100%,
               $border-radius: 9px,
-              $back-color: rgb(234, 234, 234),
+              $back-color: $main_color,
+
               $align-items: start,
               $display: flex,
               $margin: 0px,
@@ -1098,7 +1105,8 @@
           @include _main(
             $width: 100%,
             $border-radius: 9px,
-            $back-color: rgb(234, 234, 234),
+            $back-color: $main_color,
+
             $align-items: start,
             $display: flex,
             $margin: 0px,

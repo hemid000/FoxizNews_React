@@ -105,7 +105,7 @@ const Navbar = () => {
                             {NavbarMock &&
                               NavbarMock.slice(0, 3).map((el) => {
                                 return (
-                                  <div className="info_short">
+                                  <div key={el.id} className="info_short">
                                     <img src={el.imgSrc} alt="" />
                                     <div className="info_right">
                                       <p>{el.shortinfo}</p>
@@ -124,7 +124,7 @@ const Navbar = () => {
                             {NavbarMockTopNews &&
                               NavbarMockTopNews.slice(0, 3).map((el) => {
                                 return (
-                                  <div className="info_right">
+                                  <div key={el.id} className="info_right">
                                     <p>{el.shortinfo_latestnews}</p>
                                     <span>{el.time}</span>
                                   </div>
@@ -450,7 +450,7 @@ const Navbar = () => {
                           {NavbarMockNotnews &&
                             NavbarMockNotnews.map((el) => {
                               return (
-                                <div className="info_short">
+                                <div key={el.id} className="info_short">
                                   <img src={el.imgSrc} alt="" />
                                   <div className="info_right">
                                     <p>{el.shortinfo_tech}</p>

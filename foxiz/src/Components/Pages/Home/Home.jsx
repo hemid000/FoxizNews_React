@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import HotNews from "./HotNews/HotNews";
 import NewsInfo from "./NewsInfo/NewsInfo";
 import NewsInfo2 from "./NewsInfo2/NewsInfo2";
-import { ToastContainer, toast } from "react-toastify";
+import Editornews from "./Editor's Pick/Editornews";
 import "react-toastify/dist/ReactToastify.css";
 const Home = () => {
   const notify = () => toast("Saved!");
@@ -58,6 +59,7 @@ const Home = () => {
         unsave3={unsave3}
       />
       <NewsInfo2 />
+      <Editornews />
       <ToastContainer />
     </main>
   );

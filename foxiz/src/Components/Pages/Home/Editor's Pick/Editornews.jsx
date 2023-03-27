@@ -1,7 +1,9 @@
 import React from "react";
 import "../Editor's Pick/News.scss";
-import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
+import { BsBookmark, BsBookmarkFill, BsSun } from "react-icons/bs";
 import { HomeMock } from "../../../Mock/HomeMock";
+import { TiWeatherCloudy } from "react-icons/ti";
+import { Follow } from "../../../Mock/HomeMock";
 const Editornews = () => {
   return (
     <section id="editor_news">
@@ -108,6 +110,110 @@ const Editornews = () => {
                       </div>
                     );
                   })}
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 ">
+            <div className="cart_forecast">
+              <div className="row forecast">
+                <div className="box_in">
+                  {" "}
+                  <div className="box">
+                    <p id="line">Weather</p>
+                  </div>
+                </div>
+
+                <div className="col-lg-6">
+                  <div className="weather">
+                    <TiWeatherCloudy
+                      style={{ fontSize: "66px", color: "#bebebe" }}
+                    />
+                    <p>New York</p>
+                    <span>Sunny</span>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex align-items-center">
+                  <div className="weather_info">
+                    <div className="left_side">
+                      <p>4</p>
+                      <span>°C</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row fore_info">
+                <div className="info">
+                  <div className="box">
+                    <p id="line">Thu</p>
+                  </div>
+                  <BsSun />
+                  <div className="left_side">
+                    <p>4</p>
+                    <span>°C</span>
+                  </div>
+                </div>
+                <div className="info">
+                  <div className="box">
+                    <p id="line">Fri</p>
+                  </div>
+                  <BsSun />
+                  <div className="left_side">
+                    <p>4</p>
+                    <span>°C</span>
+                  </div>
+                </div>
+                <div className="info">
+                  <div className="box">
+                    <p id="line">Sat</p>
+                  </div>
+                  <BsSun />
+                  <div className="left_side">
+                    <p>4</p>
+                    <span>°C</span>
+                  </div>
+                </div>
+                <div className="info">
+                  <div className="box">
+                    <p id="line">Sun</p>
+                  </div>
+                  <BsSun />
+                  <div className="left_side">
+                    <p>4</p>
+                    <span>°C</span>
+                  </div>
+                </div>
+                <div className="info">
+                  <div className="box">
+                    <p id="line">Mon</p>
+                  </div>
+                  <BsSun />
+                  <div className="left_side">
+                    <p>4</p>
+                    <span>°C</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="follow">
+              <div className="container mt-2">
+                <p id="editor_p">Follow Us</p>
+                <div className="row g-2 mt-3">
+                  {Follow &&
+                    Follow.slice(0, 4).map((el) => {
+                      return (
+                        <div className="col-lg-6">
+                          <div className="cart">
+                            {el.logo}
+                            <div className="box">
+                              <p>{el.follow_info}</p>
+                              <span>{el.like}</span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                </div>
               </div>
             </div>
           </div>

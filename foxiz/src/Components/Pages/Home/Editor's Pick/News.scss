@@ -348,4 +348,199 @@
       }
     }
   }
+  .cart_forecast {
+    padding: 15px 14px;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 15px 0;
+    .forecast {
+      .box {
+        @include _main(
+          $display: inline-block,
+          $border-radius: 50%,
+          $cursor: pointer
+        );
+
+        #line {
+          @include _main(
+            $font_s: 15px,
+            $padding: 4px 26px,
+            $back-color: red,
+            $margin: 15px 0,
+            $color: $main_color,
+            $transition: 0.3s ease-in-out,
+            $cursor: pointer,
+            $border-radius: 4px
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: red 0px 5px 15px;
+          }
+        }
+      }
+      .weather {
+        @include _main($display: flex, $align-items: center);
+        flex-direction: column;
+        p {
+          @include _main($font_s: 24px, $margin: 0);
+          font-weight: 700;
+        }
+        span {
+          p {
+            @include _main(
+              $display: block,
+              $font_s: 12px,
+              $position: absolute,
+              $top: 0px,
+              $left: 0px
+            );
+            font-weight: 700;
+          }
+        }
+      }
+      .weather_info {
+        .left_side {
+          @include _main($position: relative);
+          p {
+            @include _main($font_s: 50px, $margin: 0);
+            font-weight: 700;
+          }
+          span {
+            @include _main(
+              $display: block,
+              $position: absolute,
+              $top: 11px,
+              $left: 55px
+            );
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .fore_info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .info {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .box {
+          @include _main(
+            $display: inline-block,
+            $border-radius: 50%,
+            $cursor: pointer
+          );
+
+          #line {
+            @include _main(
+              $font_s: 12px,
+              $padding: 4px 10px,
+              $back-color: rgb(232, 232, 232),
+              $margin: 15px 0,
+              $transition: 0.3s ease-in-out,
+              $cursor: pointer,
+              $border-radius: 8px
+            );
+            text-decoration: none;
+          }
+        }
+        .left_side {
+          @include _main($position: relative);
+          p {
+            @include _main($font_s: 19px, $margin: 0);
+            font-weight: 700;
+          }
+          span {
+            @include _main(
+              $font_s: 10px,
+              $display: block,
+              $position: absolute,
+              $top: -2px,
+              $left: 39px
+            );
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .follow {
+    cursor: pointer;
+    #editor_p {
+      @include _main(
+        $font_s: 18px,
+        $margin: 23px 0 0 28px,
+        $position: relative,
+        $display: block
+      );
+      font-weight: 650;
+
+      &::after {
+        @include _main(
+          $top: 2px,
+          $left: 98px,
+          $width: 3px,
+          $height: 22px,
+          $position: absolute,
+          $back-color: $nine-color
+        );
+        content: "";
+        transform: matrix(1, 0, -0.3, 1, 0, 0);
+      }
+      &::before {
+        @include _main(
+          $top: 2px,
+          $left: -17px,
+          $width: 3px,
+          $height: 22px,
+          $position: absolute,
+          $back-color: $nine-color
+        );
+        content: "";
+        transform: matrix(1, 0, -0.3, 1, 0, 0);
+      }
+    }
+    .cart {
+      @include _main(
+        $display: flex,
+        $align-items: center,
+        $border: 1px solid rgb(210, 210, 210),
+        $padding: 10px,
+        $gap: 4px,
+        $opacity: 0.8,
+        $border-radius: 4px,
+        $transition: 0.2s ease-in-out
+      );
+    }
+
+    .box {
+      @include _main($display: flex);
+      flex-direction: column;
+      p {
+        @include _main($font_s: 14px, $margin: 0);
+        font-weight: 700;
+      }
+      span {
+        @include _main($font_s: 11px);
+      }
+    }
+    &:hover {
+      @include _main($opacity: 0.7);
+      .cart {
+        &:hover {
+          background-color: blue;
+          opacity: 1;
+          color: white;
+          box-shadow: -1px 3px 28px 0px blue;
+          border: 1px solid transparent;
+          transform: translateY(-3px);
+          svg {
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
 }

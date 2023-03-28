@@ -1,0 +1,236 @@
+@import "../../../../Scss/Style.scss";
+
+#mostread {
+  margin: 20px 0;
+  padding: 50px 20px;
+  background-image: linear-gradient(360deg, #12151a 0%, #172234 100%);
+  color: white;
+  #editor_p {
+    @include _main(
+      $font_s: 22px,
+      $margin: 0px 0 31px 28px,
+      $position: relative,
+      $display: block,
+      $color: $main_color
+    );
+    font-weight: 700;
+
+    &::after {
+      @include _main(
+        $top: 6px,
+        $left: 120px,
+        $width: 3px,
+        $height: 22px,
+        $position: absolute,
+        $back-color: $nine-color
+      );
+      content: "";
+      transform: matrix(1, 0, -0.3, 1, 0, 0);
+    }
+    &::before {
+      @include _main(
+        $top: 7px,
+        $left: -20px,
+        $width: 3px,
+        $height: 22px,
+        $position: absolute,
+        $back-color: $nine-color
+      );
+      content: "";
+      transform: matrix(1, 0, -0.3, 1, 0, 0);
+    }
+  }
+
+  .left_side {
+    .img {
+      @include _main(
+        $width: 100%,
+        $height: 405px,
+        $border-radius: 5px,
+        $position: relative,
+        $overflow: hidden
+      );
+      img {
+        @include _main($object_f: cover, $width: 100%, $height: 100%);
+      }
+
+      .short_info {
+        background: rgb(255, 247, 231);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.025) 0%,
+          rgba(0, 0, 0, 0.882) 63%
+        );
+
+        @include _main(
+          $width: 100%,
+          $padding: 0 25px,
+          $bottom: 0px,
+          $left: 0px,
+          $position: absolute,
+          $color: $main_color
+        );
+        .box {
+          display: inline-block;
+          transform: matrix(1, 0, -0.5, 1, 0, 0);
+          border-radius: 50%;
+        }
+        #line {
+          @include _main(
+            $font_s: 12px,
+            $padding: 4px 10px,
+            $back-color: #ff6552,
+            $margin: 0,
+            $transition: 0.3s ease-in-out
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #ff6552 0px 5px 15px;
+          }
+        }
+        p {
+          @include _main($font_s: 28px, $margin: 12px 0, $cursor: pointer);
+          font-weight: 700;
+          &:hover {
+            text-decoration: red underline;
+          }
+        }
+        span {
+          @include _main($font_s: 13px, $margin: 12px 0);
+        }
+        .down_side {
+          @include _main(
+            $display: flex,
+            $justify-content: space-between,
+            $align-items: center
+          );
+          .down_left {
+            @include _main($display: flex, $align-items: center, $gap: 3px);
+            img {
+              @include _main(
+                $width: 22px,
+                $margin: 16px 0,
+                $height: 22px,
+                $object_f: cover,
+                $border-radius: 11px
+              );
+            }
+            p {
+              @include _main($font_s: 13px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .cart {
+    .img {
+      @include _main(
+        $width: 100%,
+        $height: 287px,
+        $cursor: pointer,
+        $position: relative
+      );
+      img {
+        @include _main(
+          $width: 100%,
+          $height: 100%,
+          $object_f: cover,
+          $cursor: pointer,
+          $border-radius: 5px
+        );
+      }
+      .box {
+        @include _main(
+          $position: absolute,
+          $display: inline-block,
+          $border-radius: 50%,
+          $bottom: -11px,
+          $left: -3px,
+          $cursor: pointer
+        );
+        transform: matrix(1, 0, -0.4, 1, 0, 0);
+
+        #line {
+          @include _main(
+            $font_s: 12px,
+            $padding: 4px 7px,
+            $back-color: #56ca71,
+            $margin: 15px 0,
+            $color: $main_color,
+            $transition: 0.3s ease-in-out,
+            $cursor: pointer
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #56ca71 0px 5px 15px;
+          }
+        }
+      }
+    }
+    #info {
+      font-weight: 650;
+      font-size: 15px;
+      margin-top: 10px;
+
+      &:hover {
+        text-decoration: 2px red underline;
+        cursor: pointer;
+      }
+    }
+    .down_side {
+      @include _main(
+        $display: flex,
+        $justify-content: space-between,
+        $align-items: center
+      );
+      .down_left {
+        @include _main($display: flex, $align-items: center, $gap: 5px);
+        p {
+          @include _main($font_s: 14px, $margin: 0);
+        }
+        span {
+          @include _main($font_s: 13px);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .info {
+    flex-direction: column;
+    @include _main($display: flex, $width: 100%, $gap: 20px);
+    .info_short {
+      flex-direction: row;
+
+      @include _main($display: flex, $width: 100%, $gap: 15px);
+
+      img {
+        @include _main(
+          $width: 45%,
+          $height: 97px,
+          $object_f: cover,
+          $cursor: pointer,
+          $border-radius: 4px
+        );
+      }
+      .info_right {
+        flex-direction: column;
+        @include _main($display: flex, $justify-content: space-evenly);
+        p {
+          @include _main($font_s: 14px, $cursor: pointer);
+          font-weight: 700;
+          &:hover {
+            text-decoration: 2px red underline;
+          }
+        }
+        span {
+          @include _main($font_s: 12px, $color: rgb(129, 129, 129));
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,6 @@ import "swiper/swiper.min.css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import required modules
 const HotNews = () => {
   return (
     <section id="quick_links">

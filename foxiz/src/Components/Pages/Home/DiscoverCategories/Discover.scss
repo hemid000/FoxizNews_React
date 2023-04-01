@@ -40,6 +40,7 @@
   }
 
   .cart {
+    transition: 0.3s ease-in-out;
     .img {
       @include _main(
         $width: 100%,
@@ -53,11 +54,13 @@
       }
     }
     .downside {
+      border-radius: 4px;
       @include _main(
         $display: flex,
         $align-items: center,
         $justify-content: space-between,
-        $padding: 0 10px
+        $padding: 0 10px 15px 10px,
+        $back-color: #e2e2e2
       );
       .left_side {
         @include _main($display: flex);
@@ -92,6 +95,10 @@
           }
         }
       }
+    }
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 11px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 1px 10px -13px;
     }
   }
 

@@ -7,6 +7,7 @@ import Editornews from "./Editor's Pick/Editornews";
 import "react-toastify/dist/ReactToastify.css";
 import MostRead from "./MostRead/MostRead";
 import Discover from "./DiscoverCategories/Discover";
+import Latest_news from "./Latest News/Latest_news";
 
 const Home = () => {
   const notify = () => toast("Saved!");
@@ -65,6 +66,7 @@ const Home = () => {
       <Editornews />
       <MostRead />
       <Discover />
+      <Latest_news />
       <ToastContainer />
     </main>
   );

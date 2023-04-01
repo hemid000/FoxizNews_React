@@ -153,3 +153,165 @@ export const Discover_Categories = [
     info: "14 Articles",
   },
 ];
+
+//Latest news
+export const Latest_news_home = [
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "Corsair HS80 RGB Wireless Gaming Headset Review",
+    infospan:
+      "As for quality, the HS80's provided clear-cut sound with adequate bass and…",
+    name: "Jacob",
+    time: "Sep 19, 2021",
+    type: "Technology",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/t102-615x410.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "18 Top Fall Fashion Trends from New York Fashion",
+    infospan:
+      "All of the Best Looks From New York Fashion Week Fall/Winter 2021.…",
+    name: "Jacob",
+    time: " Sep 9, 2021",
+    type: "Technology",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/f108-330x220.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "Apple iMac M1 Review: the All-In-One for Almost Everyone",
+    infospan: "The iMac weighs under 10 pounds, so it's a cinch to move…",
+    name: "Jacob",
+    time: "Sep 19, 2021",
+    type: "Technology",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/r119-330x220.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "Potential HIV Vaccine Falls Short in Mid-stage Study",
+    infospan: "We are just an advanced breed of monkeys on a minor planet…",
+    name: "Jacob",
+    time: "Sep 19, 2021",
+    type: "Health",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/m16-330x220.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "Google’s Self-Designed Tensor Chips will Power Its Next",
+    infospan:
+      "Modern technology has become a total phenomenon for civilization, the defining force…",
+    name: "Jacob",
+    time: "Sep 8, 2021",
+    type: "Technology",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t34-330x220.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "Sony WF-10XM4: Headphones Are Our Absolute Favorite",
+    infospan:
+      "Modern technology has become a total phenomenon for civilization, the defining force…",
+    name: "Jacob",
+    time: "Sep 19, 2021",
+    type: "Technology",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t37-330x220.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "Medicaid Expansion Improves Hypertension and Diabetes Control",
+    infospan: "We are just an advanced breed of monkeys on a minor planet…",
+    name: "Jacob",
+    time: "Sep 5, 2021",
+    type: "Health",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/m5-330x220.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "Hands-On With the iPhone 13, Pro, Max, and Mini",
+    infospan:
+      "Modern technology has become a total phenomenon for civilization, the defining force…",
+    name: "Jacob",
+    time: "Sep 4, 2021",
+    type: "Technology",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/g24-330x220.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc1:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+
+    info: "European Stocks Hold Firm Near Record Highs",
+    infospan:
+      "The real test is not whether you avoid this failure, because you…",
+    name: "Jacob",
+    time: "Sep 4, 2021",
+    type: "Technology",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/b32-330x220.jpg",
+  },
+];
+
+// short sponsor info
+
+export const Sponsort_info = [
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t37-200x135.jpg",
+
+    info: "Sony WF-10XM4: Headphones Are Our Absolute Favorite",
+    sponsor: "Sponsored by",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/sponsor-1.png",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/v1-200x135.jpg",
+
+    info: "The Top Secret Sights You Must See in Europe",
+    sponsor: "Sponsored by",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/sponsor-4.png",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/e29-200x135.jpg",
+
+    info: "10+ Pics That Prove Jennifer Is a Timeless Beauty",
+    sponsor: "Sponsored by",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/sponsor-2.png",
+  },
+];

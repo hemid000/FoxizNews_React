@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MostRead from "./MostRead/MostRead";
 import Discover from "./DiscoverCategories/Discover";
 import Latest_news from "./Latest News/Latest_news";
+import PoliticsInfo from "./Politics/PoliticsInfo";
 
 const Home = () => {
   const notify = () => toast("Saved!");
@@ -67,6 +68,7 @@ const Home = () => {
       <MostRead />
       <Discover />
       <Latest_news />
+      <PoliticsInfo />
       <ToastContainer />
     </main>
   );

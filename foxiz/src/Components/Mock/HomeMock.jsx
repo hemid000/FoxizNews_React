@@ -315,3 +315,59 @@ export const Sponsort_info = [
       "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/sponsor-2.png",
   },
 ];
+
+// mock data for Politics news info
+
+export const Politics = [
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p60-330x220.jpg",
+    tag: "POLITICS",
+    shortinfo: "What Is Women’s Equality Day and Why Is It Celebrated?",
+    name: "Taylor Emma",
+    time: "Aug 31, 2021",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p8-330x220.jpg",
+    tag: "POLITICS",
+    shortinfo: "New Census Data Will Shake Up Alabama Politics",
+    name: "Taylor Emma",
+    time: "Aug 30, 2021",
+  },
+];
+export const Politics2 = [
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p6-860x573.jpg",
+    tag: "POLITICS",
+    shortinfo: "Bad Credit Shouldn’t Affect Health Insurance, Experts Say",
+    short_span_info:
+      "Good web design has visual weight, is optimized for various devices, and has content that is prioritized for the medium. The most important elements of a web page should have…",
+    name: "Taylor Emma",
+    time: "Sep 19, 2021",
+  },
+];
+export const Politics3 = [
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p11-330x220.jpg",
+    tag: "POLITICS",
+    shortinfo: "The States Braces for Protests Over New COVID Rules",
+    name: "Taylor Emma",
+    time: "Aug 29, 2021",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/p13-330x220.jpg",
+    tag: "POLITICS",
+    shortinfo: "One Day Noticed, Politicians Wary Resignation Timetable",
+    name: "Taylor Emma",
+    time: "Aug 28, 2021",
+  },
+];

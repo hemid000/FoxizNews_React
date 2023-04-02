@@ -1,0 +1,249 @@
+@import "../../../../Scss/Style.scss";
+
+#homeblog {
+  #editor_p {
+    @include _main(
+      $font_s: 22px,
+      $margin: 0px 0 31px 28px,
+      $position: relative,
+      $display: block
+    );
+    font-weight: 700;
+
+    &::after {
+      @include _main(
+        $top: 6px,
+        $left: 170px,
+        $width: 3px,
+        $height: 22px,
+        $position: absolute,
+        $back-color: $nine-color
+      );
+      content: "";
+      transform: matrix(1, 0, -0.3, 1, 0, 0);
+    }
+    &::before {
+      @include _main(
+        $top: 7px,
+        $left: -6px,
+        $width: 3px,
+        $height: 22px,
+        $position: absolute,
+        $back-color: $nine-color
+      );
+      content: "";
+      transform: matrix(1, 0, -0.3, 1, 0, 0);
+    }
+  }
+  .right_side {
+    @include _main(
+      $display: flex,
+      $align-items: center,
+      $gap: 4px,
+      $padding: 0 20px
+    );
+
+    .first {
+      width: 40%;
+      .img {
+        @include _main(
+          $width: 100%,
+          $height: 150%,
+          $cursor: pointer,
+          $position: relative
+        );
+        img {
+          @include _main(
+            $width: 100%,
+            $height: 100%,
+            $object_f: cover,
+            $cursor: pointer,
+            $border-radius: 5px
+          );
+        }
+        .box {
+          @include _main(
+            $position: absolute,
+            $display: inline-block,
+            $border-radius: 50%,
+            $bottom: -6px,
+            $left: -10px,
+            $cursor: pointer
+          );
+          transform: matrix(1, 0, -0.5, 1, 0, 0);
+
+          #line {
+            @include _main(
+              $font_s: 14px,
+              $padding: 2px 10px,
+              $back-color: #56ca71,
+              $margin: 15px 0,
+              $color: $main_color,
+              $transition: 0.3s ease-in-out,
+              $cursor: pointer
+            );
+            text-decoration: none;
+
+            &:hover {
+              box-shadow: #56ca71 0px 5px 15px;
+            }
+          }
+        }
+      }
+    }
+    .second {
+      padding: 0 15px;
+      width: 60%;
+      p {
+        margin: 0;
+      }
+      #info {
+        font-weight: 650;
+        font-size: 18px;
+
+        &:hover {
+          text-decoration: underline;
+          color: red;
+          cursor: pointer;
+        }
+      }
+      .box {
+        display: inline-block;
+        transform: matrix(1, 0, -0.5, 1, 0, 0);
+        border-radius: 50%;
+
+        #line {
+          @include _main(
+            $font_s: 16px,
+            $padding: 4px 9px,
+            $back-color: #8d80ff,
+            $margin: 15px 0,
+            $color: $main_color,
+            $transition: 0.3s ease-in-out,
+            $cursor: pointer
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #8d80ff 0px 5px 15px;
+          }
+        }
+      }
+      .down_side {
+        @include _main(
+          $display: flex,
+          $justify-content: space-between,
+          $align-items: center
+        );
+      }
+      .down_left {
+        @include _main($display: flex, $align-items: center, $gap: 5px);
+        img {
+          @include _main(
+            $width: 22px,
+            $margin: 16px 0,
+            $height: 22px,
+            $object_f: cover,
+            $border-radius: 11px
+          );
+        }
+        p {
+          @include _main($font_s: 12px, $margin: 0);
+          font-weight: 700;
+        }
+        span {
+          @include _main($font_s: 11px !important);
+          font-weight: 600 !important;
+        }
+      }
+      #infospan {
+        @include _main(
+          $font_s: 14px,
+          $margin: 5px 0,
+          $color: rgb(150, 150, 150),
+          $display: block
+        );
+      }
+    }
+  }
+
+  .left_side {
+    @include _main(
+      $display: flex,
+      $align-items: center,
+      $gap: 4px,
+      $padding: 0 20px
+    );
+    .first {
+      @include _main($width: 80%);
+      p {
+        margin: 0;
+      }
+      #info {
+        font-weight: 650;
+        font-size: 17px;
+
+        &:hover {
+          text-decoration: underline;
+          color: red;
+          cursor: pointer;
+        }
+      }
+
+      .down_side {
+        @include _main(
+          $display: flex,
+          $justify-content: space-between,
+          $align-items: center
+        );
+        .down_left {
+          @include _main($display: flex, $align-items: center, $gap: 5px);
+          img {
+            @include _main(
+              $width: 22px,
+              $margin: 16px 0,
+              $height: 22px,
+              $object_f: cover,
+              $border-radius: 11px
+            );
+          }
+          p {
+            @include _main($font_s: 13px, $margin: 0);
+            font-weight: 700;
+          }
+          span {
+            @include _main($font_s: 13px);
+          }
+        }
+      }
+    }
+  }
+  .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    #more_in {
+      outline: none;
+      font-weight: 600;
+      @include _main(
+        $transition: 0.2s ease-in-out,
+        $font_s: 14px,
+        $color: $fourth_color,
+        $back-color: $main_color,
+        $padding: 5px 19px,
+        $border-radius: 4px,
+        $border: 1px solid rgb(160, 160, 160),
+        $margin: 20px 0
+      );
+
+      &:hover {
+        box-shadow: #ff184e 0px 5px 15px;
+        background-color: #ff184e;
+        color: white;
+
+        border: 1px solid transparent;
+      }
+    }
+  }
+}

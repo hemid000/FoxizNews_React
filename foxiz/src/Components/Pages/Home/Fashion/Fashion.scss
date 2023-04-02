@@ -1,0 +1,181 @@
+@import "../../../../Scss/Style.scss";
+#fashion {
+  margin: 90px 0;
+  #editor_p {
+    @include _main(
+      $font_s: 22px,
+      $margin: 0px 0 31px 28px,
+      $position: relative,
+      $display: block
+    );
+    font-weight: 700;
+
+    &::after {
+      @include _main(
+        $top: 6px,
+        $left: 93px,
+        $width: 3px,
+        $height: 22px,
+        $position: absolute,
+        $back-color: $nine-color
+      );
+      content: "";
+      transform: matrix(1, 0, -0.3, 1, 0, 0);
+    }
+    &::before {
+      @include _main(
+        $top: 7px,
+        $left: -13px,
+        $width: 3px,
+        $height: 22px,
+        $position: absolute,
+        $back-color: $nine-color
+      );
+      content: "";
+      transform: matrix(1, 0, -0.3, 1, 0, 0);
+    }
+  }
+
+  .cart {
+    .img {
+      @include _main(
+        $width: 100%,
+        $height: 231px,
+        $cursor: pointer,
+        $position: relative
+      );
+      img {
+        @include _main(
+          $width: 100%,
+          $height: 100%,
+          $object_f: cover,
+          $cursor: pointer,
+          $border-radius: 5px
+        );
+      }
+      .box {
+        @include _main(
+          $position: absolute,
+          $display: inline-block,
+          $border-radius: 50%,
+          $bottom: -11px,
+          $left: -3px,
+          $cursor: pointer
+        );
+        transform: matrix(1, 0, -0.4, 1, 0, 0);
+
+        #line {
+          @include _main(
+            $font_s: 12px,
+            $padding: 4px 19px,
+            $back-color: #ff557a,
+            $margin: 15px 0,
+            $color: $main_color,
+            $transition: 0.3s ease-in-out,
+            $cursor: pointer
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #ff557a 0px 5px 15px;
+          }
+        }
+      }
+    }
+    #info {
+      font-weight: 650;
+      font-size: 20px;
+      margin: 10px 0 5px 0;
+
+      &:hover {
+        text-decoration: 2px red underline;
+        cursor: pointer;
+        color: red;
+      }
+    }
+    .down_side {
+      @include _main(
+        $display: flex,
+        $justify-content: space-between,
+        $align-items: center
+      );
+      .down_left {
+        @include _main($display: flex, $align-items: center, $gap: 5px);
+        img {
+          @include _main(
+            $width: 20px,
+            $margin: 16px 0,
+            $height: 20px,
+            $object_f: cover,
+            $border-radius: 10px
+          );
+        }
+        p {
+          @include _main($font_s: 13px, $margin: 0);
+        }
+        span {
+          @include _main($font_s: 13px, $margin: 0);
+        }
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    display: none;
+  }
+  .swiper-slide {
+    width: 100%;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+    display: none;
+  }
+  .pagination-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 50px 0 0 0;
+
+    p {
+      &:nth-child(1) {
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        padding: 7px 14px;
+        margin: 0;
+        border: 1px solid transparent;
+        background-color: #f7f7f7;
+        color: rgba(0, 0, 0, 0.634);
+        font-size: 15px;
+        opacity: 0.6;
+      }
+    }
+
+    p {
+      &:nth-child(2) {
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        padding: 7px 14px;
+        margin: 0;
+        border: 1px solid transparent;
+        background-color: #eaeaea;
+        color: black;
+        font-size: 15px;
+        font-weight: 650;
+      }
+    }
+  }
+  .Swiper_hotnews {
+    position: relative;
+    height: 100%;
+  }
+}

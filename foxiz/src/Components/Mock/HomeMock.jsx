@@ -371,3 +371,98 @@ export const Politics3 = [
     time: "Aug 28, 2021",
   },
 ];
+
+//Fashion news
+
+export const Fashionnews = [
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/f104-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "How Fashion Insiders Are Dressing for New York Fashion Week",
+    time: "Sep 9, 2021",
+    name: "Jacob",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/av2-60x60.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/f108-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "18 Top Fall Fashion Trends from New York Fashion",
+    time: "Sep 9, 2021",
+    name: "Taylor Emma",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/emm-60x60.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/f15-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "How To Wear Brown In 15 Easy And Stylish Ways",
+    time: "Aug 29, 2021",
+    name: "Taylor Emma",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/emm-60x60.jpg",
+  },
+
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/f2-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "18 Top Fall Fashion Trends from New York Fashion",
+    time: "Sep 9, 2021",
+    name: "Taylor Emma",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/emm-60x60.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/f13-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "How To Wear Brown In 15 Easy And Stylish Ways",
+    time: "Aug 29, 2021",
+    name: "Taylor Emma",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/emm-60x60.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/f102-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "18 Top Fall Fashion Trends from New York Fashion",
+    time: "Sep 9, 2021",
+    name: "Taylor Emma",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/emm-60x60.jpg",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/f15-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "How To Wear Brown In 15 Easy And Stylish Ways",
+    time: "Aug 29, 2021",
+    name: "Taylor Emma",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/emm-60x60.jpg",
+  },
+
+  {
+    id: Math.floor(Math.random() * 100),
+    imgSrc:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/f108-420x280.jpg",
+    tag: "FASHION",
+    shortinfo: "18 Top Fall Fashion Trends from New York Fashion",
+    time: "Sep 9, 2021",
+    name: "Taylor Emma",
+    imgSrc2:
+      "https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/emm-60x60.jpg",
+  },
+];

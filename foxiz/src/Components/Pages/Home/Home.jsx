@@ -9,6 +9,7 @@ import MostRead from "./MostRead/MostRead";
 import Discover from "./DiscoverCategories/Discover";
 import Latest_news from "./Latest News/Latest_news";
 import PoliticsInfo from "./Politics/PoliticsInfo";
+import Fashion from "./Fashion/Fashion";
 
 const Home = () => {
   const notify = () => toast("Saved!");
@@ -69,6 +70,7 @@ const Home = () => {
       <Discover />
       <Latest_news />
       <PoliticsInfo />
+      <Fashion />
       <ToastContainer />
     </main>
   );

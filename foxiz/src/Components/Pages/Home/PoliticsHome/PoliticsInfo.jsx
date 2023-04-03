@@ -1,5 +1,5 @@
 import React from "react";
-import "../Politics/PoliticsInfo.scss";
+import "./PoliticsInfo.scss";
 // import { BsBookmark, BsBookmarkFill, BsSun } from "react-icons/bs";
 import { Politics, Politics2, Politics3 } from "../../../Mock/HomeMock";
 import image2 from "../../../../Assets/sponser2.webp";

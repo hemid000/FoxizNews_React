@@ -1,0 +1,205 @@
+@import "../../../Scss/Style.scss";
+
+#foot {
+  @include _main(
+    $margin: 30px 0 0 0,
+    $position: relative,
+    $back-color: #00000007,
+    $padding: 20px 40px
+  );
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      @include _main(
+        $color: black,
+        $display: flex,
+        $align-items: center,
+        $gap: 3px,
+        $font_s: 12px,
+        $transition: 0.2s ease-in-out,
+        $cursor: pointer
+      );
+      &:hover {
+        @include _main($color: red);
+      }
+      line-height: 30px;
+      .add_info {
+        @include _main(
+          $back-color: #ff6552,
+          $width: 30px,
+          $height: 19px,
+          $border-radius: 3px,
+          $color: $main_color,
+          $display: flex,
+          $align-items: center,
+          $justify-content: center,
+          $margin: 0 0 0 5px,
+          $font_s: 11px
+        );
+      }
+      .add_info2 {
+        @include _main(
+          $back-color: #56ca71,
+          $width: 30px,
+          $height: 19px,
+          $border-radius: 3px,
+          $color: $main_color,
+          $display: flex,
+          $align-items: center,
+          $justify-content: center,
+          $margin: 0 0 0 5px,
+          $font_s: 11px
+        );
+      }
+    }
+    p {
+      @include _main($color: rgb(101, 101, 101), $margin: 30px 0 14px 0);
+      font-weight: 620;
+    }
+  }
+  .left_side {
+    p {
+      @include _main($width: 60%, $font_s: 15px, $margin: 70px 0 60px 0);
+      font-weight: 650;
+    }
+  }
+
+  &::before {
+    @include _main(
+      $position: absolute,
+      $top: 0,
+      $left: 0,
+      $display: block,
+      $width: 20%,
+      $height: 50%,
+      $opacity: 0.2
+    );
+    z-index: 0;
+    content: "";
+    pointer-events: none;
+
+    // background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    // background-blend-mode: multiply,multiply;
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0.8) 0.75px,
+      transparent 0.75px
+    );
+    // background-image: -gradient(var(--body-fcolor) 0.75px,transparent 0.75px);
+    background-size: 16px 16px;
+  }
+  .right_side {
+    p {
+      @include _main(
+        $color: rgb(101, 101, 101),
+        $font_s: 14px,
+        $margin: 30px 0 14px 0
+      );
+      font-weight: 620;
+    }
+    span {
+      @include _main($color: rgb(101, 101, 101), $font_s: 13px);
+    }
+    form {
+      @include _main($margin: 20px 0, $width: 100%);
+      #inp_sign {
+        @include _main(
+          $font_s: 13px,
+          $width: 70%,
+          $padding: 10px 10px,
+          $border: transparent,
+          $back-color: rgb(223, 223, 223),
+          $color: $fourth_color
+        );
+        outline: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        @media (max-width: 1200px) {
+          width: 68%;
+        }
+      }
+      button {
+        @include _main(
+          $font_s: 13px,
+          $width: 30%,
+          $padding: 10px 10px,
+          $border: none,
+          $back-color: #ff184ee6,
+          $color: $main_color,
+          $margin: 0 0 10px 0
+        );
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        outline: none;
+        @media (max-width: 1200px) {
+          width: 32%;
+        }
+      }
+      label {
+        @include _main($display: inline, $font_s: 11px, $margin: 10px 0 0 10px);
+      }
+    }
+  }
+  .follow {
+    @include _main(
+      $display: flex,
+      $align-items: center,
+      $justify-content: space-between
+    );
+    img {
+      @include _main(
+        $width: 50px,
+        $height: 50px,
+        $object_f: cover,
+        $cursor: pointer
+      );
+    }
+
+    .box {
+      @include _main($display: flex, $align-items: center, $gap: 7px);
+      p {
+        @include _main($font_s: 14px, $margin: 0 5px 0 0);
+      }
+      svg {
+        transition: 0.2s ease-in-out;
+        &:hover {
+          scale: 1.1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .downfoot {
+    @include _main(
+      $display: flex,
+      $margin: 18px 0 0 0,
+      $align-items: center,
+      $justify-content: space-between,
+      $position: relative,
+      $padding: 11px 0 0 0
+    );
+    p {
+      @include _main($font_s: 14px, $margin: 0 5px 0 0);
+    }
+    .box {
+      @include _main($display: flex, $align-items: center, $gap: 4px);
+      span {
+        @include _main($font_s: 12px);
+      }
+    }
+    &::before {
+      @include _main(
+        $position: absolute,
+        $width: 100%,
+        $back-color: rgb(224, 224, 224),
+        $height: 2px,
+        $top: -4px,
+        $left: 0
+      );
+      content: "";
+    }
+  }
+}

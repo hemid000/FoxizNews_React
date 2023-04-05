@@ -2,6 +2,9 @@
 
 #NewsInfo {
   @include _main($margin: 20px 0 0 0);
+  .container {
+    width: 1275px;
+  }
   .left_side {
     .img {
       @include _main(

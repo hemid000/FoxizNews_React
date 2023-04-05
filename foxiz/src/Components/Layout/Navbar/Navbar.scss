@@ -3,294 +3,1420 @@
 #nav {
   @include _main($position: relative);
   z-index: 1122121;
-  .nav_left {
-    .img {
-      @include _main(
-        $width: 100%,
-        $height: 60px,
-        $cursor: pointer,
-        $overflow: hidden
-      );
-
-      img {
-        @include _main($width: 100%, $height: 100%, $object_f: contain);
-      }
-
-      &:hover {
-        img {
-          @include _main($opacity: 0.7, $transition: 0.2s ease-in-out);
-        }
-      }
-    }
-  }
-
-  .nav_middle {
-    @include _main($width: 100%, $height: 100%);
-
-    ul {
-      @include _main(
-        $width: 100%,
-        $height: 100%,
-        $display: flex,
-        $margin: 0px,
-        $padding: 0px,
-        $align-items: center,
-        $gap: 20px,
-        $justify-content: start
-      );
-      list-style-type: none;
-
-      li {
-        position: relative;
-        font-weight: 600;
-
+  .nav_large {
+    .nav_left {
+      .img {
         @include _main(
-          $color: $fourth_color,
+          $width: 100%,
+          $height: 60px,
           $cursor: pointer,
-          $display: flex,
-          $padding: 20px 0,
-          $align-items: center,
-          $gap: 2px
+          $overflow: hidden
         );
 
-        .down {
-          @include _main($transition: 0.3s ease-in-out, $font_s: 19px);
-        }
-
-        .svg_more {
-          @include _main($transition: 0.3s ease-in-out, $font_s: 24px);
-
-          &:hover {
-            color: red;
-            @include _main($color: $nine_color);
-          }
+        img {
+          @include _main($width: 100%, $height: 100%, $object_f: contain);
         }
 
         &:hover {
-          .down {
-            transform: rotate(180deg);
+          img {
+            @include _main($opacity: 0.7, $transition: 0.2s ease-in-out);
           }
         }
       }
     }
 
-    #home {
-      position: relative;
-      .home_hover {
-        @include _main(
-          $overflow: hidden,
-          $transition: 0.3s ease-in-out,
-          $position: absolute,
-          $top: 65px,
-          $left: -5px,
-          $width: 218px,
-          $opacity: 0,
-          $visibility: hidden,
-          $transform: translateY(16px)
-        );
+    .nav_middle {
+      @include _main($width: 100%, $height: 100%);
 
-        ul {
+      ul {
+        @include _main(
+          $width: 100%,
+          $height: 100%,
+          $display: flex,
+          $margin: 0px,
+          $padding: 0px,
+          $align-items: center,
+          $gap: 14px,
+          $justify-content: start
+        );
+        list-style-type: none;
+
+        li {
+          position: relative;
+          font-weight: 600;
+
           @include _main(
-            $width: 100%,
-            $border-radius: 9px,
-            $back-color: $main_color,
-            $align-items: start,
+            $color: $fourth_color,
+            $cursor: pointer,
             $display: flex,
-            $margin: 0px,
-            $padding: 10px 0px,
-            $gap: 0px,
-            $justify-content: start
+            $padding: 20px 0,
+            $align-items: center,
+            $gap: 2px
           );
-          flex-direction: column;
-          list-style-type: none;
 
-          li {
-            font-weight: 600;
-            @include _main(
-              $color: $fourth_color,
-              $font_s: 13px,
-              $border: 3px solid transparent,
-              $cursor: pointer,
-              $display: flex,
-              $padding: 3px 10px 3px 27px,
-              $gap: 2px,
-              $width: 100%
-            );
-            .add_info {
-              @include _main(
-                $back-color: #8d80ff,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            .add_info2 {
-              @include _main(
-                $back-color: #ff4545,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            &:hover {
-              @include _main($back-color: rgba(0, 0, 0, 0.037));
-              border-left: 3px solid red;
-            }
+          .down {
+            @include _main($transition: 0.3s ease-in-out, $font_s: 19px);
           }
-        }
-      }
 
-      &:hover {
-        .home_hover {
-          @include _main(
-            $visibility: visible,
-            $transform: translateY(0px),
-            $opacity: 1
-          );
-        }
-      }
-      &:before {
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        padding: 1.5px;
-        background-color: #ff184e;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in-out 25ms;
-        border-radius: 6px;
-      }
+          .svg_more {
+            @include _main($transition: 0.3s ease-in-out, $font_s: 24px);
 
-      &:hover {
-        &:before {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
-    #politics {
-      position: relative;
-      .politics_hover {
-        @include _main(
-          $overflow: hidden,
-          $transition: 0.3s ease-in-out,
-          $position: absolute,
-          $top: 65px,
-          $left: -273px,
-          $width: 1263px,
-          $opacity: 0,
-          $visibility: hidden,
-          $transform: translateY(16px),
-          $padding: 10px,
-          $cursor: auto,
-          $back-color: $main_color
-        );
-
-        .left_side {
-          @include _main($display: flex, $justify-content: start, $gap: 4px);
-          flex-direction: column;
-          p {
-            @include _main(
-              $font_s: 19px,
-              $cursor: pointer,
-              $margin: 0 0 20px 0
-            );
-            font-weight: 700;
             &:hover {
-              text-decoration: underline;
+              color: red;
               @include _main($color: $nine_color);
             }
           }
-          .img {
-            @include _main(
-              $width: 95%,
-              $height: 200px,
-              $border-radius: 8px,
-              $position: relative
-            );
 
-            #front_img {
-              @include _main(
-                $top: 0px,
-                $left: 0px,
-                $width: 90%,
-                $height: 200px,
-                $object_f: cover,
-                $position: absolute,
-                $border-radius: 8px
-              );
-              z-index: 333;
-            }
-            #back_img {
-              @include _main(
-                $top: 20px,
-                $opacity: 0.8,
-                $left: 20px,
-                $width: 90%,
-                $height: 200px,
-                $object_f: cover,
-                $position: absolute,
-                $border-radius: 8px
-              );
-              z-index: 330;
-              box-shadow: 4px 5px 19px 6px rgba(0, 0, 0, 0.62);
-              filter: drop-shadow(-1px 3px 6px black);
+          &:hover {
+            .down {
+              transform: rotate(180deg);
             }
           }
-          span {
+          @media (max-width: 1200px) {
+            font-size: 14px;
+          }
+          @media (max-width: 1000px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      #home {
+        position: relative;
+        .home_hover {
+          @include _main(
+            $overflow: hidden,
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: 65px,
+            $left: -5px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateY(16px)
+          );
+
+          ul {
             @include _main(
-              $margin: 56px 0 0 0,
-              $display: block,
-              $font_s: 13px,
-              $color: rgb(71, 71, 71)
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: $main_color,
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
             );
-          }
-          .show {
-            @include _main($width: 100%, $display: flex, $justify-content: end);
-            #btn_SHOW {
-              outline: none;
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
               font-weight: 600;
               @include _main(
-                $transition: 0.2s ease-in-out,
                 $color: $fourth_color,
-                $border: 1px solid #ff184e,
-                $padding: 5px 19px,
-                $border-radius: 4px,
-                $back-color: $main_color,
-                $font_s: 12px,
-                $margin: 18px 0 10px 0
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
               );
-
-              &:hover {
+              .add_info {
                 @include _main(
+                  $back-color: #8d80ff,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
                   $color: $main_color,
-                  $back-color: #ff184e,
-
-                  $border: 1px solid transparent
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
                 );
-                box-shadow: #ff184e 0px 2px 8px;
+              }
+              .add_info2 {
+                @include _main(
+                  $back-color: #ff4545,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $main_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
               }
             }
           }
         }
-        .middle_side {
+
+        &:hover {
+          .home_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateY(0px),
+              $opacity: 1
+            );
+          }
+        }
+        &:before {
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          content: "";
+          width: 100%;
+          padding: 1.5px;
+          background-color: #ff184e;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 300ms ease-in-out 25ms;
+          border-radius: 6px;
+        }
+
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+      #politics {
+        position: relative;
+        .politics_hover {
+          @include _main(
+            $overflow: hidden,
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: 65px,
+            $left: -278px,
+            $width: 1269px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateY(16px),
+            $padding: 10px,
+            $cursor: auto,
+            $back-color: $main_color
+          );
+
+          .left_side {
+            @include _main($display: flex, $justify-content: start, $gap: 4px);
+            flex-direction: column;
+            p {
+              @include _main(
+                $font_s: 19px,
+                $cursor: pointer,
+                $margin: 0 0 20px 0
+              );
+              font-weight: 700;
+              &:hover {
+                text-decoration: underline;
+                @include _main($color: $nine_color);
+              }
+            }
+            .img {
+              @include _main(
+                $width: 95%,
+                $height: 200px,
+                $border-radius: 8px,
+                $position: relative
+              );
+
+              #front_img {
+                @include _main(
+                  $top: 0px,
+                  $left: 0px,
+                  $width: 90%,
+                  $height: 200px,
+                  $object_f: cover,
+                  $position: absolute,
+                  $border-radius: 8px
+                );
+                z-index: 333;
+              }
+              #back_img {
+                @include _main(
+                  $top: 20px,
+                  $opacity: 0.8,
+                  $left: 20px,
+                  $width: 90%,
+                  $height: 200px,
+                  $object_f: cover,
+                  $position: absolute,
+                  $border-radius: 8px
+                );
+                z-index: 330;
+                box-shadow: 4px 5px 19px 6px rgba(0, 0, 0, 0.62);
+                filter: drop-shadow(-1px 3px 6px black);
+              }
+            }
+            span {
+              @include _main(
+                $margin: 56px 0 0 0,
+                $display: block,
+                $font_s: 13px,
+                $color: rgb(71, 71, 71)
+              );
+            }
+            .show {
+              @include _main(
+                $width: 100%,
+                $display: flex,
+                $justify-content: end
+              );
+              #btn_SHOW {
+                outline: none;
+                font-weight: 600;
+                @include _main(
+                  $transition: 0.2s ease-in-out,
+                  $color: $fourth_color,
+                  $border: 1px solid #ff184e,
+                  $padding: 5px 19px,
+                  $border-radius: 4px,
+                  $back-color: $main_color,
+                  $font_s: 12px,
+                  $margin: 18px 0 10px 0
+                );
+
+                &:hover {
+                  @include _main(
+                    $color: $main_color,
+                    $back-color: #ff184e,
+
+                    $border: 1px solid transparent
+                  );
+                  box-shadow: #ff184e 0px 2px 8px;
+                }
+              }
+            }
+          }
+          .middle_side {
+            #topics {
+              @include _main(
+                $font_s: 16px,
+                $position: relative,
+                $width: 100%,
+                $margin: 0 0 20px 0
+              );
+              font-weight: 550;
+              &::after {
+                content: "";
+                @include _main(
+                  $position: absolute,
+                  $top: 29px,
+                  $left: -10px,
+                  $width: 100%,
+                  $height: 1px,
+                  $back-color: rgb(198, 198, 198)
+                );
+              }
+            }
+            .info {
+              flex-direction: column;
+              @include _main($display: flex, $width: 100%, $gap: 20px);
+              .info_short {
+                flex-direction: row;
+
+                @include _main($display: flex, $width: 100%, $gap: 15px);
+
+                img {
+                  @include _main(
+                    $width: 135px,
+                    $height: 97px,
+                    $object_f: cover,
+                    $cursor: pointer,
+                    $border-radius: 4px
+                  );
+                }
+                .info_right {
+                  flex-direction: column;
+                  @include _main(
+                    $display: flex,
+                    $justify-content: space-evenly
+                  );
+                  p {
+                    @include _main($font_s: 15px, $cursor: pointer);
+                    font-weight: 700;
+                    &:hover {
+                      text-decoration: underline;
+                      @include _main($color: $nine_color);
+                    }
+                    @media (max-width: 1200px) {
+                      font-size: 13px;
+                    }
+                  }
+                  span {
+                    @include _main($font_s: 12px, $color: rgb(129, 129, 129));
+                    @media (max-width: 1200px) {
+                      font-size: 11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .right_side {
+            #topics {
+              @include _main(
+                $font_s: 16px,
+                $position: relative,
+                $width: 100%,
+                $margin: 0 0 20px 0
+              );
+              font-weight: 550;
+              &::after {
+                content: "";
+                @include _main(
+                  $position: absolute,
+                  $top: 29px,
+                  $left: -10px,
+                  $width: 100%,
+                  $height: 1px,
+                  $back-color: rgb(198, 198, 198)
+                );
+              }
+            }
+            .info {
+              flex-direction: column;
+              @include _main($display: flex, $width: 100%, $gap: 20px);
+
+              .info_right {
+                flex-direction: column;
+                @include _main($display: flex);
+                p {
+                  @include _main(
+                    $font_s: 15px,
+                    $width: 80%,
+                    $margin: 0 0 15px 0,
+                    $cursor: pointer
+                  );
+                  font-weight: 700;
+                  &:hover {
+                    text-decoration: underline;
+                    @include _main($color: $nine_color);
+                  }
+                  @media (max-width: 1200px) {
+                    font-size: 13px;
+                  }
+                }
+                span {
+                  @include _main($font_s: 12px, $color: rgb(129, 129, 129));
+                  @media (max-width: 1200px) {
+                    font-size: 11px;
+                  }
+                }
+              }
+            }
+          }
+
+          @media (max-width: 1400px) {
+            @include _main($width: 1114px, $left: -272px);
+          }
+          @media (max-width: 1200px) {
+            @include _main($width: 951px, $left: -248px);
+          }
+        }
+        &:hover {
+          .politics_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateY(0px),
+              $opacity: 1
+            );
+          }
+        }
+
+        &:before {
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          content: "";
+          width: 100%;
+          padding: 1.5px;
+          background-color: #ff184e;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 300ms ease-in-out 25ms;
+          border-radius: 6px;
+        }
+
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+
+      #tech {
+        position: relative;
+        .tech_hover {
+          @include _main(
+            $overflow: hidden,
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: 65px,
+            $left: -363px,
+            $width: 1269px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateY(16px),
+            $padding: 10px,
+            $cursor: auto,
+            $back-color: $main_color
+          );
+
+          .article {
+            @include _main(
+              $width: 100%,
+              $display: flex,
+              $justify-content: space-between,
+              $align-items: center
+            );
+            p {
+              font-weight: 700;
+              @include _main($color: $fourth_color, $font_s: 16px, $margin: 0);
+            }
+            span {
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 12px,
+                $cursor: pointer
+              );
+              &:hover {
+                @include _main($color: $nine_color);
+              }
+            }
+          }
+          @media (max-width: 1400px) {
+            @include _main($width: 1114px, $left: -352px);
+          }
+          @media (max-width: 1200px) {
+            @include _main($width: 953px, $left: -334px);
+          }
+        }
+
+        .info_short {
+          flex-wrap: wrap;
+          @include _main(
+            $display: flex,
+            $width: 100%,
+            $justify-content: space-between,
+            $align-items: center
+          );
+
+          .info {
+            flex-direction: column;
+            @include _main($display: flex, $width: 20%, $padding: 10px);
+            img {
+              @include _main(
+                $object_f: cover,
+                $width: 100%,
+                $height: 134px,
+                $border-radius: 3px,
+                $cursor: pointer
+              );
+            }
+            p {
+              @include _main(
+                $font_s: 14px,
+                $cursor: pointer,
+                $margin: 15px 0 10px 0
+              );
+              font-weight: 700;
+              &:hover {
+                text-decoration: underline;
+                @include _main($color: $nine_color);
+              }
+              @media (max-width: 1200px) {
+                font-size: 9px;
+              }
+            }
+            span {
+              @include _main($font_s: 12px, $color: rgb(129, 129, 129));
+            }
+            .color {
+              @include _main(
+                $width: 100%,
+                $display: flex,
+                $gap: 2px,
+                $margin: 6px 0
+              );
+              .col1 {
+                @include _main($width: 20px, $height: 7px, $back-color: red);
+              }
+              .col2 {
+                @include _main(
+                  $width: 20px,
+                  $height: 7px,
+                  $back-color: #ff5612
+                );
+              }
+              .col3 {
+                @include _main(
+                  $width: 20px,
+                  $height: 7px,
+                  $back-color: #ffa444
+                );
+              }
+              .col4 {
+                @include _main(
+                  $width: 20px,
+                  $height: 7px,
+                  $back-color: #a0b339
+                );
+              }
+              .col5 {
+                @include _main(
+                  $width: 20px,
+                  $height: 7px,
+                  $back-color: #50a735
+                );
+              }
+            }
+            .add_info {
+              p {
+                @include _main($font_s: 12px, $margin: 0px);
+                @media (max-width: 1200px) {
+                  font-size: 10px;
+                }
+              }
+              @include _main($display: flex, $align-items: center, $gap: 2px);
+              img {
+                @include _main($width: 91px, $height: 18px, $object_f: cover);
+
+                @media (max-width: 1200px) {
+                  width: 60px;
+                  height: 11px;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .tech_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateY(0px),
+              $opacity: 1
+            );
+          }
+        }
+        &:before {
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          content: "";
+          width: 100%;
+          padding: 1.5px;
+          background-color: #ff184e;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 300ms ease-in-out 25ms;
+          border-radius: 6px;
+        }
+
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+      #post {
+        position: relative;
+        .post_hover {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: 65px,
+            $left: -5px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateY(16px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: $main_color,
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%,
+                $justify-content: space-between
+              );
+              .add_info {
+                @include _main(
+                  $back-color: #ff7070,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $main_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+              .add_info2 {
+                @include _main(
+                  $back-color: #ff184e20,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $nine_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+              .add_info3 {
+                @include _main(
+                  $back-color: #54b7c7,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $main_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+
+              .add_info4 {
+                @include _main(
+                  $back-color: #a7c560,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $main_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+              .add_info5 {
+                @include _main(
+                  $back-color: #54b7c7,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $main_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+        #post_add {
+          position: relative;
+          .post_add_hover {
+            @include _main(
+              $transition: 0.3s ease-in-out,
+              $position: absolute,
+              $top: -13px,
+              $left: 214px,
+              $width: 218px,
+              $opacity: 0,
+              $visibility: hidden,
+              $transform: translateX(10px)
+            );
+
+            ul {
+              @include _main(
+                $width: 100%,
+                $border-radius: 9px,
+                $back-color: $main_color,
+
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 10px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: column;
+              list-style-type: none;
+
+              li {
+                font-weight: 600;
+                @include _main(
+                  $color: $fourth_color,
+                  $font_s: 13px,
+                  $border: 3px solid transparent,
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 3px 10px 3px 27px,
+                  $gap: 2px,
+                  $width: 100%
+                );
+
+                &:hover {
+                  @include _main($back-color: rgba(0, 0, 0, 0.037));
+                  border-left: 3px solid red;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .post_add_hover {
+              @include _main(
+                $visibility: visible,
+                $transform: translateX(0px),
+                $opacity: 1
+              );
+            }
+          }
+        }
+        #layout_add {
+          position: relative;
+          .layout_add_hover {
+            @include _main(
+              $transition: 0.3s ease-in-out,
+              $position: absolute,
+              $top: -13px,
+              $left: 214px,
+              $width: 218px,
+              $visibility: hidden,
+              $opacity: 0,
+
+              $transform: translateX(10px)
+            );
+
+            ul {
+              @include _main(
+                $width: 100%,
+                $border-radius: 9px,
+                $back-color: $main_color,
+
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 10px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: column;
+              list-style-type: none;
+
+              li {
+                font-weight: 600;
+                @include _main(
+                  $color: $fourth_color,
+                  $font_s: 13px,
+                  $border: 3px solid transparent,
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 3px 10px 3px 27px,
+                  $gap: 2px,
+                  $width: 100%
+                );
+
+                &:hover {
+                  @include _main($back-color: rgba(0, 0, 0, 0.037));
+                  border-left: 3px solid red;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .layout_add_hover {
+              @include _main(
+                $opacity: 1,
+                $visibility: visible,
+
+                $transform: translateX(0px)
+              );
+            }
+          }
+        }
+        #content_add {
+          position: relative;
+          .content_add_hover {
+            @include _main(
+              $transition: 0.3s ease-in-out,
+              $position: absolute,
+              $top: -13px,
+              $left: 214px,
+              $width: 218px,
+              $opacity: 0,
+              $visibility: hidden,
+              $transform: translateX(10px)
+            );
+
+            ul {
+              @include _main(
+                $width: 100%,
+                $border-radius: 9px,
+                $back-color: $main_color,
+
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 10px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: column;
+              list-style-type: none;
+
+              li {
+                font-weight: 600;
+                @include _main(
+                  $color: $fourth_color,
+                  $font_s: 13px,
+                  $border: 3px solid transparent,
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 3px 10px 3px 27px,
+                  $gap: 2px,
+                  $width: 100%
+                );
+
+                &:hover {
+                  @include _main($back-color: rgba(0, 0, 0, 0.037));
+                  border-left: 3px solid red;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .content_add_hover {
+              @include _main(
+                $visibility: visible,
+                $transform: translateX(0px),
+                $opacity: 1
+              );
+            }
+          }
+        }
+        #review_add {
+          position: relative;
+          .review_add_hover {
+            @include _main(
+              $transition: 0.3s ease-in-out,
+              $position: absolute,
+              $top: -13px,
+              $left: 214px,
+              $width: 218px,
+              $opacity: 0,
+              $visibility: hidden,
+              $transform: translateX(10px)
+            );
+
+            ul {
+              @include _main(
+                $width: 100%,
+                $border-radius: 9px,
+                $back-color: $main_color,
+
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 10px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: column;
+              list-style-type: none;
+
+              li {
+                font-weight: 600;
+                @include _main(
+                  $color: $fourth_color,
+                  $font_s: 13px,
+                  $border: 3px solid transparent,
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 3px 10px 3px 27px,
+                  $gap: 2px,
+                  $width: 100%
+                );
+
+                &:hover {
+                  @include _main($back-color: rgba(0, 0, 0, 0.037));
+                  border-left: 3px solid red;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .review_add_hover {
+              @include _main(
+                $visibility: visible,
+                $transform: translateX(0px),
+                $opacity: 1
+              );
+            }
+          }
+        }
+        #content_add {
+          position: relative;
+          .content_add_hover {
+            @include _main(
+              $transition: 0.3s ease-in-out,
+              $position: absolute,
+              $top: -13px,
+              $left: 214px,
+              $width: 218px,
+              $opacity: 0,
+              $visibility: hidden,
+              $transform: translateX(10px)
+            );
+
+            ul {
+              @include _main(
+                $width: 100%,
+                $border-radius: 9px,
+                $back-color: $main_color,
+
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 10px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: column;
+              list-style-type: none;
+
+              li {
+                font-weight: 600;
+                @include _main(
+                  $color: $fourth_color,
+                  $font_s: 13px,
+                  $border: 3px solid transparent,
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 3px 10px 3px 27px,
+                  $gap: 2px,
+                  $width: 100%
+                );
+
+                &:hover {
+                  @include _main($back-color: rgba(0, 0, 0, 0.037));
+                  border-left: 3px solid red;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .review_add_hover {
+              @include _main(
+                $visibility: visible,
+                $transform: translateX(0px),
+                $opacity: 1
+              );
+            }
+          }
+        }
+        #table_con_add {
+          position: relative;
+          .table_con_add_hover {
+            @include _main(
+              $transition: 0.3s ease-in-out,
+              $position: absolute,
+              $top: -13px,
+              $left: 214px,
+              $width: 218px,
+              $opacity: 0,
+              $visibility: hidden,
+              $transform: translateX(10px)
+            );
+
+            ul {
+              @include _main(
+                $width: 100%,
+                $border-radius: 9px,
+                $back-color: $main_color,
+
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 10px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: column;
+              list-style-type: none;
+
+              li {
+                font-weight: 600;
+                @include _main(
+                  $color: $fourth_color,
+                  $font_s: 13px,
+                  $border: 3px solid transparent,
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 3px 10px 3px 27px,
+                  $gap: 2px,
+                  $width: 100%
+                );
+
+                &:hover {
+                  @include _main($back-color: rgba(0, 0, 0, 0.037));
+                  border-left: 3px solid red;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .table_con_add_hover {
+              @include _main(
+                $visibility: visible,
+                $transform: translateX(0px),
+                $opacity: 1
+              );
+            }
+          }
+        }
+        &:hover {
+          .post_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateY(0px),
+              $opacity: 1
+            );
+          }
+        }
+        &:before {
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          content: "";
+          width: 100%;
+          padding: 1.5px;
+          background-color: #ff184e;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 300ms ease-in-out 25ms;
+          border-radius: 6px;
+        }
+
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+
+      #pages {
+        @include _main($position: relative);
+        .pages_hover {
+          @include _main(
+            $overflow: hidden,
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: 65px,
+            $left: -5px,
+            $width: 218px,
+            $opacity: 0,
+            $visibility: hidden,
+            $transform: translateY(16px)
+          );
+
+          ul {
+            @include _main(
+              $width: 100%,
+              $border-radius: 9px,
+              $back-color: $main_color,
+
+              $align-items: start,
+              $display: flex,
+              $margin: 0px,
+              $padding: 10px 0px,
+              $gap: 0px,
+              $justify-content: start
+            );
+            flex-direction: column;
+            list-style-type: none;
+
+            li {
+              font-weight: 600;
+              @include _main(
+                $color: $fourth_color,
+                $font_s: 13px,
+                $border: 3px solid transparent,
+                $cursor: pointer,
+                $display: flex,
+                $padding: 3px 10px 3px 27px,
+                $gap: 2px,
+                $width: 100%
+              );
+              .add_info {
+                @include _main(
+                  $back-color: #8d80ff,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $main_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+              .add_info2 {
+                @include _main(
+                  $back-color: #ff4545,
+                  $width: 30px,
+                  $height: 19px,
+                  $border-radius: 3px,
+                  $color: $main_color,
+                  $display: flex,
+                  $align-items: center,
+                  $justify-content: center,
+                  $margin: 0 0 0 5px,
+                  $font_s: 11px
+                );
+              }
+              &:hover {
+                @include _main($back-color: rgba(0, 0, 0, 0.037));
+                border-left: 3px solid red;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .pages_hover {
+            @include _main(
+              $visibility: visible,
+              $transform: translateY(0px),
+              $opacity: 1
+            );
+          }
+        }
+        &:before {
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          content: "";
+          width: 100%;
+          padding: 1.5px;
+          background-color: #ff184e;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 300ms ease-in-out 25ms;
+          border-radius: 6px;
+        }
+
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+      #more {
+        @include _main($position: relative);
+        .more_hover {
+          @include _main(
+            $overflow: hidden,
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: 65px,
+            $left: -261px,
+            $back-color: $main_color,
+            $width: 492px,
+            $border-radius: 7px,
+            $padding: 14px 10px 6px 10px,
+            $cursor: auto
+          );
+          #search_line {
+            @include _main($font_s: 16px, $color: $fourth_color);
+            font-weight: 700;
+          }
+          #inputGroup-sizing-default {
+            @include _main($back-color: $main_color, $cursor: auto);
+          }
+          .form-control {
+            @include _main($font_s: 14px !important);
+          }
+          .searching_items {
+            @include _main($text-align: center);
+
+            ul {
+              @include _main(
+                $width: 100%,
+                $border-radius: 9px,
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 6px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: column;
+              list-style-type: none;
+              p {
+                @include _main($font_s: 14px, $margin: 3px 0 3px 0);
+                font-weight: 600;
+              }
+              li {
+                font-weight: 600;
+                @include _main(
+                  $color: rgba(0, 0, 0, 0.748),
+                  $font_s: 13px,
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 5px 10px 3px 2px,
+                  $gap: 2px,
+                  $width: 100%,
+                  $transition: 0.2s ease-in-out
+                );
+
+                &:hover {
+                  @include _main($color: $nine_color);
+                }
+              }
+            }
+          }
+          .path {
+            @include _main($color: $nine_color, $margin: 30px 0);
+            ul {
+              @include _main(
+                $width: 100%,
+                $align-items: start,
+                $display: flex,
+                $margin: 0px,
+                $padding: 6px 0px,
+                $gap: 0px,
+                $justify-content: start
+              );
+              flex-direction: row;
+
+              li {
+                font-weight: 600;
+                font-size: 12px;
+                @include _main(
+                  $color: rgba(0, 0, 0, 0.748),
+                  $cursor: pointer,
+                  $display: flex,
+                  $padding: 5px 18px 3px 2px,
+                  $gap: 2px,
+
+                  $font_s: 12px,
+
+                  $transition: 0.2s ease-in-out
+                );
+              }
+            }
+            p {
+              @include _main(
+                $font_s: 11px,
+                $margin: 3px 0 3px 0,
+                $color: $fourth_color
+              );
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      #bookmarks {
+        &:before {
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          content: "";
+          width: 100%;
+          padding: 1.5px;
+          background-color: #ff184e;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 300ms ease-in-out 25ms;
+          border-radius: 6px;
+        }
+
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+
+    .nav_right {
+      @include _main(
+        $width: 100%,
+        $height: 100%,
+        $display: flex,
+        $align-items: center,
+        $justify-content: end
+      );
+
+      #notification {
+        @include _main($position: relative);
+        .notification_click {
+          @include _main(
+            $transition: 0.3s ease-in-out,
+            $position: absolute,
+            $top: 43px,
+            $left: -247px,
+            $back-color: $main_color,
+            $width: 350px,
+            $height: 420px,
+            $border-radius: 7px,
+            $padding: 14px 10px 6px 10px,
+            $cursor: auto
+          );
+          overflow-y: scroll;
           #topics {
             @include _main(
-              $font_s: 16px,
+              $font_s: 14px,
               $position: relative,
               $width: 100%,
               $margin: 0 0 20px 0
@@ -307,6 +1433,13 @@
                 $back-color: rgb(198, 198, 198)
               );
             }
+            svg {
+              @include _main($font_s: 14px);
+            }
+          }
+          #note_line {
+            @include _main($font_s: 16px, $color: $fourth_color);
+            font-weight: 700;
           }
           .info {
             flex-direction: column;
@@ -318,8 +1451,8 @@
 
               img {
                 @include _main(
-                  $width: 135px,
-                  $height: 97px,
+                  $width: 100px,
+                  $height: 75px,
                   $object_f: cover,
                   $cursor: pointer,
                   $border-radius: 4px
@@ -329,7 +1462,11 @@
                 flex-direction: column;
                 @include _main($display: flex, $justify-content: space-evenly);
                 p {
-                  @include _main($font_s: 15px, $cursor: pointer);
+                  @include _main(
+                    $font_s: 12px,
+                    $cursor: pointer,
+                    $margin: 0 0 2px 0
+                  );
                   font-weight: 700;
                   &:hover {
                     text-decoration: underline;
@@ -337,1180 +1474,111 @@
                   }
                 }
                 span {
-                  @include _main($font_s: 12px, $color: rgb(129, 129, 129));
+                  @include _main(
+                    $font_s: 12px,
+                    $color: $nine_color,
+                    $cursor: pointer
+                  );
                 }
               }
             }
-          }
-        }
-        .right_side {
-          #topics {
-            @include _main(
-              $font_s: 16px,
-              $position: relative,
-              $width: 100%,
-              $margin: 0 0 20px 0
-            );
-            font-weight: 550;
-            &::after {
-              content: "";
-              @include _main(
-                $position: absolute,
-                $top: 29px,
-                $left: -10px,
-                $width: 100%,
-                $height: 1px,
-                $back-color: rgb(198, 198, 198)
-              );
-            }
-          }
-          .info {
-            flex-direction: column;
-            @include _main($display: flex, $width: 100%, $gap: 20px);
-
-            .info_right {
-              flex-direction: column;
-              @include _main($display: flex);
-              p {
-                @include _main(
-                  $font_s: 15px,
-                  $width: 80%,
-                  $margin: 0 0 15px 0,
-                  $cursor: pointer
-                );
-                font-weight: 700;
-                &:hover {
-                  text-decoration: underline;
-                  @include _main($color: $nine_color);
-                }
-              }
-              span {
-                @include _main($font_s: 12px, $color: rgb(129, 129, 129));
-              }
+            .spinner-border {
+              margin: 0 auto;
             }
           }
         }
-      }
-      &:hover {
-        .politics_hover {
-          @include _main(
-            $visibility: visible,
-            $transform: translateY(0px),
-            $opacity: 1
-          );
+        /* width */
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #c4c4c4;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
         }
       }
 
-      &:before {
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        padding: 1.5px;
-        background-color: #ff184e;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in-out 25ms;
-        border-radius: 6px;
-      }
-
-      &:hover {
-        &:before {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
-
-    #tech {
-      position: relative;
-      .tech_hover {
-        @include _main(
-          $overflow: hidden,
-          $transition: 0.3s ease-in-out,
-          $position: absolute,
-          $top: 65px,
-          $left: -365px,
-          $width: 1263px,
-          $opacity: 0,
-          $visibility: hidden,
-          $transform: translateY(16px),
-          $padding: 10px,
-          $cursor: auto,
-          $back-color: $main_color
-        );
-
-        .article {
-          @include _main(
-            $width: 100%,
-            $display: flex,
-            $justify-content: space-between,
-            $align-items: center
-          );
-          p {
-            font-weight: 700;
-            @include _main($color: $fourth_color, $font_s: 16px, $margin: 0);
-          }
-          span {
-            @include _main(
-              $color: $fourth_color,
-              $font_s: 12px,
-              $cursor: pointer
-            );
-            &:hover {
-              @include _main($color: $nine_color);
-            }
-          }
-        }
-      }
-
-      .info_short {
-        flex-wrap: wrap;
-        @include _main(
-          $display: flex,
-          $width: 100%,
-          $justify-content: space-between,
-          $align-items: center
-        );
-
-        .info {
-          flex-direction: column;
-          @include _main($display: flex, $width: 20%, $padding: 10px);
-          img {
-            @include _main(
-              $object_f: cover,
-              $width: 100%,
-              $height: 134px,
-              $border-radius: 3px,
-              $cursor: pointer
-            );
-          }
-          p {
-            @include _main(
-              $font_s: 14px,
-              $cursor: pointer,
-              $margin: 15px 0 10px 0
-            );
-            font-weight: 700;
-            &:hover {
-              text-decoration: underline;
-              @include _main($color: $nine_color);
-            }
-          }
-          span {
-            @include _main($font_s: 12px, $color: rgb(129, 129, 129));
-          }
-          .color {
-            @include _main(
-              $width: 100%,
-              $display: flex,
-              $gap: 2px,
-              $margin: 6px 0
-            );
-            .col1 {
-              @include _main($width: 20px, $height: 7px, $back-color: red);
-            }
-            .col2 {
-              @include _main($width: 20px, $height: 7px, $back-color: #ff5612);
-            }
-            .col3 {
-              @include _main($width: 20px, $height: 7px, $back-color: #ffa444);
-            }
-            .col4 {
-              @include _main($width: 20px, $height: 7px, $back-color: #a0b339);
-            }
-            .col5 {
-              @include _main($width: 20px, $height: 7px, $back-color: #50a735);
-            }
-          }
-          .add_info {
-            p {
-              @include _main($font_s: 12px, $margin: 0px);
-            }
-            @include _main($display: flex, $align-items: center, $gap: 2px);
-            img {
-              @include _main($width: 91px, $height: 18px, $object_f: cover);
-            }
-          }
-        }
-      }
-
-      &:hover {
-        .tech_hover {
-          @include _main(
-            $visibility: visible,
-            $transform: translateY(0px),
-            $opacity: 1
-          );
-        }
-      }
-      &:before {
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        padding: 1.5px;
-        background-color: #ff184e;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in-out 25ms;
-        border-radius: 6px;
-      }
-
-      &:hover {
-        &:before {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
-    #post {
-      position: relative;
-      .post_hover {
-        @include _main(
-          $transition: 0.3s ease-in-out,
-          $position: absolute,
-          $top: 65px,
-          $left: -5px,
-          $width: 218px,
-          $opacity: 0,
-          $visibility: hidden,
-          $transform: translateY(16px)
-        );
-
-        ul {
-          @include _main(
-            $width: 100%,
-            $border-radius: 9px,
-            $back-color: $main_color,
-
-            $align-items: start,
-            $display: flex,
-            $margin: 0px,
-            $padding: 10px 0px,
-            $gap: 0px,
-            $justify-content: start
-          );
-          flex-direction: column;
-          list-style-type: none;
-
-          li {
-            font-weight: 600;
-            @include _main(
-              $color: $fourth_color,
-              $font_s: 13px,
-              $border: 3px solid transparent,
-              $cursor: pointer,
-              $display: flex,
-              $padding: 3px 10px 3px 27px,
-              $gap: 2px,
-              $width: 100%,
-              $justify-content: space-between
-            );
-            .add_info {
-              @include _main(
-                $back-color: #ff7070,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            .add_info2 {
-              @include _main(
-                $back-color: #ff184e20,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $nine_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            .add_info3 {
-              @include _main(
-                $back-color: #54b7c7,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-
-            .add_info4 {
-              @include _main(
-                $back-color: #a7c560,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            .add_info5 {
-              @include _main(
-                $back-color: #54b7c7,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            &:hover {
-              @include _main($back-color: rgba(0, 0, 0, 0.037));
-              border-left: 3px solid red;
-            }
-          }
-        }
-      }
-      #post_add {
-        position: relative;
-        .post_add_hover {
-          @include _main(
-            $transition: 0.3s ease-in-out,
-            $position: absolute,
-            $top: -13px,
-            $left: 214px,
-            $width: 218px,
-            $opacity: 0,
-            $visibility: hidden,
-            $transform: translateX(10px)
-          );
-
-          ul {
-            @include _main(
-              $width: 100%,
-              $border-radius: 9px,
-              $back-color: $main_color,
-
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 10px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: column;
-            list-style-type: none;
-
-            li {
-              font-weight: 600;
-              @include _main(
-                $color: $fourth_color,
-                $font_s: 13px,
-                $border: 3px solid transparent,
-                $cursor: pointer,
-                $display: flex,
-                $padding: 3px 10px 3px 27px,
-                $gap: 2px,
-                $width: 100%
-              );
-
-              &:hover {
-                @include _main($back-color: rgba(0, 0, 0, 0.037));
-                border-left: 3px solid red;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .post_add_hover {
-            @include _main(
-              $visibility: visible,
-              $transform: translateX(0px),
-              $opacity: 1
-            );
-          }
-        }
-      }
-      #layout_add {
-        position: relative;
-        .layout_add_hover {
-          @include _main(
-            $transition: 0.3s ease-in-out,
-            $position: absolute,
-            $top: -13px,
-            $left: 214px,
-            $width: 218px,
-            $visibility: hidden,
-            $opacity: 0,
-
-            $transform: translateX(10px)
-          );
-
-          ul {
-            @include _main(
-              $width: 100%,
-              $border-radius: 9px,
-              $back-color: $main_color,
-
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 10px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: column;
-            list-style-type: none;
-
-            li {
-              font-weight: 600;
-              @include _main(
-                $color: $fourth_color,
-                $font_s: 13px,
-                $border: 3px solid transparent,
-                $cursor: pointer,
-                $display: flex,
-                $padding: 3px 10px 3px 27px,
-                $gap: 2px,
-                $width: 100%
-              );
-
-              &:hover {
-                @include _main($back-color: rgba(0, 0, 0, 0.037));
-                border-left: 3px solid red;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .layout_add_hover {
-            @include _main(
-              $opacity: 1,
-              $visibility: visible,
-
-              $transform: translateX(0px)
-            );
-          }
-        }
-      }
-      #content_add {
-        position: relative;
-        .content_add_hover {
-          @include _main(
-            $transition: 0.3s ease-in-out,
-            $position: absolute,
-            $top: -13px,
-            $left: 214px,
-            $width: 218px,
-            $opacity: 0,
-            $visibility: hidden,
-            $transform: translateX(10px)
-          );
-
-          ul {
-            @include _main(
-              $width: 100%,
-              $border-radius: 9px,
-              $back-color: $main_color,
-
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 10px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: column;
-            list-style-type: none;
-
-            li {
-              font-weight: 600;
-              @include _main(
-                $color: $fourth_color,
-                $font_s: 13px,
-                $border: 3px solid transparent,
-                $cursor: pointer,
-                $display: flex,
-                $padding: 3px 10px 3px 27px,
-                $gap: 2px,
-                $width: 100%
-              );
-
-              &:hover {
-                @include _main($back-color: rgba(0, 0, 0, 0.037));
-                border-left: 3px solid red;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .content_add_hover {
-            @include _main(
-              $visibility: visible,
-              $transform: translateX(0px),
-              $opacity: 1
-            );
-          }
-        }
-      }
-      #review_add {
-        position: relative;
-        .review_add_hover {
-          @include _main(
-            $transition: 0.3s ease-in-out,
-            $position: absolute,
-            $top: -13px,
-            $left: 214px,
-            $width: 218px,
-            $opacity: 0,
-            $visibility: hidden,
-            $transform: translateX(10px)
-          );
-
-          ul {
-            @include _main(
-              $width: 100%,
-              $border-radius: 9px,
-              $back-color: $main_color,
-
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 10px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: column;
-            list-style-type: none;
-
-            li {
-              font-weight: 600;
-              @include _main(
-                $color: $fourth_color,
-                $font_s: 13px,
-                $border: 3px solid transparent,
-                $cursor: pointer,
-                $display: flex,
-                $padding: 3px 10px 3px 27px,
-                $gap: 2px,
-                $width: 100%
-              );
-
-              &:hover {
-                @include _main($back-color: rgba(0, 0, 0, 0.037));
-                border-left: 3px solid red;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .review_add_hover {
-            @include _main(
-              $visibility: visible,
-              $transform: translateX(0px),
-              $opacity: 1
-            );
-          }
-        }
-      }
-      #content_add {
-        position: relative;
-        .content_add_hover {
-          @include _main(
-            $transition: 0.3s ease-in-out,
-            $position: absolute,
-            $top: -13px,
-            $left: 214px,
-            $width: 218px,
-            $opacity: 0,
-            $visibility: hidden,
-            $transform: translateX(10px)
-          );
-
-          ul {
-            @include _main(
-              $width: 100%,
-              $border-radius: 9px,
-              $back-color: $main_color,
-
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 10px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: column;
-            list-style-type: none;
-
-            li {
-              font-weight: 600;
-              @include _main(
-                $color: $fourth_color,
-                $font_s: 13px,
-                $border: 3px solid transparent,
-                $cursor: pointer,
-                $display: flex,
-                $padding: 3px 10px 3px 27px,
-                $gap: 2px,
-                $width: 100%
-              );
-
-              &:hover {
-                @include _main($back-color: rgba(0, 0, 0, 0.037));
-                border-left: 3px solid red;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .review_add_hover {
-            @include _main(
-              $visibility: visible,
-              $transform: translateX(0px),
-              $opacity: 1
-            );
-          }
-        }
-      }
-      #table_con_add {
-        position: relative;
-        .table_con_add_hover {
-          @include _main(
-            $transition: 0.3s ease-in-out,
-            $position: absolute,
-            $top: -13px,
-            $left: 214px,
-            $width: 218px,
-            $opacity: 0,
-            $visibility: hidden,
-            $transform: translateX(10px)
-          );
-
-          ul {
-            @include _main(
-              $width: 100%,
-              $border-radius: 9px,
-              $back-color: $main_color,
-
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 10px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: column;
-            list-style-type: none;
-
-            li {
-              font-weight: 600;
-              @include _main(
-                $color: $fourth_color,
-                $font_s: 13px,
-                $border: 3px solid transparent,
-                $cursor: pointer,
-                $display: flex,
-                $padding: 3px 10px 3px 27px,
-                $gap: 2px,
-                $width: 100%
-              );
-
-              &:hover {
-                @include _main($back-color: rgba(0, 0, 0, 0.037));
-                border-left: 3px solid red;
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .table_con_add_hover {
-            @include _main(
-              $visibility: visible,
-              $transform: translateX(0px),
-              $opacity: 1
-            );
-          }
-        }
-      }
-      &:hover {
-        .post_hover {
-          @include _main(
-            $visibility: visible,
-            $transform: translateY(0px),
-            $opacity: 1
-          );
-        }
-      }
-      &:before {
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        padding: 1.5px;
-        background-color: #ff184e;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in-out 25ms;
-        border-radius: 6px;
-      }
-
-      &:hover {
-        &:before {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
-
-    #pages {
-      @include _main($position: relative);
-      .pages_hover {
-        @include _main(
-          $overflow: hidden,
-          $transition: 0.3s ease-in-out,
-          $position: absolute,
-          $top: 65px,
-          $left: -5px,
-          $width: 218px,
-          $opacity: 0,
-          $visibility: hidden,
-          $transform: translateY(16px)
-        );
-
-        ul {
-          @include _main(
-            $width: 100%,
-            $border-radius: 9px,
-            $back-color: $main_color,
-
-            $align-items: start,
-            $display: flex,
-            $margin: 0px,
-            $padding: 10px 0px,
-            $gap: 0px,
-            $justify-content: start
-          );
-          flex-direction: column;
-          list-style-type: none;
-
-          li {
-            font-weight: 600;
-            @include _main(
-              $color: $fourth_color,
-              $font_s: 13px,
-              $border: 3px solid transparent,
-              $cursor: pointer,
-              $display: flex,
-              $padding: 3px 10px 3px 27px,
-              $gap: 2px,
-              $width: 100%
-            );
-            .add_info {
-              @include _main(
-                $back-color: #8d80ff,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            .add_info2 {
-              @include _main(
-                $back-color: #ff4545,
-                $width: 30px,
-                $height: 19px,
-                $border-radius: 3px,
-                $color: $main_color,
-                $display: flex,
-                $align-items: center,
-                $justify-content: center,
-                $margin: 0 0 0 5px,
-                $font_s: 11px
-              );
-            }
-            &:hover {
-              @include _main($back-color: rgba(0, 0, 0, 0.037));
-              border-left: 3px solid red;
-            }
-          }
-        }
-      }
-
-      &:hover {
-        .pages_hover {
-          @include _main(
-            $visibility: visible,
-            $transform: translateY(0px),
-            $opacity: 1
-          );
-        }
-      }
-      &:before {
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        padding: 1.5px;
-        background-color: #ff184e;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in-out 25ms;
-        border-radius: 6px;
-      }
-
-      &:hover {
-        &:before {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
-    #more {
-      @include _main($position: relative);
-      .more_hover {
-        @include _main(
-          $overflow: hidden,
-          $transition: 0.3s ease-in-out,
-          $position: absolute,
-          $top: 65px,
-          $left: -261px,
-          $back-color: $main_color,
-          $width: 492px,
-          $border-radius: 7px,
-          $padding: 14px 10px 6px 10px,
-          $cursor: auto
-        );
-        #search_line {
-          @include _main($font_s: 16px, $color: $fourth_color);
-          font-weight: 700;
-        }
-        #inputGroup-sizing-default {
-          @include _main($back-color: $main_color, $cursor: auto);
-        }
-        .form-control {
-          @include _main($font_s: 14px !important);
-        }
-        .searching_items {
-          @include _main($text-align: center);
-
-          ul {
-            @include _main(
-              $width: 100%,
-              $border-radius: 9px,
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 6px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: column;
-            list-style-type: none;
-            p {
-              @include _main($font_s: 14px, $margin: 3px 0 3px 0);
-              font-weight: 600;
-            }
-            li {
-              font-weight: 600;
-              @include _main(
-                $color: rgba(0, 0, 0, 0.748),
-                $font_s: 13px,
-                $cursor: pointer,
-                $display: flex,
-                $padding: 5px 10px 3px 2px,
-                $gap: 2px,
-                $width: 100%,
-                $transition: 0.2s ease-in-out
-              );
-
-              &:hover {
-                @include _main($color: $nine_color);
-              }
-            }
-          }
-        }
-        .path {
-          @include _main($color: $nine_color, $margin: 30px 0);
-          ul {
-            @include _main(
-              $width: 100%,
-              $align-items: start,
-              $display: flex,
-              $margin: 0px,
-              $padding: 6px 0px,
-              $gap: 0px,
-              $justify-content: start
-            );
-            flex-direction: row;
-
-            li {
-              font-weight: 600;
-              font-size: 12px;
-              @include _main(
-                $color: rgba(0, 0, 0, 0.748),
-                $cursor: pointer,
-                $display: flex,
-                $padding: 5px 18px 3px 2px,
-                $gap: 2px,
-
-                $font_s: 12px,
-
-                $transition: 0.2s ease-in-out
-              );
-            }
-          }
-          p {
-            @include _main(
-              $font_s: 11px,
-              $margin: 3px 0 3px 0,
-              $color: $fourth_color
-            );
-            font-weight: 600;
-          }
-        }
-      }
-    }
-
-    #bookmarks {
-      &:before {
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        padding: 1.5px;
-        background-color: #ff184e;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in-out 25ms;
-        border-radius: 6px;
-      }
-
-      &:hover {
-        &:before {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
-  }
-
-  .nav_right {
-    @include _main(
-      $width: 100%,
-      $height: 100%,
-      $display: flex,
-      $align-items: center,
-      $justify-content: end
-    );
-
-    #notification {
-      @include _main($position: relative);
-      .notification_click {
-        @include _main(
-          $transition: 0.3s ease-in-out,
-          $position: absolute,
-          $top: 43px,
-          $left: -247px,
-          $back-color: $main_color,
-          $width: 350px,
-          $height: 420px,
-          $border-radius: 7px,
-          $padding: 14px 10px 6px 10px,
-          $cursor: auto
-        );
-        overflow-y: scroll;
-        #topics {
-          @include _main(
-            $font_s: 14px,
-            $position: relative,
-            $width: 100%,
-            $margin: 0 0 20px 0
-          );
-          font-weight: 550;
-          &::after {
-            content: "";
-            @include _main(
-              $position: absolute,
-              $top: 29px,
-              $left: -10px,
-              $width: 100%,
-              $height: 1px,
-              $back-color: rgb(198, 198, 198)
-            );
-          }
-          svg {
-            @include _main($font_s: 14px);
-          }
-        }
-        #note_line {
-          @include _main($font_s: 16px, $color: $fourth_color);
-          font-weight: 700;
-        }
-        .info {
-          flex-direction: column;
-          @include _main($display: flex, $width: 100%, $gap: 20px);
-          .info_short {
-            flex-direction: row;
-
-            @include _main($display: flex, $width: 100%, $gap: 15px);
-
-            img {
-              @include _main(
-                $width: 100px,
-                $height: 75px,
-                $object_f: cover,
-                $cursor: pointer,
-                $border-radius: 4px
-              );
-            }
-            .info_right {
-              flex-direction: column;
-              @include _main($display: flex, $justify-content: space-evenly);
-              p {
-                @include _main(
-                  $font_s: 12px,
-                  $cursor: pointer,
-                  $margin: 0 0 2px 0
-                );
-                font-weight: 700;
-                &:hover {
-                  text-decoration: underline;
-                  @include _main($color: $nine_color);
-                }
-              }
-              span {
-                @include _main(
-                  $font_s: 12px,
-                  $color: $nine_color,
-                  $cursor: pointer
-                );
-              }
-            }
-          }
-          .spinner-border {
-            margin: 0 auto;
-          }
-        }
-      }
-      /* width */
-      ::-webkit-scrollbar {
-        width: 5px;
-      }
-
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #c4c4c4;
-      }
-
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-    }
-
-    #sign_in {
-      outline: none;
-      font-weight: 600;
-      @include _main(
-        $transition: 0.2s ease-in-out,
-        $font_s: 14px,
-        $color: $main_color,
-        $back-color: #ff184e,
-        $padding: 5px 19px,
-        $border-radius: 4px,
-        $border: transparent
-      );
-
-      &:hover {
-        box-shadow: #ff184e 0px 5px 15px;
-      }
-    }
-
-    ul {
-      list-style-type: none;
-      @include _main(
-        $margin: 0 0 0 22px,
-        $padding: 0px,
-        $height: 100%,
-        $gap: 20px,
-        $display: flex,
-        $align-items: center,
-        $justify-content: start
-      );
-
-      li {
+      #sign_in {
+        outline: none;
         font-weight: 600;
         @include _main(
-          $color: $fourth_color,
-          $cursor: pointer,
-          $display: flex,
-          $align-items: center
+          $transition: 0.2s ease-in-out,
+          $font_s: 14px,
+          $color: $main_color,
+          $back-color: #ff184e,
+          $padding: 5px 19px,
+          $border-radius: 4px,
+          $border: transparent
         );
 
-        &:nth-child(1) {
-          svg {
-            @include _main($font_s: 21px);
-          }
-        }
-
-        &:nth-child(2) {
-          svg {
-            @include _main($font_s: 20px);
-          }
+        &:hover {
+          box-shadow: #ff184e 0px 5px 15px;
         }
       }
 
-      #nav_dark {
-        @include _main($position: relative);
+      ul {
+        list-style-type: none;
+        @include _main(
+          $margin: 0 0 0 22px,
+          $padding: 0px,
+          $height: 100%,
+          $gap: 20px,
+          $display: flex,
+          $align-items: center,
+          $justify-content: start
+        );
 
-        &:before {
+        li {
+          font-weight: 600;
           @include _main(
-            $width: 1px,
-            $height: 16px,
-            $position: absolute,
-            $top: 4px,
-            $left: -9px,
-            $back-color: #d8d8d8
+            $color: $fourth_color,
+            $cursor: pointer,
+            $display: flex,
+            $align-items: center
           );
-          content: "";
+
+          &:nth-child(1) {
+            svg {
+              @include _main($font_s: 21px);
+            }
+          }
+
+          &:nth-child(2) {
+            svg {
+              @include _main($font_s: 20px);
+            }
+          }
+        }
+
+        #nav_dark {
+          @include _main($position: relative);
+
+          &:before {
+            @include _main(
+              $width: 1px,
+              $height: 16px,
+              $position: absolute,
+              $top: 4px,
+              $left: -9px,
+              $back-color: #d8d8d8
+            );
+            content: "";
+          }
         }
       }
+    }
+    @media (max-width: 1000px) {
+      display: none;
     }
   }
 }

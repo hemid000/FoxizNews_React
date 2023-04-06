@@ -137,3 +137,84 @@ export const NavbarMockNotnews = [
     time: "Business",
   },
 ];
+
+// Home list
+export const Nav_home_list = [
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Home 1",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Home 2",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Home 3",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Home 4",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Home 5",
+  },
+];
+// Categories list
+export const Nav_categories_list = [
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Technology",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Entertainment",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Travel",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Fashion",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Business",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Politics",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Science",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Health",
+  },
+];
+// Bookmarks list
+export const Nav_bookmark_list = [
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Customize Interests",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "My Bookmarks",
+  },
+];
+// More Foxiz list
+export const Nav_More_list = [
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Blog Index",
+  },
+  {
+    id: Math.floor(Math.random() * 100),
+    li: "Sitemap",
+  },
+];

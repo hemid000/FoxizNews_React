@@ -46,7 +46,7 @@ const NewsInfo = (probs) => {
                       alt=""
                     />
                     <p>Taylor Emma</p>
-                    <span>Oct 1, 2021</span>
+                    <span id="time_sp">Oct 1, 2021</span>
                   </div>{" "}
                   {save && (
                     <div onClick={handleClick} className="">
@@ -67,7 +67,7 @@ const NewsInfo = (probs) => {
           </div>
           <div className="col-lg-4 right_side">
             <div className="row g-3">
-              <div className="col-lg-12">
+              <div className="col-lg-12 col-md-6">
                 {" "}
                 <div className="img2">
                   <img
@@ -108,7 +108,7 @@ const NewsInfo = (probs) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-12">
+              <div className="col-lg-12 col-md-6">
                 {" "}
                 <div className="img2">
                   <img

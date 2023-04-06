@@ -13,12 +13,21 @@ import { FiSearch } from "react-icons/fi";
 import DarkMode from "../../DarkMode/DarkMode";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import { NavbarMockTopNews } from "../../Mock/NavbarMock";
+import {
+  Nav_More_list,
+  Nav_bookmark_list,
+  Nav_categories_list,
+  Nav_home_list,
+  NavbarMockTopNews,
+} from "../../Mock/NavbarMock";
 import { NavbarMock } from "../../Mock/NavbarMock";
 import { NavbarMockNotnews } from "../../Mock/NavbarMock";
+import { BiMenuAltLeft } from "react-icons/bi";
+
 const Navbar = () => {
   const [search, setSearch] = useState(false);
   const [notification, setNotification] = useState(false);
+  const [navclick, setNavclick] = useState();
 
   const handleclick = () => {
     setSearch(!search);
@@ -491,12 +500,109 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="nav_mobile">
+      <div
+        onClick={() => {
+          setNavclick(!navclick);
+        }}
+        className="nav_mobile"
+      >
         <div className="container">
-          <div className="col-lg-6"></div>
-          <div className="col-lg-6"></div>
+          <div className="row">
+            <div className="col-6 d-flex align-items-center left_side">
+              <BiMenuAltLeft style={{ fontSize: "29px", cursor: "pointer" }} />
+              <img
+                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo.svg"
+                alt=""
+              />
+            </div>
+            <div className="col-6 d-flex align-items-center justify-content-end right_side">
+              <ul>
+                <li>
+                  <FiSearch
+                    style={{ fontSize: "19px", margin: "0 5px 0 0" }}
+                    title="Search"
+                    onClick={handleclick}
+                  />
+                </li>
+                <li id="nav_dark">
+                  <DarkMode />
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+      {navclick && (
+        <div className="nav_click">
+          <div className="list_mobile">
+            <div className="container">
+              <p id="line">Search</p>
+              <form action="">
+                <InputGroup className="mb-3">
+                  <InputGroup.Text id="inputGroup-sizing-default">
+                    <BsSearch />
+                  </InputGroup.Text>
+                  <Form.Control
+                    placeholder="Search Headlines,News..."
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default"
+                  />
+                </InputGroup>
+              </form>
+              <div className="row">
+                <p>Home Pages</p>
+                {Nav_home_list &&
+                  Nav_home_list.map((el) => {
+                    return (
+                      <div key={el.id} className="col-6">
+                        <ul>
+                          <li>{el.li}</li>
+                        </ul>
+                      </div>
+                    );
+                  })}
+                <p>Categories</p>
+                {Nav_categories_list &&
+                  Nav_categories_list.map((el) => {
+                    return (
+                      <div key={el.id} className="col-6">
+                        <ul>
+                          <li>{el.li}</li>
+                        </ul>
+                      </div>
+                    );
+                  })}
+                <p>Bookmarks</p>
+                {Nav_bookmark_list &&
+                  Nav_bookmark_list.map((el) => {
+                    return (
+                      <div key={el.id} className="col-6">
+                        <ul>
+                          <li>{el.li}</li>
+                        </ul>
+                      </div>
+                    );
+                  })}
+                <p>More Foxiz</p>
+                {Nav_More_list &&
+                  Nav_More_list.map((el) => {
+                    return (
+                      <div key={el.id} className="col-6">
+                        <ul>
+                          <li>{el.li}</li>
+                        </ul>
+                      </div>
+                    );
+                  })}
+              </div>
+              <div className="register">
+                <p>Have an existing account?</p>
+                <button id="sign_in">Sign in</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

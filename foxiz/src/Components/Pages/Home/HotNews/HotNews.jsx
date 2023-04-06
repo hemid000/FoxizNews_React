@@ -15,13 +15,13 @@ const HotNews = () => {
     <section id="quick_links">
       <div className="container">
         <div className="row">
-          <div className="col-lg-1 p-0 left_side">
+          <div className="col-lg-2 col-md-2 col-3 p-0 left_side">
             <p id="hot_news">
               <AiOutlineFire />
               Hot News
             </p>
           </div>
-          <div className="col-lg-7  middle_side">
+          <div className="col-lg-6 col-md-8  col-9 middle_side">
             <div id="swiper">
               <Swiper
                 slidesPerView={1}

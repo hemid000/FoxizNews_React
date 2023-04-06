@@ -26,6 +26,15 @@
       svg {
         @include _main($font_s: 13px, $color: $nine_color);
       }
+      @media (max-width: 1200px) {
+        font-size: 11px;
+      }
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media (max-width: 400px) {
+        font-size: 9px;
+      }
     }
   }
   .middle_side {
@@ -46,6 +55,19 @@
       }
 
       font-weight: 600;
+
+      @media (max-width: 1200px) {
+        font-size: 12px;
+      }
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+      @media (max-width: 508px) {
+        margin: 6px 0 0 0;
+      }
+      @media (max-width: 400px) {
+        font-size: 9px;
+      }
     }
     .swiper-pagination-bullet {
       display: none;
@@ -61,6 +83,9 @@
       &::after {
         content: "next";
         font-size: 20px;
+      }
+      @media (max-width: 500px) {
+        display: none;
       }
     }
   }
@@ -93,6 +118,12 @@
 
         box-shadow: #ff184e 0px 0px 4px;
       }
+      @media (max-width: 1200px) {
+        font-size: 8px;
+      }
+    }
+    @media (max-width: 1000px) {
+      display: none;
     }
   }
 }

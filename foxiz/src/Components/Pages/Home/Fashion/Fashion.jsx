@@ -17,7 +17,7 @@ const Fashion = () => {
     <section id="fashion">
       <div className="container">
         <p id="editor_p">Fashion</p>
-        <div className="row g-5">
+        <div className="row swiper_res g-5">
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -31,36 +31,24 @@ const Fashion = () => {
             // pagination={{
             //   clickable: true,
             // }}
-            // breakpoints={{
-            //   300: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 20,
-            //   },
-            //   400: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 20,
-            //   },
-            //   500: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 20,
-            //   },
-            //   600: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 20,
-            //   },
-            //   640: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 20,
-            //   },
-            //   768: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 40,
-            //   },
-            //   1024: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 50,
-            //   },
-            // }}
+            breakpoints={{
+              300: {
+                width: 300,
+                slidesPerView: 1,
+              },
+              400: {
+                width: 400,
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
           >
             {Fashionnews &&
               Fashionnews.map((el) => {

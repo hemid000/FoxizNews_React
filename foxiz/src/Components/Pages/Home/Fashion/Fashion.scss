@@ -92,6 +92,9 @@
         cursor: pointer;
         color: red;
       }
+      @media (max-width: 1000px) {
+        font-size: 13px;
+      }
     }
     .down_side {
       @include _main(
@@ -177,5 +180,8 @@
   .Swiper_hotnews {
     position: relative;
     height: 100%;
+  }
+  .swiper_res {
+    width: 100%;
   }
 }

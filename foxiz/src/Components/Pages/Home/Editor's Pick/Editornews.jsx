@@ -10,7 +10,7 @@ const Editornews = () => {
       <div className="container">
         <div className="row ">
           <p id="editor_p">Editor's Pick</p>
-          <div className="col-lg-8">
+          <div className="col-lg-8 col-md-12">
             <div className="row d-flex align-items-center">
               <div className="col-lg-6">
                 <div className="right_side">
@@ -80,7 +80,7 @@ const Editornews = () => {
                 {HomeMock &&
                   HomeMock.map((el) => {
                     return (
-                      <div key={el.id} className="col-lg-4">
+                      <div key={el.id} className="col-lg-4 col-md-4 col-6 ">
                         <div className="cart">
                           <div className="img">
                             <div className="box">
@@ -113,7 +113,7 @@ const Editornews = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 ">
+          <div className="col-lg-4 col-md-12">
             <div className="cart_forecast">
               <div className="row forecast">
                 <div className="box_in">
@@ -132,7 +132,7 @@ const Editornews = () => {
                     <span>Sunny</span>
                   </div>
                 </div>
-                <div className="col-lg-6 d-flex align-items-center">
+                <div className="col-lg-6 d-flex align-items-center justify-content-center">
                   <div className="weather_info">
                     <div className="left_side">
                       <p>4</p>

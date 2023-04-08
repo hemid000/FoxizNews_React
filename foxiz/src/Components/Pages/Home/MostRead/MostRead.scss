@@ -96,6 +96,18 @@
           &:hover {
             text-decoration: red underline;
           }
+          @media (max-width: 780px) {
+            font-size: 23px;
+          }
+          @media (max-width: 500px) {
+            font-size: 21px;
+          }
+          @media (max-width: 400px) {
+            font-size: 17px;
+          }
+          @media (max-width: 340px) {
+            font-size: 14px;
+          }
         }
         span {
           @include _main($font_s: 13px, $margin: 12px 0);
@@ -180,6 +192,9 @@
         text-decoration: 2px red underline;
         cursor: pointer;
       }
+      @media (max-width: 1200px) {
+        font-size: 13px;
+      }
     }
     .down_side {
       @include _main(
@@ -216,6 +231,10 @@
           $cursor: pointer,
           $border-radius: 4px
         );
+        @media (max-width: 1000px) {
+          width: 21%;
+          height: 89px;
+        }
       }
       .info_right {
         flex-direction: column;
@@ -225,6 +244,9 @@
           font-weight: 700;
           &:hover {
             text-decoration: 2px red underline;
+          }
+          @media (max-width: 1200px) {
+            font-size: 12px;
           }
         }
         span {

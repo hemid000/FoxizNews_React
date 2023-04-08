@@ -28,6 +28,18 @@
           color: red;
           cursor: pointer;
         }
+        @media (max-width: 700px) {
+          font-size: 15px;
+        }
+        @media (max-width: 500px) {
+          font-size: 12px;
+        }
+        @media (max-width: 400px) {
+          font-size: 11px;
+        }
+        @media (max-width: 350px) {
+          font-size: 10px;
+        }
       }
       .box {
         display: inline-block;
@@ -74,6 +86,9 @@
           }
           span {
             @include _main($font_s: 13px);
+            @media (max-width: 416px) {
+              display: none;
+            }
           }
         }
       }
@@ -86,6 +101,22 @@
           $object_f: cover,
           $cursor: pointer
         );
+        @media (max-width: 500px) {
+          width: 164px;
+          height: 100px;
+        }
+        @media (max-width: 440px) {
+          width: 147px;
+          height: 91px;
+        }
+        @media (max-width: 380px) {
+          width: 125px;
+          height: 77px;
+        }
+        @media (max-width: 350px) {
+          width: 115px;
+          height: 69px;
+        }
       }
     }
   }
@@ -109,6 +140,18 @@
           text-decoration: underline;
           color: red;
           cursor: pointer;
+        }
+        @media (max-width: 700px) {
+          font-size: 15px;
+        }
+        @media (max-width: 700px) {
+          font-size: 12px;
+        }
+        @media (max-width: 400px) {
+          font-size: 11px;
+        }
+        @media (max-width: 350px) {
+          font-size: 10px;
         }
       }
       .box {
@@ -161,10 +204,19 @@
           }
           p {
             @include _main($font_s: 12px, $margin: 0);
+            @media (max-width: 468px) {
+              font-size: 9px;
+            }
+            @media (max-width: 420px) {
+              display: none;
+            }
           }
           span {
             @include _main($font_s: 13px);
             font-weight: 700;
+            @media (max-width: 768px) {
+              display: none;
+            }
           }
         }
       }
@@ -177,6 +229,22 @@
           $object_f: cover,
           $cursor: pointer
         );
+        @media (max-width: 500px) {
+          width: 164px;
+          height: 100px;
+        }
+        @media (max-width: 440px) {
+          width: 147px;
+          height: 91px;
+        }
+        @media (max-width: 380px) {
+          width: 125px;
+          height: 77px;
+        }
+        @media (max-width: 350px) {
+          width: 115px;
+          height: 69px;
+        }
       }
     }
   }

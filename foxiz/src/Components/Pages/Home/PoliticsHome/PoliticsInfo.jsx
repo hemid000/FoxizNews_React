@@ -11,28 +11,32 @@ const PoliticsInfo = () => {
           <p id="editor_p">Politics</p>
 
           <div className="col-lg-3">
-            {Politics &&
-              Politics.map((el) => {
-                return (
-                  <div key={el.id} className="cart">
-                    <div className="img">
-                      <div className="box">
-                        <p id="line">{el.tag}</p>
+            <div className="row">
+              {Politics &&
+                Politics.map((el) => {
+                  return (
+                    <div key={el.id} className="col-lg-12 col-md-6">
+                      <div className="cart">
+                        <div className="img">
+                          <div className="box">
+                            <p id="line">{el.tag}</p>
+                          </div>
+                          <img src={el.imgSrc} alt="" />
+                        </div>
+                        <p id="info">{el.shortinfo}</p>
+                        <div className="down_side">
+                          <div className="down_right">
+                            <span>{el.name}</span>
+                          </div>
+                          <div className="down_left">
+                            <span>{el.time}</span>
+                          </div>{" "}
+                        </div>
                       </div>
-                      <img src={el.imgSrc} alt="" />
                     </div>
-                    <p id="info">{el.shortinfo}</p>
-                    <div className="down_side">
-                      <div className="down_right">
-                        <span>{el.name}</span>
-                      </div>
-                      <div className="down_left">
-                        <span>{el.time}</span>
-                      </div>{" "}
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+            </div>
           </div>
           <div className="col-lg-6">
             {Politics2 &&
@@ -60,28 +64,32 @@ const PoliticsInfo = () => {
               })}
           </div>
           <div className="col-lg-3">
-            {Politics3 &&
-              Politics3.map((el) => {
-                return (
-                  <div key={el.id} className="cart">
-                    <div className="img">
-                      <div className="box">
-                        <p id="line">{el.tag}</p>
+            <div className="row">
+              {Politics3 &&
+                Politics3.map((el) => {
+                  return (
+                    <div key={el.id} className="col-lg-12 col-md-6">
+                      <div className="cart">
+                        <div className="img">
+                          <div className="box">
+                            <p id="line">{el.tag}</p>
+                          </div>
+                          <img src={el.imgSrc} alt="" />
+                        </div>
+                        <p id="info">{el.shortinfo}</p>
+                        <div className="down_side">
+                          <div className="down_right">
+                            <span>{el.name}</span>
+                          </div>
+                          <div className="down_left">
+                            <span>{el.time}</span>
+                          </div>{" "}
+                        </div>
                       </div>
-                      <img src={el.imgSrc} alt="" />
                     </div>
-                    <p id="info">{el.shortinfo}</p>
-                    <div className="down_side">
-                      <div className="down_right">
-                        <span>{el.name}</span>
-                      </div>
-                      <div className="down_left">
-                        <span>{el.time}</span>
-                      </div>{" "}
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+            </div>
           </div>
         </div>
       </div>

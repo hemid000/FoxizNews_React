@@ -9,11 +9,11 @@ const Discover = () => {
       <div className="container">
         <p id="editor_p">Discover Categories</p>
 
-        <div className="row">
+        <div className="row g-3">
           {Discover_Categories &&
             Discover_Categories.slice(0, 4).map((el) => {
               return (
-                <div key={el.id} className="col-lg-3">
+                <div key={el.id} className="col-lg-3 col-md-6 col-sm-12">
                   <div className="cart">
                     <div className="img">
                       <img src={el.imgSrc} alt="" />

@@ -5,7 +5,7 @@
   #editor_p {
     @include _main(
       $font_s: 22px,
-      $margin: 0px 0 31px 28px,
+      $padding: 0px 0 31px 28px,
       $position: relative,
       $display: block,
       $cursor: pointer
@@ -15,7 +15,7 @@
     &::after {
       @include _main(
         $top: 6px,
-        $left: 97px,
+        $left: 112px,
         $width: 3px,
         $height: 22px,
         $position: absolute,
@@ -27,7 +27,7 @@
     &::before {
       @include _main(
         $top: 7px,
-        $left: -4px,
+        $left: 16px,
         $width: 3px,
         $height: 22px,
         $position: absolute,
@@ -93,6 +93,9 @@
         text-decoration: underline;
         color: red;
         cursor: pointer;
+      }
+      @media (max-width: 1200px) {
+        font-size: 15px;
       }
     }
     .down_side {
@@ -176,9 +179,15 @@
         color: red;
         cursor: pointer;
       }
+      @media (max-width: 1200px) {
+        font-size: 21px;
+      }
     }
     span {
       font-size: 14px;
+      @media (max-width: 1200px) {
+        font-size: 12px;
+      }
     }
     .down_side {
       @include _main(

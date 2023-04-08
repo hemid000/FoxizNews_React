@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
           <div className="col-lg-8">
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-md-6 col-6">
                 <ul>
                   <p>Quick Link</p>
                   <li>MY BOOKMARK</li>
@@ -25,7 +25,7 @@ const Footer = () => {
                   <li>BLOG INDEX</li>
                 </ul>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-md-6 col-6">
                 <ul>
                   <p>Top Categories</p>
                   <li>BUSINESS</li>

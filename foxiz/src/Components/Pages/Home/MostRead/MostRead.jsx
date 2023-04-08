@@ -45,12 +45,12 @@ const MostRead = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-md-12">
             <div className="row g-3">
               {Mostread &&
                 Mostread.slice(0, 2).map((el) => {
                   return (
-                    <div key={el.id} className="col-lg-6">
+                    <div key={el.id} className="col-lg-6 col-md-6">
                       <div className="cart">
                         <div className="img">
                           <div className="box">

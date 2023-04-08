@@ -6,7 +6,7 @@
   #editor_p {
     @include _main(
       $font_s: 22px,
-      $margin: 0 0 0 28px,
+      $padding: 0 0 0 28px,
       $position: relative,
       $display: inline
     );
@@ -15,7 +15,7 @@
     &::after {
       @include _main(
         $top: 6px,
-        $left: 154px,
+        $left: 166px,
         $width: 3px,
         $height: 22px,
         $position: absolute,
@@ -27,7 +27,7 @@
     &::before {
       @include _main(
         $top: 7px,
-        $left: -3px,
+        $left: 12px,
         $width: 3px,
         $height: 22px,
         $position: absolute,
@@ -56,6 +56,15 @@
           text-decoration: underline;
           color: red;
           cursor: pointer;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
+        @media (max-width: 500px) {
+          font-size: 21px;
+        }
+        @media (max-width: 380px) {
+          font-size: 19px;
         }
       }
       .box {
@@ -142,6 +151,12 @@
           $color: rgb(150, 150, 150),
           $display: block
         );
+        @media (max-width: 600px) {
+          font-size: 12px;
+        }
+        @media (max-width: 500px) {
+          font-size: 11px;
+        }
       }
     }
   }
@@ -329,6 +344,12 @@
         color: red;
         cursor: pointer;
       }
+      @media (max-width: 550px) {
+        font-size: 13px;
+      }
+      @media (max-width: 500px) {
+        font-size: 11px;
+      }
     }
     .down_side {
       @include _main(
@@ -465,6 +486,9 @@
         }
       }
     }
+    @media (max-width: 1000px) {
+      margin-top: 60px;
+    }
   }
   .follow {
     cursor: pointer;
@@ -480,7 +504,7 @@
       &::after {
         @include _main(
           $top: 2px,
-          $left: 98px,
+          $left: 118px,
           $width: 3px,
           $height: 22px,
           $position: absolute,
@@ -492,7 +516,7 @@
       &::before {
         @include _main(
           $top: 2px,
-          $left: -17px,
+          $left: 15px,
           $width: 3px,
           $height: 22px,
           $position: absolute,

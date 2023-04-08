@@ -54,6 +54,9 @@
           $font_s: 11px
         );
       }
+      @media (max-width: 430px) {
+        font-size: 11px;
+      }
     }
     p {
       @include _main($color: rgb(101, 101, 101), $margin: 30px 0 14px 0);
@@ -64,6 +67,13 @@
     p {
       @include _main($width: 60%, $font_s: 15px, $margin: 70px 0 60px 0);
       font-weight: 650;
+      @media (max-width: 1000px) {
+        font-size: 13px;
+      }
+      @media (max-width: 994px) {
+        width: 100%;
+        font-size: 15px;
+      }
     }
   }
 
@@ -117,7 +127,7 @@
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         @media (max-width: 1200px) {
-          width: 68%;
+          width: 63%;
         }
       }
       button {
@@ -134,7 +144,7 @@
         border-bottom-right-radius: 5px;
         outline: none;
         @media (max-width: 1200px) {
-          width: 32%;
+          width: 37%;
         }
       }
       label {
@@ -183,11 +193,23 @@
     );
     p {
       @include _main($font_s: 14px, $margin: 0 5px 0 0);
+      @media (max-width: 960px) {
+        font-size: 11px;
+      }
+      @media (max-width: 610px) {
+        font-size: 9px;
+      }
     }
     .box {
       @include _main($display: flex, $align-items: center, $gap: 4px);
       span {
         @include _main($font_s: 12px);
+        @media (max-width: 960px) {
+          font-size: 11px;
+        }
+        @media (max-width: 600px) {
+          font-size: 9px;
+        }
       }
     }
     &::before {

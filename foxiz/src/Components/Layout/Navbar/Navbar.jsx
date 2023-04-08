@@ -500,16 +500,16 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div
-        onClick={() => {
-          setNavclick(!navclick);
-        }}
-        className="nav_mobile"
-      >
+      <div className="nav_mobile">
         <div className="container">
           <div className="row">
             <div className="col-6 d-flex align-items-center left_side">
-              <BiMenuAltLeft style={{ fontSize: "29px", cursor: "pointer" }} />
+              <BiMenuAltLeft
+                onClick={() => {
+                  setNavclick(!navclick);
+                }}
+                style={{ fontSize: "29px", cursor: "pointer" }}
+              />
               <img
                 src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo.svg"
                 alt=""
@@ -519,9 +519,11 @@ const Navbar = () => {
               <ul>
                 <li>
                   <FiSearch
+                    onClick={() => {
+                      setNavclick(!navclick);
+                    }}
                     style={{ fontSize: "19px", margin: "0 5px 0 0" }}
                     title="Search"
-                    onClick={handleclick}
                   />
                 </li>
                 <li id="nav_dark">

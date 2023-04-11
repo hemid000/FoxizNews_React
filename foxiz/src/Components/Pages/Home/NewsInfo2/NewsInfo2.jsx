@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import "../NewsInfo2/NewsInfo2.scss";
 import image1 from "../../../../Assets/sponser1.webp";
+import { ToastContainer, toast } from "react-toastify";
+
 const NewsInfo2 = () => {
+  const notify = () => toast("Saved!");
+
+  const [save, setSave] = useState(true);
+  const [unsave, setUnsave] = useState(false);
+  const [save2, setSave2] = useState(true);
+  const [unsave2, setUnsave2] = useState(false);
+  const handleClick = () => {
+    setSave(false);
+    setUnsave(true);
+  };
+  const handleClick2 = () => {
+    setSave(true);
+    setUnsave(false);
+  };
+  const handleClick3 = () => {
+    setSave2(false);
+    setUnsave2(true);
+  };
+  const handleClick4 = () => {
+    setSave2(true);
+    setUnsave2(false);
+  };
   return (
     <section id="NewsInfo2">
       <div className="container all">
@@ -26,15 +50,21 @@ const NewsInfo2 = () => {
                     <p>Jacob</p>
                     <span>Sep 19, 2021</span>
                   </div>{" "}
-                  <div className="">
-                    <BsBookmark
-                      style={{ cursor: "pointer", margin: "0 20px 0 0" }}
-                    />
-                  </div>
-                  {/*                   
-                    <div className="">
-                      <BsBookmarkFill style={{ cursor: "pointer" }} />
-                    </div> */}
+                  {save2 && (
+                    <div onClick={handleClick3} className="">
+                      <BsBookmark
+                        onClick={notify}
+                        style={{ cursor: "pointer", margin: "0 20px 0 0" }}
+                      />
+                    </div>
+                  )}
+                  {unsave2 && (
+                    <div onClick={handleClick4} className="">
+                      <BsBookmarkFill
+                        style={{ cursor: "pointer", margin: "0 20px 0 0" }}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="second">
@@ -67,15 +97,21 @@ const NewsInfo2 = () => {
                     <p>9.6 out of 10</p>
                     <span>Good Place</span>
                   </div>{" "}
-                  <div className="">
-                    <BsBookmark
-                      style={{ cursor: "pointer", margin: "0 20px 0 0" }}
-                    />
-                  </div>
-                  {/*                   
-                    <div className="">
-                      <BsBookmarkFill style={{ cursor: "pointer" }} />
-                    </div> */}
+                  {save && (
+                    <div onClick={handleClick} className="">
+                      <BsBookmark
+                        onClick={notify}
+                        style={{ cursor: "pointer", margin: "0 20px 0 0" }}
+                      />
+                    </div>
+                  )}
+                  {unsave && (
+                    <div onClick={handleClick2} className="">
+                      <BsBookmarkFill
+                        style={{ cursor: "pointer", margin: "0 20px 0 0" }}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="second">

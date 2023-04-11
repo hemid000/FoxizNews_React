@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "../NewsInfo/NewsInfo.scss";
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
 
-const NewsInfo = (probs) => {
-  const notify = probs.notify;
-  const handleClick = probs.handleClick;
-  const handleClick2 = probs.handleClick2;
-  const handleClick3 = probs.handleClick3;
-  const handleClick4 = probs.handleClick4;
-  const handleClick5 = probs.handleClick5;
-  const handleClick6 = probs.handleClick6;
-  const save = probs.save;
-  const unsave = probs.unsave;
-  const save2 = probs.save2;
-  const unsave2 = probs.unsave2;
-  const save3 = probs.save3;
-  const unsave3 = probs.unsave3;
+const NewsInfo = (props) => {
+  const notify = props.notify;
+  const handleClick = props.handleClick;
+  const handleClick2 = props.handleClick2;
+  const handleClick3 = props.handleClick3;
+  const handleClick4 = props.handleClick4;
+  const handleClick5 = props.handleClick5;
+  const handleClick6 = props.handleClick6;
+  const save = props.save;
+  const unsave = props.unsave;
+  const save2 = props.save2;
+  const unsave2 = props.unsave2;
+  const save3 = props.save3;
+  const unsave3 = props.unsave3;
 
   return (
     <section id="NewsInfo">

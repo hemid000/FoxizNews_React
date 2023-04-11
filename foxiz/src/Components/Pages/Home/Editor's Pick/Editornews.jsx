@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Editor's Pick/News.scss";
 import { BsBookmark, BsBookmarkFill, BsSun } from "react-icons/bs";
 import { HomeMock } from "../../../Mock/HomeMock";
 import { TiWeatherCloudy } from "react-icons/ti";
 import { Follow } from "../../../Mock/HomeMock";
+import { ToastContainer, toast } from "react-toastify";
+
 const Editornews = () => {
+  const notify = () => toast("Saved!");
+
+  const [save, setSave] = useState(true);
+  const [unsave, setUnsave] = useState(false);
+  const [save2, setSave2] = useState(true);
+  const [unsave2, setUnsave2] = useState(false);
+  const handleClick = () => {
+    setSave(false);
+    setUnsave(true);
+  };
+  const handleClick2 = () => {
+    setSave(true);
+    setUnsave(false);
+  };
+  const handleClick3 = () => {
+    setSave2(false);
+    setUnsave2(true);
+  };
+  const handleClick4 = () => {
+    setSave2(true);
+    setUnsave2(false);
+  };
   return (
     <section id="editor_news">
       <div className="container">
@@ -30,10 +54,6 @@ const Editornews = () => {
                         <p>9.6 out of 10</p>
                         <span>Good Place</span>
                       </div>{" "}
-                      {/*                   
-                    <div className="">
-                      <BsBookmarkFill style={{ cursor: "pointer" }} />
-                    </div> */}
                     </div>
                     <span id="infospan">
                       As for quality, the HS80's provided clear-cut sound with
@@ -48,15 +68,21 @@ const Editornews = () => {
                         <p>Jacob</p>
                         <span>Sep 19, 2021</span>
                       </div>{" "}
-                      <div className="">
-                        <BsBookmark
-                          style={{ cursor: "pointer", margin: "0 20px 0 0" }}
-                        />
-                      </div>
-                      {/*                   
-                    <div className="">
-                      <BsBookmarkFill style={{ cursor: "pointer" }} />
-                    </div> */}
+                      {save2 && (
+                        <div onClick={handleClick3} className="">
+                          <BsBookmark
+                            onClick={notify}
+                            style={{ cursor: "pointer", margin: "0 20px 0 0" }}
+                          />
+                        </div>
+                      )}
+                      {unsave2 && (
+                        <div onClick={handleClick4} className="">
+                          <BsBookmarkFill
+                            style={{ cursor: "pointer", margin: "0 20px 0 0" }}
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -93,18 +119,27 @@ const Editornews = () => {
                             <div className="down_left">
                               <span>{el.time}</span>
                             </div>{" "}
-                            <div className="">
-                              <BsBookmark
-                                style={{
-                                  cursor: "pointer",
-                                  margin: "0 20px 0 0",
-                                }}
-                              />
-                            </div>
-                            {/*                   
-                    <div className="">
-                      <BsBookmarkFill style={{ cursor: "pointer" }} />
-                    </div> */}
+                            {/* {save && (
+                              <div onClick={handleClick} className="">
+                                <BsBookmark
+                                  onClick={notify}
+                                  style={{
+                                    cursor: "pointer",
+                                    margin: "0 20px 0 0",
+                                  }}
+                                />
+                              </div>
+                            )}
+                            {unsave && (
+                              <div onClick={handleClick2} className="">
+                                <BsBookmarkFill
+                                  style={{
+                                    cursor: "pointer",
+                                    margin: "0 20px 0 0",
+                                  }}
+                                />
+                              </div>
+                            )} */}
                           </div>
                         </div>
                       </div>

@@ -19,6 +19,9 @@ body.light {
 body.dark {
   background-color: #131518 !important;
   color: rgb(255, 255, 255) !important;
+  a {
+    color: white !important;
+  }
   #lightmode_img {
     display: none;
   }
@@ -72,6 +75,12 @@ body.dark {
     #nav_dark {
       &:before {
         background-color: #454545 !important;
+      }
+    }
+    .list_mobile {
+      background-color: #0d0f11;
+      p {
+        color: white !important;
       }
     }
   }

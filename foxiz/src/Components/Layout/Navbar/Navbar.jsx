@@ -23,6 +23,7 @@ import {
 import { NavbarMock } from "../../Mock/NavbarMock";
 import { NavbarMockNotnews } from "../../Mock/NavbarMock";
 import { BiMenuAltLeft } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
@@ -44,26 +45,30 @@ const Navbar = () => {
           <div className="row g-3">
             <div className="col-2">
               <div className="nav_left">
-                <div className="img">
-                  <img
-                    id="lightmode_img"
-                    src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo.svg"
-                    alt=""
-                    title="News"
-                  />
-                  <img
-                    id="darkmode_img"
-                    src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo-light.svg"
-                    alt=""
-                  />
-                </div>
+                <Link to={"/"}>
+                  <div className="img">
+                    <img
+                      id="lightmode_img"
+                      src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo.svg"
+                      alt=""
+                      title="News"
+                    />
+                    <img
+                      id="darkmode_img"
+                      src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo-light.svg"
+                      alt=""
+                    />
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="col-7">
               <div className="nav_middle">
                 <ul>
                   <li id="home">
-                    Home <BiChevronDown className="down" />
+                    <Link to={"/"}>
+                      Home <BiChevronDown className="down" />
+                    </Link>
                     <div className="home_hover">
                       <ul>
                         <li>
@@ -78,12 +83,16 @@ const Navbar = () => {
                     </div>
                   </li>
                   <li id="politics">
-                    Politics <BiChevronDown className="down" />
+                    <Link to={"/politics"}>
+                      Politics <BiChevronDown className="down" />
+                    </Link>
                     <div className="politics_hover">
                       <div className="container">
                         <div className="row">
                           <div className="col-lg-4 left_side">
-                            <p>Politics</p>
+                            <Link to={"/politics"}>
+                              <p>Politics</p>{" "}
+                            </Link>
                             <div className="img">
                               <img
                                 id="front_img"
@@ -228,7 +237,10 @@ const Navbar = () => {
                         </div>
                       </div>
                     </div>
-                    Technology <BiChevronDown className="down" />
+
+                    <Link to={"/technology"}>
+                      Technology <BiChevronDown className="down" />
+                    </Link>
                   </li>
                   <li id="post">
                     <div className="post_hover">
@@ -348,22 +360,38 @@ const Navbar = () => {
                         <li>Highlights/ Key Points</li>
                       </ul>
                     </div>
-                    Posts <BiChevronDown className="down" />
+                    <Link to={"/posts"}>
+                      Posts <BiChevronDown className="down" />
+                    </Link>
                   </li>
                   <li id="bookmarks">
-                    <BsBookmark /> Bookmarks
+                    <Link to={"/bookmarks"}>
+                      <BsBookmark /> Bookmarks
+                    </Link>
                   </li>
                   <li id="pages">
                     <div className="pages_hover">
                       <ul>
-                        <li>Blog Index</li>
-                        <li>Contact Us</li>
-                        <li>Search Page</li>
-                        <li>404 Page</li>
-                        <li>Costumize Interests</li>
+                        <li>
+                          <Link to={"/blogIndex"}>Blog Index</Link>{" "}
+                        </li>
+                        <li>
+                          <Link to={"/contact"}> Contact Us</Link>
+                        </li>
+                        <li>
+                          <Link to={"/search"}>Search Page</Link>{" "}
+                        </li>
+                        <li>
+                          <Link to={"/*"}> 404 Page</Link>
+                        </li>
+                        <li>
+                          <Link to={"/custom"}>Costumize Interests</Link>{" "}
+                        </li>
                       </ul>
                     </div>
-                    Pages <BiChevronDown className="down" />
+                    <Link to={"/pages"}>
+                      Pages <BiChevronDown className="down" />
+                    </Link>
                   </li>
 
                   <li id="more">
@@ -511,7 +539,14 @@ const Navbar = () => {
                 style={{ fontSize: "29px", cursor: "pointer" }}
               />
               <img
+                id="lightmode_img"
                 src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo.svg"
+                alt=""
+                title="News"
+              />
+              <img
+                id="darkmode_img"
+                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo-light.svg"
                 alt=""
               />
             </div>

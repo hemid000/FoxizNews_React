@@ -1,11 +1,15 @@
 import React from "react";
-import Home from "./Components/Pages/Home/Home";
+import { Routes, Route } from "react-router-dom";
+import Router from "../src/router";
 
 const App = () => {
   return (
-    <main>
-      <Home />
-    </main>
+    <Routes>
+      {Router &&
+        Router.map((el, index) => (
+          <Route key={index} path={el.path} element={el.component} />
+        ))}
+    </Routes>
   );
 };
 

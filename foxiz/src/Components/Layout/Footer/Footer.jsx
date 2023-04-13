@@ -1,6 +1,8 @@
 import React from "react";
 import "../Footer/Footer.scss";
 import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer id="foot">
@@ -17,12 +19,19 @@ const Footer = () => {
               <div className="col-lg-4 col-md-6 col-6">
                 <ul>
                   <p>Quick Link</p>
-                  <li>MY BOOKMARK</li>
                   <li>
-                    INTERESTS <div className="add_info">New</div>
+                    <Link to={"/bookmarks"}>MY BOOKMARK</Link>
                   </li>
-                  <li>CONTACT US</li>
-                  <li>BLOG INDEX</li>
+                  <li>
+                    <Link to={"/custom"}> INTERESTS</Link>
+                    <div className="add_info">New</div>
+                  </li>
+                  <li>
+                    <Link to={"/contact"}>CONTACT US</Link>
+                  </li>
+                  <li>
+                    <Link to={"/blogIndex"}>BLOG INDEX</Link>
+                  </li>
                 </ul>
               </div>
               <div className="col-lg-4 col-md-6 col-6">

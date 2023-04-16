@@ -1,0 +1,37 @@
+@import "../../Scss/Style.scss";
+
+.topbtn {
+  position: fixed;
+  bottom: 50px;
+  right: 1.5625rem;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  border: 1px solid transparent;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: #ff184e 0px 2px 8px;
+    background-color: #ff184e;
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.topbtn_visible {
+  opacity: 1;
+  visibility: visible;
+  &::before {
+    top: -15px;
+  }
+}

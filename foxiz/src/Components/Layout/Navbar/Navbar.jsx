@@ -538,17 +538,20 @@ const Navbar = () => {
                 }}
                 style={{ fontSize: "29px", cursor: "pointer" }}
               />
-              <img
-                id="lightmode_img"
-                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo.svg"
-                alt=""
-                title="News"
-              />
-              <img
-                id="darkmode_img"
-                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo-light.svg"
-                alt=""
-              />
+              <Link to={"/"}>
+                {" "}
+                <img
+                  id="lightmode_img"
+                  src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo.svg"
+                  alt=""
+                  title="News"
+                />
+                <img
+                  id="darkmode_img"
+                  src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/12/logo-light.svg"
+                  alt=""
+                />
+              </Link>
             </div>
             <div className="col-6 d-flex align-items-center justify-content-end right_side">
               <ul>
@@ -588,49 +591,122 @@ const Navbar = () => {
               </form>
               <div className="row">
                 <p>Home Pages</p>
-                {Nav_home_list &&
-                  Nav_home_list.map((el) => {
-                    return (
-                      <div key={el.id} className="col-6">
-                        <ul>
-                          <li>{el.li}</li>
-                        </ul>
-                      </div>
-                    );
-                  })}
+                <div className="row">
+                  <div className="col-6">
+                    <ul>
+                      <li>
+                        <Link to={"/"}> Home 1</Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Home 2</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Home 3</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Home 4</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Home 5</li>
+                    </ul>
+                  </div>
+                </div>
+
                 <p>Categories</p>
-                {Nav_categories_list &&
-                  Nav_categories_list.map((el) => {
-                    return (
-                      <div key={el.id} className="col-6">
-                        <ul>
-                          <li>{el.li}</li>
-                        </ul>
-                      </div>
-                    );
-                  })}
+                <div className="row">
+                  <div className="col-6">
+                    <ul>
+                      <li>
+                        <Link to={"/technology"}>Technology</Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Entertainment</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Travel</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Fashion</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Business</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>
+                        {" "}
+                        <Link to={"/politics"}>Politics</Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Science</li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Health</li>
+                    </ul>
+                  </div>
+                </div>
                 <p>Bookmarks</p>
-                {Nav_bookmark_list &&
-                  Nav_bookmark_list.map((el) => {
-                    return (
-                      <div key={el.id} className="col-6">
-                        <ul>
-                          <li>{el.li}</li>
-                        </ul>
-                      </div>
-                    );
-                  })}
+                <div className="row">
+                  <div className="col-6">
+                    <ul>
+                      <li>
+                        <Link to={"/custom"}>Customize Interests</Link>{" "}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>
+                        <Link to={"/bookmarks"}>My Bookmarks</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <p>More Foxiz</p>
-                {Nav_More_list &&
-                  Nav_More_list.map((el) => {
-                    return (
-                      <div key={el.id} className="col-6">
-                        <ul>
-                          <li>{el.li}</li>
-                        </ul>
-                      </div>
-                    );
-                  })}
+                <div className="row">
+                  <div className="col-6">
+                    <ul>
+                      <li>
+                        <Link to={"/blogIndex"}>Blog Index</Link>{" "}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-6">
+                    <ul>
+                      <li>Sitemap</li>
+                    </ul>
+                  </div>
+                </div>
+                <p>
+                  <Link to={"/contact"}>Contact Us</Link>
+                </p>
+                <p>
+                  <Link to={"/search"}>Search</Link>
+                </p>
               </div>
               <div className="register">
                 <p>Have an existing account?</p>

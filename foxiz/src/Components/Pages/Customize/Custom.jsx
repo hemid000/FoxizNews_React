@@ -1,7 +1,7 @@
 import React from "react";
 
 const Custom = () => {
-  return <div>custom</div>;
+  return <div></div>;
 };
 
 export default Custom;

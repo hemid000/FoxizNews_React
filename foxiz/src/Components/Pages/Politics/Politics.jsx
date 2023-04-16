@@ -1,7 +1,7 @@
 import React from "react";
 
 const Politics = () => {
-  return <div>p</div>;
+  return <div></div>;
 };
 
 export default Politics;

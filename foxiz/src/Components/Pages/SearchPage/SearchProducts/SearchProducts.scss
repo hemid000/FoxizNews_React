@@ -1,0 +1,292 @@
+@import "../../../../Scss/Style.scss";
+
+#search {
+  @include _main($width: 100%);
+  .backImg {
+    @include _main($width: 100%, $height: 225px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .search_row {
+      @include _main(
+        $width: 100%,
+        $display: flex,
+        $gap: 10px,
+        $align-items: center,
+        $justify-content: center,
+        $text-align: center
+      );
+      flex-direction: column;
+      h2 {
+        @include _main($font_s: 43px, $margin: 40px 0 0 0);
+        font-weight: 700;
+        @media (max-width: 770px) {
+          font-size: 35px;
+        }
+        @media (max-width: 400px) {
+          font-size: 25px;
+        }
+      }
+      p {
+        @media (max-width: 770px) {
+          font-size: 15px;
+        }
+        @media (max-width: 400px) {
+          font-size: 13px !important;
+        }
+      }
+      .box_search {
+        margin: 60px 0;
+        width: 100%;
+        z-index: 23;
+        @include _main(
+          $display: flex,
+          $align-items: center,
+          $justify-content: center
+        );
+        form {
+          box-shadow: 0 0 40px #0000001f;
+          @include _main(
+            $width: 45%,
+            $display: flex,
+            $align-items: center,
+            $justify-content: center
+          );
+          #text_input {
+            @include _main(
+              $width: 77%,
+              $padding: 15px 5px,
+              $font_s: 14px,
+              $back-color: $main_color,
+              $border: none
+            );
+            @media (max-width: 400px) {
+              font-size: 11px;
+            }
+          }
+          svg {
+            @media (max-width: 400px) {
+              font-size: 12px;
+            }
+          }
+          #submit_input {
+            @include _main(
+              $width: 12%,
+              $padding: 11px 0px,
+              $font_s: 13px,
+              $back-color: $main_color,
+              $border: none
+            );
+            @media (max-width: 400px) {
+              font-size: 11px;
+            }
+          }
+          .search-form-icon {
+            width: 4%;
+          }
+          @media (max-width: 1000px) {
+            width: 68%;
+          }
+          @media (max-width: 770px) {
+            width: 97%;
+          }
+          @media (max-width: 420px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .backImgDark {
+    @include _main($width: 100%, $height: 225px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .search_row {
+      @include _main(
+        $width: 100%,
+        $display: flex,
+        $gap: 10px,
+        $align-items: center,
+        $justify-content: center,
+        $text-align: center
+      );
+      flex-direction: column;
+      h2 {
+        @include _main($font_s: 43px, $margin: 40px 0 0 0);
+        font-weight: 700;
+        @media (max-width: 770px) {
+          font-size: 35px;
+        }
+        @media (max-width: 400px) {
+          font-size: 25px;
+        }
+      }
+      p {
+        @media (max-width: 770px) {
+          font-size: 15px;
+        }
+        @media (max-width: 400px) {
+          font-size: 13px !important;
+        }
+      }
+      .box_search {
+        margin: 60px 0;
+        width: 100%;
+        z-index: 23;
+        @include _main(
+          $display: flex,
+          $align-items: center,
+          $justify-content: center
+        );
+        form {
+          box-shadow: 0 0 40px #0000001f;
+          @include _main(
+            $width: 45%,
+            $display: flex,
+            $align-items: center,
+            $justify-content: center
+          );
+          #text_input {
+            @include _main(
+              $width: 77%,
+              $padding: 15px 5px,
+              $font_s: 14px,
+              $back-color: $main_color,
+              $border: none
+            );
+            @media (max-width: 400px) {
+              font-size: 11px;
+            }
+          }
+          svg {
+            @media (max-width: 400px) {
+              font-size: 12px;
+            }
+          }
+          #submit_input {
+            @include _main(
+              $width: 12%,
+              $padding: 16px 0px,
+              $font_s: 13px,
+              $back-color: $main_color,
+              $border: none
+            );
+            @media (max-width: 400px) {
+              font-size: 11px;
+            }
+            @media (max-width: 770px) {
+              padding: 16px 0px 15px 0;
+            }
+            @media (max-width: 400px) {
+              padding: 15px 0px 15px 0;
+            }
+          }
+          .search-form-icon {
+            width: 4%;
+            padding: 13px 0 14px 0;
+            background-color: white;
+            color: black;
+            @media (max-width: 400px) {
+              display: none;
+            }
+          }
+          @media (max-width: 1000px) {
+            width: 68%;
+          }
+          @media (max-width: 770px) {
+            width: 97%;
+          }
+          @media (max-width: 420px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #products_se {
+    margin: 100px 0;
+    .cart {
+      .img {
+        @include _main(
+          $width: 100%,
+          $height: 182px,
+          $cursor: pointer,
+          $position: relative
+        );
+        img {
+          @include _main(
+            $width: 100%,
+            $height: 100%,
+            $object_f: cover,
+            $cursor: pointer,
+            $border-radius: 5px
+          );
+        }
+        .box {
+          @include _main(
+            $position: absolute,
+            $display: inline-block,
+            $border-radius: 50%,
+            $bottom: -11px,
+            $left: -3px,
+            $cursor: pointer
+          );
+          transform: matrix(1, 0, -0.4, 1, 0, 0);
+
+          #line {
+            @include _main(
+              $font_s: 12px,
+              $padding: 4px 7px,
+              $back-color: #56ca71,
+              $margin: 15px 0,
+              $color: $main_color,
+              $transition: 0.3s ease-in-out,
+              $cursor: pointer
+            );
+            text-decoration: none;
+
+            &:hover {
+              box-shadow: #56ca71 0px 5px 15px;
+            }
+          }
+        }
+      }
+      #info {
+        font-weight: 650;
+        font-size: 15px;
+        margin-top: 10px;
+
+        &:hover {
+          text-decoration: underline;
+          color: red;
+          cursor: pointer;
+        }
+        @media (max-width: 550px) {
+          font-size: 13px;
+        }
+        @media (max-width: 500px) {
+          font-size: 11px;
+        }
+      }
+      .down_side {
+        @include _main(
+          $display: flex,
+          $justify-content: space-between,
+          $align-items: center
+        );
+        .down_left {
+          @include _main($display: flex, $align-items: center, $gap: 5px);
+          p {
+            @include _main($font_s: 12px, $margin: 0);
+          }
+          span {
+            @include _main($font_s: 13px);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

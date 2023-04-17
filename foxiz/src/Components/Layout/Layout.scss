@@ -15,10 +15,16 @@ body.light {
   .sun {
     display: none;
   }
+  .backImgDark {
+    display: none;
+  }
 }
 body.dark {
   background-color: #131518 !important;
   color: rgb(255, 255, 255) !important;
+  .backImg {
+    display: none;
+  }
   a {
     color: white !important;
   }

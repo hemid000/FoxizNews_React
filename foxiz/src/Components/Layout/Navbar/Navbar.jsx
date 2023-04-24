@@ -389,9 +389,7 @@ const Navbar = () => {
                         </li>
                       </ul>
                     </div>
-                    <Link to={"/pages"}>
-                      Pages <BiChevronDown className="down" />
-                    </Link>
+                    Pages <BiChevronDown className="down" />
                   </li>
 
                   <li id="more">

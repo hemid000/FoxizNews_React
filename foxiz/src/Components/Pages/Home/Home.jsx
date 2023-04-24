@@ -72,7 +72,6 @@ const Home = () => {
       <PoliticsInfo />
       <Fashion />
       <HBlog />
-      <ToastContainer />
     </main>
   );
 };

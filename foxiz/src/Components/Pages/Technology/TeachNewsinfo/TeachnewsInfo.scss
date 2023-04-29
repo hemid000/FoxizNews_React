@@ -1,0 +1,260 @@
+@import "../../../../Scss/Style.scss";
+
+#teachnewsInfo {
+  @include _main($margin: 20px 0 0 0);
+  .container {
+    @media (max-width: 1600px) {
+      max-width: 1275px;
+    }
+    @media (max-width: 1400px) {
+      max-width: 1320px;
+    }
+    @media (max-width: 1200px) {
+      max-width: 1140px;
+    }
+    @media (max-width: 992px) {
+      max-width: 960px;
+    }
+    @media (max-width: 768px) {
+      max-width: 720px;
+    }
+    @media (max-width: 576px) {
+      max-width: 540px;
+    }
+    @media (max-width: 576px) {
+      max-width: 540px;
+    }
+  }
+  .left_side {
+    .img {
+      @include _main(
+        $width: 100%,
+        $height: 493px,
+        $border-radius: 5px,
+        $position: relative,
+        $overflow: hidden
+      );
+      img {
+        @include _main($object_f: cover, $width: 100%, $height: 100%);
+      }
+
+      .short_info {
+        background: rgb(255, 247, 231);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.025) 0%,
+          rgba(0, 0, 0, 0.882) 63%
+        );
+
+        @include _main(
+          $width: 100%,
+          $padding: 0 25px,
+          $bottom: 0px,
+          $left: 0px,
+          $position: absolute,
+          $color: $main_color
+        );
+        .box {
+          display: inline-block;
+          transform: matrix(1, 0, -0.5, 1, 0, 0);
+          border-radius: 50%;
+        }
+        #line {
+          @include _main(
+            $font_s: 16px,
+            $padding: 4px 7px,
+            $back-color: #56ca71,
+            $margin: 0,
+            $transition: 0.3s ease-in-out
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #56ca71 0px 5px 15px;
+          }
+        }
+        p {
+          @include _main($font_s: 35px, $margin: 12px 0, $cursor: pointer);
+          font-weight: 700;
+          &:hover {
+            text-decoration: red underline;
+          }
+          @media (max-width: 800px) {
+            font-size: 28px;
+          }
+          @media (max-width: 600px) {
+            font-size: 25px;
+          }
+          @media (max-width: 500px) {
+            font-size: 20px;
+          }
+          @media (max-width: 380px) {
+            font-size: 18px;
+          }
+        }
+        span {
+          @include _main($font_s: 13px, $margin: 12px 0);
+          @media (max-width: 800px) {
+            font-size: 11px;
+          }
+          @media (max-width: 500px) {
+            font-size: 9px;
+          }
+          @media (max-width: 380px) {
+            font-size: 8px;
+          }
+        }
+        #time_sp {
+          font-size: 11px !important;
+        }
+        .down_side {
+          @include _main(
+            $display: flex,
+            $justify-content: space-between,
+            $align-items: center
+          );
+          .down_left {
+            @include _main($display: flex, $align-items: center, $gap: 3px);
+            img {
+              @include _main(
+                $width: 22px,
+                $margin: 16px 0,
+                $height: 22px,
+                $object_f: cover,
+                $border-radius: 11px
+              );
+            }
+            p {
+              @include _main($font_s: 13px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .right_side {
+    .img2 {
+      @include _main(
+        $width: 100%,
+        $height: 239px,
+        $border-radius: 5px,
+        $position: relative,
+        $overflow: hidden
+      );
+      img {
+        @include _main($object_f: cover, $width: 100%, $height: 100%);
+      }
+
+      .short_info {
+        background: rgb(255, 247, 231);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.025) 0%,
+          rgba(0, 0, 0, 0.882) 63%
+        );
+
+        @include _main(
+          $width: 100%,
+          $padding: 0 15px,
+          $bottom: 0px,
+          $left: 0px,
+          $position: absolute,
+          $color: $main_color
+        );
+        .box {
+          display: inline-block;
+          transform: matrix(1, 0, -0.5, 1, 0, 0);
+          border-radius: 50%;
+        }
+        #line {
+          @include _main(
+            $font_s: 11px,
+            $padding: 4px 7px,
+            $back-color: #ff28a9,
+            $margin: 0,
+            $transition: 0.3s ease-in-out
+          );
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: #ff28a9 0px 5px 15px;
+          }
+        }
+        p {
+          @include _main($font_s: 20px, $margin: 12px 0, $cursor: pointer);
+          font-weight: 700;
+          &:hover {
+            text-decoration: red underline;
+          }
+          @media (max-width: 428px) {
+            font-size: 16px;
+          }
+          @media (max-width: 380px) {
+            font-size: 14px;
+          }
+        }
+        span {
+          @include _main($font_s: 11px, $margin: 12px 0);
+        }
+        .down_side {
+          @include _main(
+            $display: flex,
+            $justify-content: space-between,
+            $align-items: center
+          );
+          .down_left {
+            @include _main($display: flex, $align-items: center, $gap: 3px);
+            img {
+              @include _main(
+                $width: 22px,
+                $margin: 16px 0,
+                $height: 22px,
+                $object_f: cover,
+                $border-radius: 11px
+              );
+            }
+            p {
+              @include _main($font_s: 11px);
+              @media (max-width: 400px) {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .middle {
+    p {
+      text-align: center;
+      font-size: 14px;
+      color: rgb(86, 86, 86);
+      margin: 20px 0;
+    }
+    .sponsor {
+      @include _main(
+        $display: flex,
+        $align-items: center,
+        $justify-content: center
+      );
+      @include _main($display: flex, $width: 100%);
+
+      img {
+        @include _main(
+          $width: 100%,
+          $margin: 0px 0,
+          $cursor: pointer,
+          $height: 95px,
+          $object_f: contain
+        );
+      }
+    }
+  }
+}
+
+.Toastify {
+  z-index: 48747437;
+  position: relative;
+}

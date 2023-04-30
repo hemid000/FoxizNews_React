@@ -2,19 +2,25 @@
 #latestTechNews {
   margin: 40px 0;
   position: relative;
-  .large_section {
-    @media (max-width: 770px) {
-      display: none;
+
+  .box_next {
+    @include _main(
+      $width: 100%,
+      $display: flex,
+      $justify-content: center,
+      $align-items: center,
+      $gap: 4px,
+      $margin: 30px 0 0 0
+    );
+    .box1 {
+      @include _main(
+        $padding: 4px 8px,
+        $border: 1px solid rgba(112, 112, 112, 0.408),
+        $border-radius: 6px,
+        $cursor: pointer
+      );
     }
   }
-  .mobile_section {
-    display: none;
-
-    @media (max-width: 770px) {
-      display: block;
-    }
-  }
-
   #editor_p {
     @include _main(
       $font_s: 22px,
@@ -27,7 +33,7 @@
     &::after {
       @include _main(
         $top: 6px,
-        $left: 214px,
+        $left: 193px,
         $width: 3px,
         $height: 22px,
         $position: absolute,
@@ -64,7 +70,7 @@
       #info {
         font-weight: 650;
         font-size: 22px;
-
+        margin: 10px 0 0 0;
         &:hover {
           text-decoration: underline;
           color: red;
@@ -156,7 +162,8 @@
           $width: 100%,
           $height: 100%,
           $object_f: cover,
-          $cursor: pointer
+          $cursor: pointer,
+          $border-radius: 6px
         );
       }
       .box {

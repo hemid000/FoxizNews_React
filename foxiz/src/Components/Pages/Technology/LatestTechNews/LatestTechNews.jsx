@@ -7,104 +7,59 @@ import { AiOutlineRetweet } from "react-icons/ai";
 import {
   PoliticsFollow,
   PoliticsFollow_envo,
-  PoliticsLatest_news_home,
 } from "../../../Mock/PoliticsMock";
+import { Tech_news_home } from "../../../Mock/TechMock";
+
 const LatestTechNews = () => {
   return (
     <section id="latestTechNews">
       <div className="container">
         <div className="row">
           <div className="col-lg-8">
-            <p id="editor_p">Latest Politics News</p>
+            <p id="editor_p">Technology News</p>
             <div className="large_section">
-              {PoliticsLatest_news_home &&
-                PoliticsLatest_news_home.map((el) => {
-                  return (
-                    <div
-                      key={el.id}
-                      className="row mt-5 d-flex align-items-center"
-                    >
-                      <div className="col-lg-8 col-md-8">
-                        <div className="right_side">
-                          <div className="first">
-                            <p id="info">{el.info}</p>
-                            <span id="infospan">{el.infospan}</span>
-                            <div className="down_side">
-                              <div className="down_left">
-                                <img src={el.imgSrc1} alt="" />
-                                <p>{el.name}</p>
-                                <span>{el.time}</span>
+              <div className="row mt-5 d-flex ">
+                {Tech_news_home &&
+                  Tech_news_home.map((el) => {
+                    return (
+                      <div key={el.id} className="col-lg-6">
+                        <div className="row align-items-center flex-column">
+                          <div className="second">
+                            <div className="img">
+                              <div className="box">
+                                <p id="line">{el.type}</p>
+                              </div>
+                              <img src={el.imgSrc2} alt="" />
+                            </div>
+                          </div>
+                          <div className="right_side">
+                            <div className="first">
+                              <p id="info">{el.info}</p>
+                              <span id="infospan">{el.infospan}</span>
+                              <div className="down_side">
+                                <div className="down_left">
+                                  <img src={el.imgSrc1} alt="" />
+                                  <p>{el.name}</p>
+                                  <span>{el.time}</span>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-4 col-md-4">
-                        <div className="second">
-                          <div className="img">
-                            <div className="box">
-                              <p id="line">{el.type}</p>
-                            </div>
-                            <img src={el.imgSrc2} alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+              </div>
             </div>
 
-            <div className="mobile_section">
-              {" "}
-              {PoliticsLatest_news_home &&
-                PoliticsLatest_news_home.map((el) => {
-                  return (
-                    <div
-                      key={el.id}
-                      className="row mt-5 d-flex align-items-center"
-                    >
-                      <div className="col-lg-4 col-md-4">
-                        <div className="second">
-                          <div className="img">
-                            <div className="box">
-                              <p id="line">{el.type}</p>
-                            </div>
-                            <img src={el.imgSrc2} alt="" />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-8 col-md-8">
-                        <div className="right_side">
-                          <div className="first">
-                            <p id="info">{el.info}</p>
-                            <span id="infospan">{el.infospan}</span>
-                            <div className="down_side">
-                              <div className="down_left">
-                                <img src={el.imgSrc1} alt="" />
-                                <p>{el.name}</p>
-                                <span>{el.time}</span>
-                              </div>
-                              <div className="">
-                                <BsBookmark
-                                  style={{
-                                    cursor: "pointer",
-                                    margin: "0 20px 0 0",
-                                  }}
-                                />
-                              </div>
-                              {/*                   
-                          <div className="">
-                            <BsBookmarkFill style={{ cursor: "pointer" }} />
-                          </div> */}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
+            <div className="container">
+              <div className="box_next">
+                <div className="box1">1</div>
+                <div className="box1">2</div>
+              </div>
             </div>
           </div>
+
           <div className="col-lg-4">
             <div className="stick_right">
               <div className="follow">

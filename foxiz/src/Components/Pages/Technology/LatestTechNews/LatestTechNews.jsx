@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../LatestTechNews/LatestTechNews.scss";
 import { BsBookmark, BsFillReplyAllFill } from "react-icons/bs";
 import { Sponsort_info } from "../../../Mock/HomeMock";
@@ -9,8 +9,39 @@ import {
   PoliticsFollow_envo,
 } from "../../../Mock/PoliticsMock";
 import { Tech_news_home } from "../../../Mock/TechMock";
-
+import { AiFillCaretRight } from "react-icons/ai";
 const LatestTechNews = () => {
+  const [bgColor, setBgColor] = useState("#ff184e");
+  const [bgColor2, setBgColor2] = useState("#fff");
+  const [bgColor3, setBgColor3] = useState("#fff");
+  const [color, setColor] = useState("#fff");
+  const [color2, setColor2] = useState("#000");
+  const [color3, setColor3] = useState("#000");
+  const handleclick = () => {
+    setColor("#fff") ||
+      setColor2("#000") ||
+      setColor3("#000") ||
+      setBgColor("#ff184e") ||
+      setBgColor3("#fff") ||
+      setBgColor2("#fff");
+  };
+  const handleclick2 = () => {
+    setColor("#000") ||
+      setColor2("#fff") ||
+      setColor3("#000") ||
+      setBgColor("#fff") ||
+      setBgColor3("#fff") ||
+      setBgColor2("#ff184e");
+  };
+  const handleclick3 = () => {
+    setColor("#000") ||
+      setColor2("#000") ||
+      setColor3("#fff") ||
+      setBgColor("#fff") ||
+      setBgColor3("#ff184e") ||
+      setBgColor2("#fff");
+  };
+
   return (
     <section id="latestTechNews">
       <div className="container">
@@ -54,8 +85,27 @@ const LatestTechNews = () => {
 
             <div className="container">
               <div className="box_next">
-                <div className="box1">1</div>
-                <div className="box1">2</div>
+                <div
+                  onClick={handleclick}
+                  style={{ backgroundColor: bgColor, color: color }}
+                  className="box1"
+                >
+                  1
+                </div>
+                <div
+                  onClick={handleclick2}
+                  style={{ backgroundColor: bgColor2, color: color2 }}
+                  className="box2"
+                >
+                  2
+                </div>
+                <div
+                  onClick={handleclick3}
+                  style={{ backgroundColor: bgColor3, color: color3 }}
+                  className="box3"
+                >
+                  <AiFillCaretRight />
+                </div>
               </div>
             </div>
           </div>

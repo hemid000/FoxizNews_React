@@ -14,7 +14,36 @@
     );
     .box1 {
       @include _main(
-        $padding: 4px 8px,
+        $display: flex,
+        $align-items: center,
+        $justify-content: center,
+        $width: 34px,
+        $height: 34px,
+        $border: 1px solid rgba(112, 112, 112, 0.408),
+        $border-radius: 6px,
+        $cursor: pointer
+      );
+      background-color: #ff184e;
+    }
+    .box2 {
+      @include _main(
+        $display: flex,
+        $align-items: center,
+        $justify-content: center,
+        $width: 34px,
+        $height: 34px,
+        $border: 1px solid rgba(112, 112, 112, 0.408),
+        $border-radius: 6px,
+        $cursor: pointer
+      );
+    }
+    .box3 {
+      @include _main(
+        $display: flex,
+        $align-items: center,
+        $justify-content: center,
+        $width: 34px,
+        $height: 34px,
         $border: 1px solid rgba(112, 112, 112, 0.408),
         $border-radius: 6px,
         $cursor: pointer

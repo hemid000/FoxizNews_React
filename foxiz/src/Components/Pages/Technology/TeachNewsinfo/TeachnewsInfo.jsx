@@ -48,7 +48,7 @@ const TeachnewsInfo = () => {
                   />
                   <div className="short_info">
                     <div className="box">
-                      <p id="line">ENTERTAINMENT</p>
+                      <p id="line">Technology</p>
                     </div>
                     <p>Corsair HS80 RGB Wireless Gaming Headset Review</p>
 
@@ -74,7 +74,7 @@ const TeachnewsInfo = () => {
                   />
                   <div className="short_info">
                     <div className="box">
-                      <p id="line">ENTERTAINMENT</p>
+                      <p id="line">Technology</p>
                     </div>
                     <p>
                       Apple VS Samsung– Can a Good Smartwatch Save Your Life?

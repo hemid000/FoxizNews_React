@@ -172,14 +172,14 @@
           @include _main(
             $font_s: 11px,
             $padding: 4px 7px,
-            $back-color: #ff28a9,
+            $back-color: #56ca71,
             $margin: 0,
             $transition: 0.3s ease-in-out
           );
           text-decoration: none;
 
           &:hover {
-            box-shadow: #ff28a9 0px 5px 15px;
+            box-shadow: #56ca71 0px 5px 15px;
           }
         }
         p {

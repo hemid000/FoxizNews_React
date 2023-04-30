@@ -53,7 +53,7 @@ const LatestTechNews = () => {
                 {Tech_news_home &&
                   Tech_news_home.map((el) => {
                     return (
-                      <div key={el.id} className="col-lg-6">
+                      <div key={el.id} className="col-lg-6 col-md-6">
                         <div className="row align-items-center flex-column">
                           <div className="second">
                             <div className="img">

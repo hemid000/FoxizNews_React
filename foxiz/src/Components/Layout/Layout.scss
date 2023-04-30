@@ -142,4 +142,14 @@ body.dark {
       color: white;
     }
   }
+  #techinfo_tex {
+    &::before {
+      background-image: radial-gradient(#fff 0.75px, transparent 0.75px);
+    }
+  }
+  #politicsinfosec {
+    &::before {
+      background-image: radial-gradient(#fff 0.75px, transparent 0.75px);
+    }
+  }
 }

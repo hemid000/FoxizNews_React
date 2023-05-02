@@ -1,0 +1,51 @@
+@import "../../../../Scss/Style.scss";
+#bookmarksaved {
+  .upside {
+    position: relative;
+    padding: 30px 0 30px 57px;
+    h2 {
+      font-size: 28px;
+
+      font-weight: 700;
+    }
+    p {
+      font-size: 13px;
+      margin: 10px 0 10px 0;
+    }
+    &::before {
+      @include _main(
+        $position: absolute,
+        $top: 0,
+        $left: 0,
+        $display: block,
+        $width: 100%,
+        $height: 100%,
+        $opacity: 0.2
+      );
+      z-index: 0;
+      content: "";
+      pointer-events: none;
+
+      // background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+      // background-blend-mode: multiply,multiply;
+      background-image: radial-gradient(
+        rgba(0, 0, 0, 0.8) 0.75px,
+        transparent 0.75px
+      );
+      // background-image: -gradient(var(--body-fcolor) 0.75px,transparent 0.75px);
+      background-size: 16px 16px;
+    }
+  }
+
+  .downside {
+    padding: 30px 0 30px 57px;
+    p {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0;
+    }
+    span {
+      font-size: 15px;
+    }
+  }
+}

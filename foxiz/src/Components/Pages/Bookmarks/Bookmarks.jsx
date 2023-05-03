@@ -2,6 +2,7 @@ import React from "react";
 import BookmarkSaved from "./BookmarkSaved/BookmarkSaved";
 import BookCategory from "./BookmarkCategory/BookCategory";
 import BookmarkWriter from "./BookmarkWriter/BookmarkWriter";
+import BRecommend from "./BookmarkRecommended/BRecommend";
 
 const Bookmarks = () => {
   return (
@@ -9,6 +10,7 @@ const Bookmarks = () => {
       <BookmarkSaved />
       <BookCategory />
       <BookmarkWriter />
+      <BRecommend />
     </div>
   );
 };

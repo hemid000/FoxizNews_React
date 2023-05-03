@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../BookmarkWriter/BookmarkWriter.scss";
 import { ToastContainer, toast } from "react-toastify";
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
-
+import { IoAdd } from "react-icons/io5";
 const BookmarkWriter = () => {
   const notify = () => toast("Saved!");
   const [save, setSave] = useState(true);
@@ -25,7 +25,7 @@ const BookmarkWriter = () => {
         </div>
       </div>
       <div className="container">
-        <div className="row">
+        <div className="row g-3">
           <div className="col-lg-6">
             <div className="left_side">
               <div className="first">
@@ -67,6 +67,14 @@ const BookmarkWriter = () => {
                   src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/08/t12-860x574.jpg"
                   alt=""
                 />
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6 d-flex align-items-center  justify-content-center">
+            <div className="add_more d-flex align-items-center  justify-content-center flex-column">
+              <div className="add_more_scale  d-flex align-items-center  justify-content-center flex-column">
+                <IoAdd style={{ fontSize: "23px" }} />
+                <p>Add More</p>
               </div>
             </div>
           </div>

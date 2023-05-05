@@ -152,4 +152,42 @@ body.dark {
       background-image: radial-gradient(#fff 0.75px, transparent 0.75px);
     }
   }
+  #bookmarksaved {
+    .upside {
+      &::before {
+        background-image: radial-gradient(#fff 0.75px, transparent 0.75px);
+      }
+    }
+  }
+  #bookmarkwriter {
+    .upside {
+      &::before {
+        background-image: radial-gradient(#fff 0.75px, transparent 0.75px);
+      }
+    }
+    .left_side {
+      box-shadow: 1px 4px 1px 2px #000 !important;
+    }
+    .add_more_scale {
+      &::after {
+        background-color: #d0c0c04a;
+      }
+    }
+  }
+  #bookcategory {
+    .upside {
+      &::before {
+        background-image: radial-gradient(#fff 0.75px, transparent 0.75px);
+      }
+    }
+    p {
+      color: black !important;
+    }
+    .cart {
+      margin: 20px 0;
+    }
+  }
+  #brecommend {
+    background-color: #131518 !important;
+  }
 }

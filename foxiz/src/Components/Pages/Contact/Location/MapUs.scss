@@ -1,0 +1,13 @@
+@import "../../../../Scss/Style.scss";
+
+#map {
+  background-color: #f6f6f6;
+  padding: 20px 0;
+  p {
+    @include _main($margin: 10px 0);
+  }
+  h2 {
+    @include _main($margin: 0px 0 40px 0);
+    font-weight: 650;
+  }
+}

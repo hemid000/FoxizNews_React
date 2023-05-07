@@ -1,0 +1,13 @@
+@import "../../../../Scss/Style.scss";
+
+#reading_customize {
+  padding: 20px 0;
+  p {
+    @include _main($margin: 10px auto);
+    width: 60%;
+  }
+  h2 {
+    @include _main($margin: 20px 0 10px 0);
+    font-weight: 700;
+  }
+}

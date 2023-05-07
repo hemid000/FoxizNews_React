@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
-import "../NewsInfo2/NewsInfo2.scss";
-import image1 from "../../../../Assets/sponser1.webp";
+import "../CustomWriter/CustomWriter.scss";
 import { toast } from "react-toastify";
 
-const NewsInfo2 = () => {
+const CustomWriter = () => {
   const notify = () => toast("Saved!");
 
   const [save, setSave] = useState(true);
@@ -28,7 +27,7 @@ const NewsInfo2 = () => {
     setUnsave2(false);
   };
   return (
-    <section id="NewsInfo2">
+    <section id="customwriter">
       <div className="container all">
         <div className="row">
           <div className="col-lg-6">
@@ -124,17 +123,8 @@ const NewsInfo2 = () => {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="row middle">
-          <p>-Sponsored-</p>
-
-          <div className="col-lg-6 sponsor">
-            <img src={image1} alt="" />
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
 
-export default NewsInfo2;
+export default CustomWriter;

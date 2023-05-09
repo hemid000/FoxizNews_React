@@ -83,4 +83,14 @@
         rgba(0, 0, 0, 0.3) 0px 1px 10px -13px;
     }
   }
+  .cus_change {
+    @media (max-width: 500px) {
+      justify-content: center;
+    }
+  }
+  .upside {
+    @media (max-width: 500px) {
+      text-align: center;
+    }
+  }
 }

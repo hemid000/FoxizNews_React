@@ -12,7 +12,7 @@ const Cus_business = () => {
       </div>
       <div className="container">
         <div className="row g-3">
-          <div className="d-flex gap-4 flex-wrap">
+          <div className="d-flex gap-4 flex-wrap cus_change">
             {CustomBusiness &&
               CustomBusiness.map((el) => {
                 return (

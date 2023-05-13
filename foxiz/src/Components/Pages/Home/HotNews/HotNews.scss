@@ -2,7 +2,7 @@
 
 #quick_links {
   @include _main(
-    $margin: 5px 0,
+    $margin: 100px 0 10px 0,
     $back-color: #00000007,
     $display: flex,
     $align-items: center,

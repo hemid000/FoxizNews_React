@@ -1,8 +1,15 @@
 @import "../../../Scss/Style.scss";
 
 #nav {
-  @include _main($position: relative);
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  @include _main($position: fixed);
   z-index: 1122121;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.184);
+  padding: 13px 0;
   .nav_large {
     .nav_left {
       .img {
@@ -169,11 +176,11 @@
           }
         }
         &:before {
-          bottom: 0;
+          bottom: 13px;
           position: absolute;
           left: 0;
           content: "";
-          width: 100%;
+          width: 80%;
           padding: 1.5px;
           background-color: #ff184e;
           transform: scaleX(0);
@@ -435,11 +442,11 @@
         }
 
         &:before {
-          bottom: 0;
+          bottom: 13px;
           position: absolute;
           left: 0;
           content: "";
-          width: 100%;
+          width: 80%;
           padding: 1.5px;
           background-color: #ff184e;
           transform: scaleX(0);
@@ -612,11 +619,11 @@
           }
         }
         &:before {
-          bottom: 0;
+          bottom: 13px;
           position: absolute;
           left: 0;
           content: "";
-          width: 100%;
+          width: 80%;
           padding: 1.5px;
           background-color: #ff184e;
           transform: scaleX(0);
@@ -1129,11 +1136,11 @@
           }
         }
         &:before {
-          bottom: 0;
+          bottom: 13px;
           position: absolute;
           left: 0;
           content: "";
-          width: 100%;
+          width: 80%;
           padding: 1.5px;
           background-color: #ff184e;
           transform: scaleX(0);
@@ -1239,11 +1246,11 @@
           }
         }
         &:before {
-          bottom: 0;
+          bottom: 13px;
           position: absolute;
           left: 0;
           content: "";
-          width: 100%;
+          width: 80%;
           padding: 1.5px;
           background-color: #ff184e;
           transform: scaleX(0);
@@ -1367,7 +1374,7 @@
 
       #bookmarks {
         &:before {
-          bottom: 0;
+          bottom: 13px;
           position: absolute;
           left: 0;
           content: "";
@@ -1733,4 +1740,7 @@
       }
     }
   }
+}
+a {
+  width: 100%;
 }

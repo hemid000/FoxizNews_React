@@ -1,7 +1,7 @@
 @import "../../../../Scss/Style.scss";
 
 #error {
-  margin: 60px 0 60px 0;
+  margin: 120px 0 60px 0;
   .img {
     @include _main(
       $width: 100%,
@@ -55,7 +55,8 @@
     @include _main(
       $display: flex,
       $align-items: center,
-      $justify-content: center
+      $justify-content: center,
+      $text-align: center
     );
     form {
       box-shadow: 0 0 40px #0000001f;

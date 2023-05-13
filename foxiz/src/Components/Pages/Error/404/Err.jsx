@@ -38,12 +38,12 @@ const Err = () => {
               placeholder="Search"
             />
           </form>{" "}
-        </div>
-        <div className="return_home">
-          <Link to={"/"}>
+        </div>{" "}
+        <Link to={"/"}>
+          <div className="return_home">
             <span>Return to Homepage</span>
-          </Link>
-        </div>
+          </div>{" "}
+        </Link>
       </div>
     </section>
   );

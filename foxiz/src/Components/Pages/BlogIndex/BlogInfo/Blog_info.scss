@@ -1,8 +1,7 @@
 @import "../../../../Scss/Style.scss";
 
 #blog_info {
-  margin-top: 20px;
-  @include _main($margin: 20px 0 0 0);
+  @include _main($margin: 120px 0 0 0);
   .container {
     @media (max-width: 1600px) {
       max-width: 1275px;

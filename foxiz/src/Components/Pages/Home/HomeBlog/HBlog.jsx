@@ -37,14 +37,7 @@ const HBlog = () => {
                           <p>{el.name}</p>
                           <span>{el.time}</span>
                         </div>
-                        <div className="">
-                          <BsBookmark
-                            style={{
-                              cursor: "pointer",
-                              margin: "0 20px 0 0",
-                            }}
-                          />
-                        </div>
+
                         {/*                   
                           <div className="">
                             <BsBookmarkFill style={{ cursor: "pointer" }} />

@@ -69,9 +69,6 @@ const Fashion = () => {
                           <span>{el.time}</span>
                         </div>{" "}
                         {/* {save && ( */}
-                        <div className="">
-                          <BsBookmark style={{ cursor: "pointer" }} />
-                        </div>
                         {/* )} */}
                         {/* {unsave && ( */}
                         {/* <div className="">

@@ -1,0 +1,21 @@
+@import "./Scss/Style.scss";
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e3e3e3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5c5c5c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f2f2f;
+}

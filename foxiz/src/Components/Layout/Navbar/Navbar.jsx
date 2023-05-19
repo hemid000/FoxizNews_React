@@ -13,13 +13,7 @@ import { FiSearch } from "react-icons/fi";
 import DarkMode from "../../DarkMode/DarkMode";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import {
-  Nav_More_list,
-  Nav_bookmark_list,
-  Nav_categories_list,
-  Nav_home_list,
-  NavbarMockTopNews,
-} from "../../Mock/NavbarMock";
+import { NavbarMockTopNews } from "../../Mock/NavbarMock";
 import { NavbarMock } from "../../Mock/NavbarMock";
 import { NavbarMockNotnews } from "../../Mock/NavbarMock";
 import { BiMenuAltLeft } from "react-icons/bi";

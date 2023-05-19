@@ -563,6 +563,19 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
+        <div className="nav_res_list">
+          <ul>
+            <li>Home</li>
+            <li>Business</li>
+            <li>Politics</li>
+            <li>Travel</li>
+            <li>Entertainment</li>
+            <li>Science</li>
+            <li>Technology</li>
+            <li>Fashion</li>
+          </ul>
+        </div>
       </div>
       {navclick && (
         <div className="nav_click">

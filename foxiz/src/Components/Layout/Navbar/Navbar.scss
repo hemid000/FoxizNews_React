@@ -1640,6 +1640,28 @@
         }
       }
     }
+    .nav_res_list {
+      padding: 10px 30px;
+      width: 100%;
+      overflow-x: scroll;
+      ul {
+        @include _main(
+          $width: 100%,
+          $display: flex,
+          $gap: 15px,
+          $margin: 6px 0,
+          $padding: 0
+        );
+        list-style-type: none;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
     @media (max-width: 1000px) {
       display: block;
     }

@@ -721,6 +721,19 @@ const Navbar = () => {
           </div>
         </div>
       )}
+
+      <div id="signIn">
+        <div className="signIn_items">
+          <div className="sign_upside">
+            <img
+              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/login.png"
+              alt=""
+            />
+            <p>Welcome Back!</p>
+            <span>Sign in to your account</span>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

@@ -1761,6 +1761,29 @@
       }
     }
   }
+  #signIn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .signIn_items {
+      width: 350px;
+      background-color: rgb(245, 245, 245);
+      .sign_upside {
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
 }
 a {
   width: 100%;

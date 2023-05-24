@@ -565,16 +565,37 @@ const Navbar = () => {
         </div>
 
         <div className="nav_res_list">
-          <ul>
-            <li>Home</li>
-            <li>Business</li>
-            <li>Politics</li>
-            <li>Travel</li>
-            <li>Entertainment</li>
-            <li>Science</li>
-            <li>Technology</li>
-            <li>Fashion</li>
-          </ul>
+          <div className="container">
+            <ul>
+              <Link to={"/"}>
+                <li>Home</li>
+              </Link>
+              <Link to={"/bookmarks"}>
+                <li>Bookmarks</li>
+              </Link>
+              <Link to={"/politics"}>
+                <li>Politics</li>
+              </Link>
+              <Link to={"/contact"}>
+                <li>Contact</li>
+              </Link>
+              <Link to={"/custom"}>
+                <li>Custom</li>
+              </Link>
+              <Link to={"/search"}>
+                <li>Search</li>
+              </Link>
+              <Link to={"/technology"}>
+                <li>Technology</li>
+              </Link>
+              <Link to={"/blogIndex"}>
+                <li>Blog</li>
+              </Link>
+              <Link to={"/*"}>
+                <li>Error</li>
+              </Link>
+            </ul>
+          </div>
         </div>
       </div>
       {navclick && (

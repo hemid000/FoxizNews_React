@@ -98,6 +98,10 @@
           &:hover {
             box-shadow: #8d80ff 0px 5px 15px;
           }
+          @media (max-width: 580px) {
+            margin: 15px 9px !important;
+            font-size: 14px;
+          }
         }
       }
       .down_side {
@@ -184,6 +188,10 @@
 
           &:hover {
             box-shadow: #56ca71 0px 5px 15px;
+          }
+          @media (max-width: 580px) {
+            margin: 15px 9px !important;
+            font-size: 14px;
           }
         }
       }

@@ -2,7 +2,6 @@
 
 #foot {
   @include _main(
-    $margin: 30px 0 0 0,
     $position: relative,
     $back-color: #00000007,
     $padding: 20px 40px

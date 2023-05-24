@@ -21,14 +21,12 @@ const App = () => {
       {loading ? (
         <SplashScreen />
       ) : (
-        <Layout>
-          <Routes>
-            {Router &&
-              Router.map((el, index) => (
-                <Route key={index} path={el.path} element={el.component} />
-              ))}
-          </Routes>
-        </Layout>
+        <Routes>
+          {Router &&
+            Router.map((el, index) => (
+              <Route key={index} path={el.path} element={el.component} />
+            ))}
+        </Routes>
       )}{" "}
       <ToastContainer />
       <ToTopButton />

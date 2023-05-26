@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Navbar/Navbar.scss";
 import { BiChevronDown, BiTrendingUp, BiChevronRight } from "react-icons/bi";
 import {
@@ -18,7 +18,7 @@ import { NavbarMock } from "../../Mock/NavbarMock";
 import { NavbarMockNotnews } from "../../Mock/NavbarMock";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { Link } from "react-router-dom";
-
+import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [search, setSearch] = useState(false);
   const [notification, setNotification] = useState(false);
@@ -32,6 +32,9 @@ const Navbar = () => {
     setNotification(!notification);
     setSearch(false);
   };
+  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible2, setIsVisible2] = useState(false);
+
   return (
     <nav id="nav">
       <div className="nav_large">
@@ -465,7 +468,14 @@ const Navbar = () => {
             </div>
             <div className="col-3">
               <div className="nav_right">
-                <button id="sign_in">Sign in</button>
+                <button
+                  id="sign_in"
+                  onClick={() => {
+                    setIsVisible(true);
+                  }}
+                >
+                  Sign in
+                </button>
                 <ul>
                   <li id="notification">
                     {notification && (
@@ -742,19 +752,47 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      {isVisible && (
+        <div id="signIn">
+          <div className="signIn_items">
+            <div className="sign_upside">
+              <img
+                src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/login.png"
+                alt=""
+              />
+              <p>Welcome Back!</p>
+              <span>Sign in to your account</span>
+            </div>
+            <div className="signIn_middle">
+              <div className="row">
+                <div className="col-12 d-flex align-items-center justify-content-center flex-column">
+                  <label htmlFor="">Name (required)</label>
+                  <input required type="text" id="text" placeholder="Name" />
+                </div>
+                <div className="col-12 mt-2 d-flex align-items-center justify-content-center flex-column">
+                  <label htmlFor="">Email (required)</label>
+                  <input required type="text" id="text" placeholder="Email" />
+                </div>
+                <div className="box">
+                  <input type="checkbox" id="scales" name="scales" required />
+                  <label id="agreesign">Remember Me</label>
+                </div>
+              </div>
+              <button id="sign_in">Leave Message</button>
+              <span>Lost your password?</span>
+            </div>
 
-      <div id="signIn">
-        <div className="signIn_items">
-          <div className="sign_upside">
-            <img
-              src="https://foxiz.themeruby.com/default/wp-content/uploads/sites/2/2021/09/login.png"
-              alt=""
-            />
-            <p>Welcome Back!</p>
-            <span>Sign in to your account</span>
+            <div
+              className="close_sign_in"
+              onClick={() => {
+                setIsVisible(false);
+              }}
+            >
+              <AiOutlineClose />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

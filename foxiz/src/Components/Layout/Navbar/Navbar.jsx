@@ -746,7 +746,14 @@ const Navbar = () => {
               </div>
               <div className="register">
                 <p>Have an existing account?</p>
-                <button id="sign_in">Sign in</button>
+                <button
+                  id="sign_in"
+                  onClick={() => {
+                    setIsVisible(true);
+                  }}
+                >
+                  Sign in
+                </button>
               </div>
             </div>
           </div>

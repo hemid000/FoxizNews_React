@@ -785,7 +785,7 @@ const Navbar = () => {
                   <label id="agreesign">Remember Me</label>
                 </div>
               </div>
-              <button id="sign_in">Leave Message</button>
+              <button id="sign_in">Log in</button>
               <span>Lost your password?</span>
             </div>
 

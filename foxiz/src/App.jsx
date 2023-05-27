@@ -7,6 +7,7 @@ import ToTopButton from "./Components/ToTopButton/ToTopButton";
 import SplashScreen from "./Components/SplashScreen/SplashScreen";
 import Layout from "./Components/Layout/Layout";
 import "./App.scss";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -14,10 +15,14 @@ const App = () => {
     // Simulate loading time
     setTimeout(() => {
       setLoading(false);
-    }, 0);
+    }, 1000);
   }, []);
+
+  const [resetState, setResetState] = useState(false);
+
   return (
-    <main>
+    <>
+      <ScrollToTop />
       {loading ? (
         <SplashScreen />
       ) : (
@@ -30,7 +35,7 @@ const App = () => {
       )}{" "}
       <ToastContainer />
       <ToTopButton />
-    </main>
+    </>
   );
 };
 
